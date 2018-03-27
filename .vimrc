@@ -14,6 +14,7 @@ Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'dnonov/vim-code-dark'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            
 filetype plugin indent on
 
