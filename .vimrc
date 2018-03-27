@@ -46,6 +46,7 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set nofixendofline
+set guifont=Source\Code\Pro\12
 
 " Enable syntax
 if !exists("g:syntax_on")
