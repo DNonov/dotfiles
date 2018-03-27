@@ -40,7 +40,6 @@ set updatetime=100
 set number
 set relativenumber
 set t_Co=256
-set conceallevel=1
 set smartindent
 set tabstop=2
 set shiftwidth=4
@@ -63,7 +62,6 @@ colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
-let g:javascript_conceal_arrow_function = "⇒"
 
 " Mappings
 :inoremap ( ()<Esc>i
