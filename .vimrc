@@ -15,6 +15,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ap/vim-css-color'
 call vundle#end()            
 filetype plugin indent on
 
@@ -72,8 +73,15 @@ let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
 
 " Mappings
+" Double all that
 :inoremap ( ()<Esc>i
 :inoremap { {}<Esc>i
 :inoremap [ []<Esc>i
 :inoremap ' ''<Esc>i
 :inoremap " ""<Esc>i
+
+" Faster scrolling
+nmap J 5j
+nmap K 5k
+xmap J 5j
+xmap K 5k
