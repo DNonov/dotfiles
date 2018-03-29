@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'romainl/Apprentice'
@@ -101,18 +102,17 @@ function! GenerateDOCComment()
 endfunction
 
 " Mappings
-" Double all that
-:inoremap ( ()<Esc>i
-:inoremap { {}<Esc>i
-:inoremap [ []<Esc>i
-:inoremap ' ''<Esc>i
-:inoremap " ""<Esc>i
-
 " Faster scrolling
 nmap J 5j
 nmap K 5k
 xmap J 5j
 xmap K 5k
+
+" Moving through splits
+nnoremap gh <C-w>h
+nnoremap gj <C-w>j
+nnoremap gk <C-w>k
+nnoremap gl <C-w>l
 
 " Get out of surroundings
 :inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
