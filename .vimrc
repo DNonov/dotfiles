@@ -113,3 +113,6 @@ nmap J 5j
 nmap K 5k
 xmap J 5j
 xmap K 5k
+
+" Get out of surroundings
+:inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
