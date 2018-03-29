@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:$PATH;
 
 # default editor
-export EDITOR=/usr/bin/vim;
+export EDITOR="vim"
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Linux/UNIX tools
