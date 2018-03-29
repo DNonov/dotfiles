@@ -53,7 +53,7 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set nofixendofline
-set guifont=Source\Code\Pro\12
+set nowrap
 
 " Enable syntax
 if !exists("g:syntax_on")

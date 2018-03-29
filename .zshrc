@@ -185,7 +185,7 @@ function load(){
 
 # Function that goes to .vimrc
 function vimrc(){
-  cd Documents/workspace/dotfiles
+  cd /home/dim/Documents/workspace/dotfiles;
   vim .vimrc;
 }
 
@@ -196,8 +196,8 @@ function workspace(){
 
 # Function that goes to my personal settings.
 function settings(){
-  cd Documents/workspace;
-  code personal-settings;
+  cd Documents/workspace/dotfiles;
+  vim .vimrc;
 }
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
