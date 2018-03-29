@@ -183,6 +183,12 @@ function load(){
 # Terminal navigation
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# Function that goes to .vimrc
+function vimrc(){
+  cd Documents/workspace/dotfiles
+  vim .vimrc;
+}
+
 # Function that goes to workspace.
 function workspace(){
   cd Documents/workspace;
