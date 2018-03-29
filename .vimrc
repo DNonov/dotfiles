@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'romainl/Apprentice'
@@ -44,6 +45,7 @@ let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI"]
 let g:airline_powerline_fonts = 1
 
 " Settings
+let mapleader = ","
 set updatetime=100
 set number
 set relativenumber
@@ -71,6 +73,32 @@ colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
+
+" Documentation
+" source: https://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
+
+map <leader>d :call GenerateDOCComment()<cr>
+
+function! GenerateDOCComment()
+  let l    = line('.')
+  let i    = indent(l)
+  let pre  = repeat(' ',i)
+  let text = getline(l)
+  let params   = matchstr(text,'([^)]*)')
+  let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
+  echomsg params
+  let vars = []
+  let m    = ' '
+  let ml = matchlist(params,paramPat)
+  while ml!=[]
+    let [_,var;rest]= ml
+    let vars += [pre.' * @param '.var]
+    let ml = matchlist(rest,paramPat,0)
+  endwhile
+  let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
+  call append(l-1,comment)
+  call cursor(l+1,i+3)
+endfunction
 
 " Mappings
 " Double all that
