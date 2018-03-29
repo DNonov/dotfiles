@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cp -i .bashrc /home/dim;
-cp -i .vimrc /home/dim;
-cp -i .tmux.conf /home/dim;
-cp -i .zshrc /home/dim;
+cp .bashrc /home/dim;
+cp .vimrc /home/dim;
+cp .tmux.conf /home/dim;
+cp .zshrc /home/dim;

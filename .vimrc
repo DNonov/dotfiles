@@ -33,6 +33,12 @@ map <C-g> :Gvdiff<CR>
 let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI"]
 
+" highlight all search matches
+:set hlsearch
+
+" remove highlighting from current search
+:nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
+
 " Airline settings
 let g:airline_powerline_fonts = 1
 
