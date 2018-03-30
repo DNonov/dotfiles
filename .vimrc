@@ -10,7 +10,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'romainl/Apprentice'
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
@@ -19,11 +18,15 @@ Plugin 'mxw/vim-jsx'
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ap/vim-css-color'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 call vundle#end()            
 filetype plugin indent on
 
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
+
+"vim-markdown-preview
+let vim_markdown_preview_hotkey='<C-m>'
 
 " CtrlP config
 let g:ctrlp_custom_ignore = 'node_modules'
