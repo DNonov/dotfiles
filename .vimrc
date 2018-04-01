@@ -5,6 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
@@ -33,6 +34,9 @@ let g:gitgutter_max_signs = 100
 let g:gitgutter_map_keys = 0
 map <C-g> :Gvdiff<CR>
 
+" JSX
+let g:jsx_ext_required = 1
+
 " vim-auto-save
 let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI"]
@@ -45,6 +49,7 @@ let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI"]
 
 " Airline settings
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
 " Settings
 let mapleader = ","
