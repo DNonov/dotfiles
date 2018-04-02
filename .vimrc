@@ -15,7 +15,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'leshill/vim-json'
+Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx'
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
@@ -60,7 +60,6 @@ set t_Co=256
 set smartindent
 set tabstop=2
 set shiftwidth=2
-set expandtab
 set nofixendofline
 set nowrap
 
