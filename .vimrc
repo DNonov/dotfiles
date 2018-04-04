@@ -9,6 +9,9 @@ Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
+Plugin 'mileszs/ack.vim'
+Plugin 'digitaltoad/vim-pug'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
@@ -16,7 +19,7 @@ Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ap/vim-css-color'
@@ -26,6 +29,12 @@ filetype plugin indent on
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
 
+" Emmet
+let g:user_emmet_leader_key='<C-e>'
+let g:user_emmet_install_global = 0
+let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx', },}
+autocmd FileType html,css,javascript.jsx EmmetInstall
+
 " CtrlP config
 let g:ctrlp_custom_ignore = 'node_modules'
 
@@ -34,12 +43,9 @@ let g:gitgutter_max_signs = 100
 let g:gitgutter_map_keys = 0
 map <C-g> :Gvdiff<CR>
 
-" JSX
-let g:jsx_ext_required = 1
-
 " vim-auto-save
 let g:auto_save = 1
-let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI"]
+let g:auto_save_events = ["InsertLeave"]
 
 " highlight all search matches
 :set hlsearch
