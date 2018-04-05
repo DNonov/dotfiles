@@ -119,6 +119,10 @@ nmap K 5k
 xmap J 5j
 xmap K 5k
 
+" Vs code like behavior Shift+Alt+Arrow
+no <down> ddp
+no <up> ddkP
+
 " Moving through splits
 nnoremap gh <C-w>h
 nnoremap gj <C-w>j
