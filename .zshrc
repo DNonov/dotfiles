@@ -142,7 +142,7 @@ function cattail(){
 # $1 = -I -- HEAD request
 # $1 = -G -- GET request
 function crl() {
-  curl "$1" 127.0.0.2:"$2";   
+  curl ${1:--I} localhost:${2:-3000};
 }
 
 # Function that displays ports that listen.
