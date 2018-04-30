@@ -112,7 +112,6 @@ alias con='ping 8.8.8.8'
 
 # Shortcuts 
 alias t='tmux'
-alias mux='tmuxinator'
 alias g='| grep'
 alias md='mkdir'
 alias mf='touch'
