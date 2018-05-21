@@ -142,7 +142,9 @@ xmap K 5k
 no <down> ddp
 no <up> ddkP
 
-
+" some good mappings
+:nmap H 0
+:nmap L $
 
 " Moving through splits
 nnoremap gh <C-w>h
