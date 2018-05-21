@@ -113,6 +113,16 @@ function! GenerateDOCComment()
   call cursor(l+1,i+3)
 endfunction
 
+" Different cursorInsert/Normal
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[1 q"
+
+" optional reset cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+
 " Mappings
 " Faster scrolling
 nmap J 5j
