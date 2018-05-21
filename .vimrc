@@ -18,6 +18,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
@@ -81,7 +82,7 @@ let &backupdir=vimtmp
 let &directory=vimtmp
 
 " Theme
-colorscheme codedark
+colorscheme jellybeans
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
@@ -122,6 +123,8 @@ xmap K 5k
 " Vs code like behavior Shift+Alt+Arrow
 no <down> ddp
 no <up> ddkP
+
+
 
 " Moving through splits
 nnoremap gh <C-w>h
