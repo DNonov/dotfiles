@@ -154,9 +154,10 @@ nnoremap gl <C-w>l
 
 " Abbreviations
 :iabbrev c const
-:iabbrev ir import
+:iabbrev i import
 :iabbrev l let
 :iabbrev t this
+:iabbrev r return
 
 " Get out of surroundings
 :inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
