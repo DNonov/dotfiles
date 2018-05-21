@@ -82,7 +82,7 @@ let &backupdir=vimtmp
 let &directory=vimtmp
 
 " Theme
-colorscheme jellybeans
+colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
@@ -131,6 +131,12 @@ nnoremap gh <C-w>h
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
 nnoremap gl <C-w>l
+
+" Abbreviations
+:iabbrev c const
+:iabbrev ir import
+:iabbrev l let
+:iabbrev t this
 
 " Get out of surroundings
 :inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
