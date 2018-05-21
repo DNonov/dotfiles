@@ -117,6 +117,10 @@ endfunction
 " Edit Vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
+" Fast sourcing .vimrc. 's' and 'v' stands for
+" Source Vimrc 
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Different cursorInsert/Normal
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[1 q"
