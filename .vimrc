@@ -113,6 +113,10 @@ function! GenerateDOCComment()
   call cursor(l+1,i+3)
 endfunction
 
+" Fast .vimrc edit. 'e' and 'v' stands for
+" Edit Vimrc
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
 " Different cursorInsert/Normal
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[1 q"
