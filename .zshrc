@@ -166,6 +166,11 @@ function ports(){
   watch -n 1 'sudo lsof -i -n -P | grep -v dnsmasq |  grep -v cupsd | grep -i listen';
 }
 
+# Function that displays git status of a project.
+function gstat(){
+	watch -n 1 "git status";
+}
+
 # Function that displays documents at any given database and collection on localhost.
 # $1 = database
 # $2 = collection
