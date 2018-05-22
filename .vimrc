@@ -46,6 +46,7 @@ let g:gitgutter_map_keys = 0
 " fugitive config
 map <C-g> :Gvdiff<CR>
 map <C-g>s :Gstatus<CR>
+map <C-g>c :Gcommit<CR>
 
 " vim-auto-save
 let g:auto_save = 1
