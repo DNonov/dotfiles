@@ -42,7 +42,10 @@ let g:ctrlp_custom_ignore = 'node_modules'
 " vim-gitguter config
 let g:gitgutter_max_signs = 100
 let g:gitgutter_map_keys = 0
+
+" fugitive config
 map <C-g> :Gvdiff<CR>
+map <C-g>s :Gstatus<CR>
 
 " vim-auto-save
 let g:auto_save = 1
