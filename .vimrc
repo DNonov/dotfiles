@@ -126,7 +126,7 @@ endfunction
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Different cursorInsert/Normal
-let &t_SI = "\e[6 q"
+let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
 " optional reset cursor on start:
