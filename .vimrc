@@ -85,6 +85,16 @@ silent! call mkdir(vimtmp, "p", 0700)
 let &backupdir=vimtmp
 let &directory=vimtmp
 
+augroup vimrcEx
+	autocmd!
+	autocmd FileType text setlocal textwidth=78
+	" Jump to last currsor position when open buffer again
+	autocmd BufReadPost *
+		\ if line("'\"") > 0 && line("'\"") <= line("$") |
+		\		exe "normal g`\"" |
+		\	endif
+augroup END
+
 " Theme
 colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
