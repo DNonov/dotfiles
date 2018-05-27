@@ -85,6 +85,7 @@ silent! call mkdir(vimtmp, "p", 0700)
 let &backupdir=vimtmp
 let &directory=vimtmp
 
+" Memorize the last position of the cursor into the buffer
 augroup vimrcEx
 	autocmd!
 	autocmd FileType text setlocal textwidth=78
@@ -146,6 +147,9 @@ autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
 " Mappings
+" Draw an arrow in insert mode
+imap <c-l> <Space>=><Space>
+
 " Faster scrolling
 nmap J 5j
 nmap K 5k
