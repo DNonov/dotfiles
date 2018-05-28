@@ -1,0 +1,13 @@
+[user]
+	email = d.nonov@gmail.com
+	name = Dimitar Nonov
+[alias]
+	aa = add -A
+	st = status
+	ci = commit
+	ca = commit --amend
+	cob = checkout -b
+	co = checkout
+	sa = stage --all
+	pom = push origin master
+
