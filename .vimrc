@@ -85,6 +85,7 @@ silent! call mkdir(vimtmp, "p", 0700)
 let &backupdir=vimtmp
 let &directory=vimtmp
 
+
 " Memorize the last position of the cursor into the buffer
 augroup vimrcEx
 	autocmd!
@@ -107,6 +108,7 @@ function! RenameFile()
 	endif
 endfunction
 map <leader>n :call RenameFile() <cr>
+
 
 " Theme
 colorscheme codedark
