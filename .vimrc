@@ -44,7 +44,7 @@ let g:gitgutter_max_signs = 100
 let g:gitgutter_map_keys = 0
 
 " fugitive config
-map <C-g> :Gvdiff<CR>
+map <C-g>d :Gvdiff<CR>
 map <C-g>s :Gstatus<CR>
 map <C-g>c :Gcommit<CR>
 
