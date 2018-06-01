@@ -1,0 +1,7 @@
+#! /bin/bash
+
+# Color of choice variable (Black default)
+COLOR=${1?000000}
+
+# Open new chrome tab with 0to255 service
+google-chrome http://www.0to255.com/$COLOR
