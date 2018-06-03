@@ -19,6 +19,7 @@ Plugin '907th/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'cocopon/iceberg.vim'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
@@ -111,7 +112,7 @@ map <leader>n :call RenameFile() <cr>
 
 
 " Theme
-colorscheme codedark
+colorscheme iceberg
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
