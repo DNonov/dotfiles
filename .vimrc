@@ -110,9 +110,12 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile() <cr>
 
+" PWD
+cnoremap %% <C-R>=expand("%:h")."/"<cr>
+
 
 " Theme
-colorscheme iceberg
+colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
