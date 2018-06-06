@@ -126,34 +126,6 @@ export EDITOR="vim"
 # Conection check
 alias con='ping 8.8.8.8'
 
-# Shortcuts 
-alias t='tmux'
-alias g='| grep'
-alias md='mkdir'
-alias mf='touch'
-
-# Function that creates dir and 'CD' into.
-function mdc(){
-  mkdir "$1";
-  cd "$1";
-}
-
-# Function that creates file and then open it in VS Code.
-function mfc(){
-  touch "$1";
-  code "$1"; 
-}
-
-# Function displays first 'n' lines of a file.
-function cathead(){
-  cat "$1" | head -n "$2";
-}
-
-#Function displays last 'n' lines of a file.
-function cattail(){
-  cat "$1" | tail -n "$2";
-}
-
 # Function that run curl on localhost at any given port.
 # $1 = -I -- HEAD request
 # $1 = -G -- GET request
@@ -210,66 +182,17 @@ function load(){
 # Terminal navigation
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Function that goes to .vimrc
-function vimrc(){
-  cd /home/dim/Documents/workspace/dotfiles;
-  vim .vimrc;
-}
-
 # Function that goes to workspace.
 function workspace(){
   cd Documents/workspace;
-}
-
-# Function that goes to my personal settings.
-function settings(){
-  cd Documents/workspace/dotfiles;
-  vim .vimrc;
-}
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Git related
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# Shortcuts for some git commands.
-alias gi='git init'
-alias gsa='git add -A'
-alias gsf='git add -f'
-alias gch='git checkout'
-alias gchb='git checkout -b'
-alias gp='git push -u'
-alias gpm='git push -u origin master'
-function gc(){
-  git commit -m "$1"
-}
-
-
-# Function that create .gitignore file with 'node_modules/' text.
-function gitignore(){
-  touch .gitignore;
-  echo 'node_modules/' > .gitignore;
 }
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Web Deveopment tools
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#Shortcut for cloning small project template
-alias gittemplate='git clone https://github.com/DNonov/small-projects-template.git'
-
-# Shortcuts for some gulp commands.
-alias gw='gulp watch'
-alias gb='gulp build'
-
 # nodemon
 alias nm='nodemon'
-
-# NPM
-alias ninstall='npm install'
-alias ninit='npm init -y'
-alias npmis='npm install --save'
-alias npmisd='npm install --save-dev'
-alias iexpress='npm install express --save'
 
 # Function that starts mongod proces.
 function mongoon(){
