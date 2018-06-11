@@ -1,3 +1,6 @@
 #! /bin/sh
 
-watch -n 1 "sudo lsof -i -n -P | grep -v dnsmasq | grep -v cupsd | grep -i listen";
+watch -n 1 "sudo lsof -i -n -P |
+grep -v dnsmasq |
+grep -v cupsd |
+grep -i listen";
