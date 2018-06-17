@@ -1,8 +1,8 @@
 #! /bin/bash
 
-cp .bashrc /home/dim;
-cp .vimrc /home/dim;
-cp .gitconfig /home/dim;
-cp .tmux.conf /home/dim;
-cp .zshrc /home/dim;
-cp -R bin /home/dim;
+cp -p .bashrc /home/dim;
+cp -p .vimrc /home/dim;
+cp -p .gitconfig /home/dim;
+cp -p .tmux.conf /home/dim;
+cp -p .zshrc /home/dim;
+cp -Rp bin /home/dim;
