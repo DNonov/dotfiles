@@ -76,7 +76,6 @@ BULLETTRAIN_PROMPT_ORDER=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	vi-mode
-	web-search
 )
 
 source $ZSH/oh-my-zsh.sh
