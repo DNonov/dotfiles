@@ -75,7 +75,8 @@ BULLETTRAIN_PROMPT_ORDER=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+	vi-mode
+	web-search
 )
 
 source $ZSH/oh-my-zsh.sh
