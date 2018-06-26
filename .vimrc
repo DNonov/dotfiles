@@ -25,7 +25,7 @@ Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ap/vim-css-color'
-call vundle#end()            
+call vundle#end()
 filetype plugin indent on
 
 "nerdtree config
@@ -151,7 +151,7 @@ endfunction
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Fast sourcing .vimrc. 's' and 'v' stands for
-" Source Vimrc 
+" Source Vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Different cursorInsert/Normal
