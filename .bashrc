@@ -127,7 +127,7 @@ fi
 # Conection check
 alias con='ping 8.8.8.8'
 
-# Shortcuts 
+# Shortcuts
 alias cl='clear'
 alias c='code'
 alias t='tmux'
@@ -144,7 +144,7 @@ mdc(){
 # Function that creates file and then open it in VS Code.
 mfc(){
   touch "$1";
-  vim "$1"; 
+  vim "$1";
 }
 
 # Function displays first 'n' lines of a file.
@@ -161,7 +161,7 @@ cattail(){
 # $1 = -I -- HEAD request
 # $1 = -G -- GET request
 crl() {
-  curl "$1" 127.0.0.2:"$2";   
+  curl "$1" 127.0.0.2:"$2";
 }
 
 # Function that displays ports that listen.
@@ -291,18 +291,3 @@ mongoon(){
 mongooff(){
   service mongod stop;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
