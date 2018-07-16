@@ -115,7 +115,7 @@ cnoremap %% <C-R>=expand("%:h")."/"<cr>
 
 
 " Theme
-colorscheme tomorrow
+colorscheme codedark
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
