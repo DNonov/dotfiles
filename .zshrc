@@ -9,7 +9,7 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
 
-BULLETTRAIN_PROMPT_CHAR=" "
+BULLETTRAIN_PROMPT_CHAR=" "λ
 BULLETTRAIN_GIT_BG=black
 BULLETTRAIN_GIT_FG=white
 
