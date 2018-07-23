@@ -164,10 +164,6 @@ au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
-" Mappings
-" Draw an arrow in insert mode
-imap <c-l> <Space>=><Space>
-
 " Faster scrolling
 nmap J 5j
 nmap K 5k
@@ -187,13 +183,3 @@ nnoremap gh <C-w>h
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
 nnoremap gl <C-w>l
-
-" Abbreviations
-:iabbrev c const
-:iabbrev i import
-:iabbrev l let
-:iabbrev t this
-:iabbrev r return
-
-" Get out of surroundings
-:inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
