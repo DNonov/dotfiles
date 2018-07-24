@@ -25,6 +25,7 @@ Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on
