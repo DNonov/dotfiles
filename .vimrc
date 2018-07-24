@@ -94,7 +94,7 @@ let &directory=vimtmp
 augroup vimrcEx
 	autocmd!
 	autocmd FileType text setlocal textwidth=78
-	" Jump to last currsor position when open buffer again
+	" Jump to last cursor position when open buffer again
 	autocmd BufReadPost *
 		\ if line("'\"") > 0 && line("'\"") <= line("$") |
 		\		exe "normal g`\"" |
