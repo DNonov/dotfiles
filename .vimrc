@@ -13,6 +13,7 @@ Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
 Plugin 'mileszs/ack.vim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
@@ -60,6 +61,7 @@ let g:auto_save_events = ["InsertLeave"]
 :nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
 
 " Airline settings
+let g:airline_theme = 'tomorrow'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 
@@ -74,6 +76,7 @@ set tabstop=2
 set shiftwidth=2
 set nofixendofline
 set nowrap
+set spell spelllang=en_us
 
 " Enable syntax
 if !exists("g:syntax_on")
@@ -115,7 +118,7 @@ cnoremap %% <C-R>=expand("%:h")."/"<cr>
 
 
 " Theme
-colorscheme codedark
+colorscheme tomorrow
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc= 1
 let g:javascript_plugin_flow= 1
@@ -153,10 +156,6 @@ endfunction
 " Fast sourcing .vimrc. 's' and 'v' stands for
 " Source Vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Different cursorInsert/Normal
-let &t_SI = "\e[5 q"
-let &t_EI = "\e[1 q"
 
 " optional reset cursor on start:
 augroup myCmds
