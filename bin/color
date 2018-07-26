@@ -1,7 +1,9 @@
 #! /bin/bash
-
 # Color of choice variable (Black default)
-COLOR=${1:-000000}
+COLOR=${1:-000000};
 
-# Open new chrome tab with 0to255 service
-google-chrome http://www.0to255.com/$COLOR
+LINES=`curl -s www.0to255.com/$COLOR | grep 'class="hex_color"' | grep -Eio '#[A-Fa-f0-9]{6}'`;
+
+for line in $LINES; do
+	echo "i{color: "$line" }"
+done
