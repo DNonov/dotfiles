@@ -77,7 +77,9 @@ set tabstop=2
 set shiftwidth=2
 set nofixendofline
 set nowrap
-set spell spelllang=en_us
+
+" Toggle spell check
+map <leader>s :set spell! spelllang=en_us<CR>
 
 " Enable syntax
 if !exists("g:syntax_on")
