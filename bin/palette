@@ -1,4 +1,4 @@
 #! /bin/bash
 
-source ~/bin/color ${ 1:-000000 } > ~/bin/.index.css;
+source ~/bin/color ${1:-000000} > ~/bin/.index.css;
 code ~/bin/.index.css;
