@@ -7,7 +7,7 @@
 	aa = add -A
 	s = status
 	ci = commit
-	ca = commit --amend
+k	ca = commit --amend
 	cob = checkout -b
 	co = checkout
 	pom = push origin master
