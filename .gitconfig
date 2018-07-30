@@ -6,10 +6,10 @@
 	d = diff
 	aa = add -A
 	s = status
-	ci = commit
-k	ca = commit --amend
+	co = commit
+	ca = commit --amend
 	cob = checkout -b
-	co = checkout
+	ch = checkout
 	pom = push origin master
 	phm = push heroku  master
 
