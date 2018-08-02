@@ -83,6 +83,9 @@ set shiftwidth=2
 set nofixendofline
 set nowrap
 
+autocmd FileType python setlocal ts=4 sw=4 sts=0 expandtab
+autocmd FileType csharp setlocal ts=4 sw=4 sts=0 expandtab
+
 " Toggle spell check
 map <leader>s :set spell! spelllang=en_us<CR>
 
