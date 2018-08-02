@@ -24,14 +24,19 @@ Plugin 'cocopon/iceberg.vim'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
+Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on
 
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
+
+" UltiSnipsTriger
+let g:UltiSnipsExpandTrigger="<c-j>"
 
 " Emmet
 let g:user_emmet_leader_key='<C-e>'
