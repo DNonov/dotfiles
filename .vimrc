@@ -17,6 +17,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
+Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
@@ -46,6 +47,14 @@ autocmd FileType html,css,javascript.jsx EmmetInstall
 
 " CtrlP config
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" CtrlP config
+if exists(":Tabularize")
+	nmap <Leader>t= :Tabularize /=<CR>
+	vmap <Leader>t= :Tabularize /=<CR>
+	nmap <Leader>t: :Tabularize /:\zs<CR>
+	vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
 
 " vim-gitguter config
 let g:gitgutter_max_signs = 100
