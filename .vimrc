@@ -76,7 +76,7 @@ let g:auto_save_events = ["InsertLeave"]
 :nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
 
 " Airline settings
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'distinguished'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 
