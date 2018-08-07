@@ -141,6 +141,10 @@ nnoremap gj <C-w>j
 nnoremap gk <C-w>k
 nnoremap gl <C-w>l
 
+" Different cursor on INSERT and NORMAL mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " PWD
 cnoremap %% <C-R>=expand("%:h")."/"<cr>
 
