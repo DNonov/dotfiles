@@ -19,6 +19,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'cocopon/iceberg.vim'
@@ -27,38 +28,53 @@ Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'dnonov/vim-code-dark'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on
 
+"+------------------+
+"|                  |
+"|  Plugins config  |
+"|                  |
+"+------------------+
+
+
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
 
 " UltiSnipsTriger
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger       = "<Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-Tab>"
+let g:UltiSnipsJumpFrowardTrigger  = "<Tab>"
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
 
 " Emmet
-let g:user_emmet_leader_key='<C-e>'
 let g:user_emmet_install_global = 0
-let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx', },}
+let g:user_emmet_leader_key     = '<C-e>'
+let g:user_emmet_settings       = { 'javascript.jsx' : { 'extends' : 'jsx', },}
 autocmd FileType html,css,javascript.jsx EmmetInstall
 
 " CtrlP config
 let g:ctrlp_custom_ignore = 'node_modules'
 
-" CtrlP config
+" Tabularize config
 if exists(":Tabularize")
-	nmap <Leader>t= :Tabularize /=<CR>
-	vmap <Leader>t= :Tabularize /=<CR>
-	nmap <Leader>t: :Tabularize /:\zs<CR>
-	vmap <Leader>t: :Tabularize /:\zs<CR>
+	nmap <leader>t= :Tabularize /=<CR>
+	vmap <leader>t= :Tabularize /=<CR>
+	nmap <leader>t: :Tabularize /:\zs<CR>
+	vmap <leader>t: :Tabularize /:\zs<CR>
 endif
 
 " vim-gitguter config
+let g:gitgutter_map_keys  = 0
 let g:gitgutter_max_signs = 100
-let g:gitgutter_map_keys = 0
 
 " fugitive config
 map <C-g>d :Gvdiff<CR>
@@ -66,21 +82,31 @@ map <C-g>s :Gstatus<CR>
 map <C-g>c :Gcommit<CR>
 
 " vim-auto-save
-let g:auto_save = 1
+let g:auto_save        = 1
 let g:auto_save_events = ["InsertLeave"]
 
-" highlight all search matches
-:set hlsearch
-
-" remove highlighting from current search
-:nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
-
 " Airline settings
-let g:airline_theme = 'distinguished'
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts        = 1
+let g:airline_theme                  = 'distinguished'
 
-" Settings
+" Theme
+let g:javascript_plugin_flow  = 1
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+
+"+-------------------------+
+"|                         |
+"|  Settings and mappings  |
+"|                         |
+"+-------------------------+
+
+" Enable syntax
+if !exists("g:syntax_on")
+    syntax enable
+endif
+
+colorscheme tomorrow
 let mapleader = ","
 set updatetime=100
 set number
@@ -95,31 +121,52 @@ set nowrap
 autocmd FileType python setlocal ts=4 sw=4 sts=0 expandtab
 autocmd FileType csharp setlocal ts=4 sw=4 sts=0 expandtab
 
+" Faster scrolling
+nmap J 5j
+nmap K 5k
+xmap J 5j
+xmap K 5k
+
+" Vs code like behavior Shift+Alt+Arrow
+no <down> ddp
+no <up> ddkP
+
+" some good mappings
+:nmap H 0
+:nmap L $
+
+" Moving through splits
+nnoremap gh <C-w>h
+nnoremap gj <C-w>j
+nnoremap gk <C-w>k
+nnoremap gl <C-w>l
+
+" PWD
+cnoremap %% <C-R>=expand("%:h")."/"<cr>
+
 " Toggle spell check
 map <leader>s :set spell! spelllang=en_us<CR>
 
-" Enable syntax
-if !exists("g:syntax_on")
-    syntax enable
-endif
+" highlight all search matches
+:set hlsearch
+
+" remove highlighting from current search
+:nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
+
+" shows last search in quickfix
+nmap g/ :vimgrep /<C-R>//j %<CR>\|:cw<CR>
+
+" Edit Vimrc
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" Source Vimrc
+:nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Store temporary files in a central spot
 let vimtmp = $HOME . '/.tmp/' . getpid()
 silent! call mkdir(vimtmp, "p", 0700)
 let &backupdir=vimtmp
 let &directory=vimtmp
-
-
-" Memorize the last position of the cursor into the buffer
-augroup vimrcEx
-	autocmd!
-	autocmd FileType text setlocal textwidth=78
-	" Jump to last cursor position when open buffer again
-	autocmd BufReadPost *
-		\ if line("'\"") > 0 && line("'\"") <= line("$") |
-		\		exe "normal g`\"" |
-		\	endif
-augroup END
 
 " Rename current file
 function! RenameFile()
@@ -132,16 +179,6 @@ function! RenameFile()
 	endif
 endfunction
 map <leader>n :call RenameFile() <cr>
-
-" PWD
-cnoremap %% <C-R>=expand("%:h")."/"<cr>
-
-
-" Theme
-colorscheme tomorrow
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc= 1
-let g:javascript_plugin_flow= 1
 
 " Documentation
 " source: https://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
@@ -168,37 +205,3 @@ function! GenerateDOCComment()
   call append(l-1,comment)
   call cursor(l+1,i+3)
 endfunction
-
-" Fast .vimrc edit. 'e' and 'v' stands for
-" Edit Vimrc
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-" Fast sourcing .vimrc. 's' and 'v' stands for
-" Source Vimrc
-:nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" optional reset cursor on start:
-augroup myCmds
-au!
-autocmd VimEnter * silent !echo -ne "\e[2 q"
-augroup END
-
-" Faster scrolling
-nmap J 5j
-nmap K 5k
-xmap J 5j
-xmap K 5k
-
-" Vs code like behavior Shift+Alt+Arrow
-no <down> ddp
-no <up> ddkP
-
-" some good mappings
-:nmap H 0
-:nmap L $
-
-" Moving through splits
-nnoremap gh <C-w>h
-nnoremap gj <C-w>j
-nnoremap gk <C-w>k
-nnoremap gl <C-w>l
