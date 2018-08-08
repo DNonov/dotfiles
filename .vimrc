@@ -88,7 +88,7 @@ let g:auto_save_events = ["InsertLeave"]
 " Airline settings
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts        = 1
-let g:airline_theme                  = 'distinguished'
+let g:airline_theme                  = 'tomorrow'
 
 " Theme
 let g:javascript_plugin_flow  = 1
