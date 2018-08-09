@@ -118,8 +118,12 @@ set shiftwidth=2
 set nofixendofline
 set nowrap
 
+" Different indentation
 autocmd FileType python setlocal ts=4 sw=4 sts=0 expandtab
 autocmd FileType csharp setlocal ts=4 sw=4 sts=0 expandtab
+
+" Remove all trailing white spaces after save
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Faster scrolling
 nmap J 5j
@@ -186,7 +190,6 @@ map <leader>n :call RenameFile() <cr>
 
 " Documentation
 " source: https://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
-
 map <leader>d :call GenerateDOCComment()<cr>
 
 function! GenerateDOCComment()
