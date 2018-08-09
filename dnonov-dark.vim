@@ -4,18 +4,18 @@
 let s:foreground = "d0d0d0"
 let s:background = "232323"
 let s:line = "efefef"
-let s:selection = "d6d6d6"
+let s:selection = "00699f"
 let s:comment = "757772"
-let s:red = "c82829"
-let s:orange = "f4b342"
+let s:red = "ce9167"
+let s:orange = "dcb135"
 let s:yellow = "eab700"
-let s:green = "00aa02"
+let s:green = "80b057"
 let s:aqua = "fefefe"
 let s:blue = "4271ae"
 let s:purple = "8959a8"
 let s:window = "efefef"
 
-set background=light
+set background=dark
 hi clear
 syntax reset
 
@@ -270,7 +270,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Function", s:aqua, "", "")
 	call <SID>X("Constant", s:aqua, "", "")
 	call <SID>X("Number", s:orange, "", "")
-	call <SID>X("String", s:orange, "", "")
+	call <SID>X("String", s:red, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
 	call <SID>X("Operator", s:foreground, "", "none")
@@ -282,7 +282,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	"NERDTree slashes in nice blue color
 	call <SID>X("NERDTreeDirSlash",s:blue, "", "")
-	
+
 	" Fix jsx bug (different color on closing tag)
 	hi link xmlEndTag xmlTag
 
