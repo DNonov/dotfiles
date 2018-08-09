@@ -1,36 +1,58 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype plugin on            " required
 
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" ======================================================
+" General
+" ======================================================
+Plugin '907th/vim-auto-save'
+Plugin 'vimwiki/vimwiki'
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
-Plugin 'mileszs/ack.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'godlygeek/tabular'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin '907th/vim-auto-save'
-Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'cocopon/iceberg.vim'
-Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
-Plugin 'dnonov/vim-code-dark'
-Plugin 'OmniSharp/omnisharp-vim'
+" ======================================================
+" Linting
+" ======================================================
+Plugin 'w0rp/ale'
+" ======================================================
+" Snippets auto compl.
+" ======================================================
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+" ======================================================
+" JavaScript
+" ======================================================
+Plugin 'elzr/vim-json'
+Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
+Plugin 'pangloss/vim-javascript'
+" ======================================================
+" Colors
+" ======================================================
+Plugin 'cocopon/iceberg.vim'
+Plugin 'dnonov/vim-code-dark'
+Plugin 'nanotech/jellybeans.vim'
+" ======================================================
+" HTML CSS
+" ======================================================
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
+" ======================================================
+" CSharp
+" ======================================================
 Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on
