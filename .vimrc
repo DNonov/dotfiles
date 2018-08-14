@@ -1,6 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype plugin on            " required
-
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -60,7 +57,6 @@ Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
 " ======================================================
 Plugin 'ap/vim-css-color'
 call vundle#end()
-filetype plugin indent on
 
 "+-------------------------+
 "|                         |
@@ -73,21 +69,23 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 
+filetype plugin on
 colorscheme tomorrow
 let mapleader = ","
+set nocompatible
 set updatetime=100
 set number
 set relativenumber
 set t_Co=256
-set smartindent
-set tabstop=2
-set shiftwidth=2
+set shiftwidth=4
+set tabstop=4
+set expandtab
 set nofixendofline
 set nowrap
 
 " Different indentation
-autocmd FileType python setlocal ts=4 sw=4 sts=0 expandtab
-autocmd FileType csharp setlocal ts=4 sw=4 sts=0 expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
+autocmd FileType csharp setlocal tabstop=4 shiftwidth=4 sts=0
 
 " Remove all trailing white spaces after save
 autocmd BufWritePre * :%s/\s\+$//e
