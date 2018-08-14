@@ -40,6 +40,10 @@ Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'pangloss/vim-javascript'
 " ======================================================
+" Python
+" ======================================================
+Plugin 'hdima/python-syntax'
+" ======================================================
 " Colors
 " ======================================================
 Plugin 'cocopon/iceberg.vim'
@@ -56,66 +60,6 @@ Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
 Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on
-
-"+------------------+
-"|                  |
-"|  Plugins config  |
-"|                  |
-"+------------------+
-
-" Ale linters
-let b:ale_linters = ['eslint']
-
-"nerdtree config
-map <C-n> :NERDTreeToggle<CR>
-
-" UltiSnipsTriger
-let g:UltiSnipsExpandTrigger       = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-Tab>"
-let g:UltiSnipsJumpFrowardTrigger  = "<Tab>"
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:SuperTabDefaultCompletionType    = '<C-n>'
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
-
-" Emmet
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key     = '<C-e>'
-let g:user_emmet_settings       = { 'javascript.jsx' : { 'extends' : 'jsx', },}
-autocmd FileType html,css,javascript.jsx EmmetInstall
-
-" CtrlP config
-let g:ctrlp_custom_ignore = 'node_modules'
-
-" Tabularize config
-	nmap <leader>t= :Tabularize /=<CR>
-	vmap <leader>t= :Tabularize /=<CR>
-	nmap <leader>t: :Tabularize /:\zs<CR>
-	vmap <leader>t: :Tabularize /:\zs<CR>
-
-" vim-gitguter config
-let g:gitgutter_map_keys  = 0
-let g:gitgutter_max_signs = 100
-
-" fugitive config
-map <C-g>d :Gvdiff<CR>
-map <C-g>s :Gstatus<CR>
-map <C-g>c :Gcommit<CR>
-
-" vim-auto-save
-let g:auto_save        = 1
-let g:auto_save_events = ["InsertLeave"]
-
-" Airline settings
-let g:airline#extensions#ale#enabled = 1
-let g:airline_powerline_fonts        = 1
-let g:airline_theme                  = 'tomorrow'
-
-" Theme
-let g:javascript_plugin_flow  = 1
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
 
 "+-------------------------+
 "|                         |
@@ -234,3 +178,65 @@ function! GenerateDOCComment()
   call append(l-1,comment)
   call cursor(l+1,i+3)
 endfunction
+
+"+------------------+
+"|                  |
+"|  Plugins config  |
+"|                  |
+"+------------------+
+
+" Ale linters
+let b:ale_linters = ['eslint']
+let g:ALEToggle   = "<leader>l"
+
+"nerdtree config
+map <C-n> :NERDTreeToggle<CR>
+
+" UltiSnipsTriger
+let g:UltiSnipsExpandTrigger       = "<Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-Tab>"
+let g:UltiSnipsJumpFrowardTrigger  = "<Tab>"
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
+
+" Emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key     = '<C-e>'
+let g:user_emmet_settings       = { 'javascript.jsx' : { 'extends' : 'jsx', },}
+autocmd FileType html,css,javascript.jsx EmmetInstall
+
+" CtrlP config
+let g:ctrlp_custom_ignore = 'node_modules'
+
+" Tabularize config
+nmap <leader>t= :Tabularize /=<CR>
+vmap <leader>t= :Tabularize /=<CR>
+nmap <leader>t: :Tabularize /:\zs<CR>
+vmap <leader>t: :Tabularize /:\zs<CR>
+
+" vim-gitguter config
+let g:gitgutter_map_keys  = 0
+let g:gitgutter_max_signs = 100
+
+" fugitive config
+map <C-g>d :Gvdiff<CR>
+map <C-g>s :Gstatus<CR>
+map <C-g>c :Gcommit<CR>
+
+" vim-auto-save
+let g:auto_save        = 1
+let g:auto_save_events = ["InsertLeave"]
+
+" Airline settings
+let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts        = 1
+let g:airline_theme                  = 'tomorrow'
+
+" Theme
+let g:javascript_plugin_flow  = 1
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+
