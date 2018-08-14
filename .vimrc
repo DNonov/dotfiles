@@ -63,6 +63,8 @@ filetype plugin indent on
 "|                  |
 "+------------------+
 
+" Ale linters
+let b:ale_linters = ['eslint']
 
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
