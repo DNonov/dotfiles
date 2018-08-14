@@ -89,12 +89,10 @@ autocmd FileType html,css,javascript.jsx EmmetInstall
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " Tabularize config
-if exists(":Tabularize")
 	nmap <leader>t= :Tabularize /=<CR>
 	vmap <leader>t= :Tabularize /=<CR>
 	nmap <leader>t: :Tabularize /:\zs<CR>
 	vmap <leader>t: :Tabularize /:\zs<CR>
-endif
 
 " vim-gitguter config
 let g:gitgutter_map_keys  = 0
