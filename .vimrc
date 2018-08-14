@@ -187,8 +187,7 @@ endfunction
 "+------------------+
 
 " Ale linters
-let b:ale_linters = ['eslint']
-let g:ALEToggle   = "<leader>l"
+nmap <leader>l :ALEToggle <CR>
 
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
