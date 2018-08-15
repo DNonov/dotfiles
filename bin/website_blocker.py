@@ -21,7 +21,6 @@ while True:
                     pass
                 else:
                     file.write(redirect + " " + website + "\n")
-        print(content)
     else:
         with open(host_path, "r+") as file:
             content = file.readlines()
@@ -30,5 +29,4 @@ while True:
                 if not any(website in line for website in black_list):
                     file.write(line)
             file.truncate()
-        print(content)
     time.sleep(5)
