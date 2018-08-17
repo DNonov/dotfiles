@@ -97,13 +97,17 @@ nmap K 5k
 xmap J 5j
 xmap K 5k
 
+d
+a
+b
+
+
+" Sort
+vmap <leader>sr :sort<CR>
+
 " Vs code like behavior Shift+Alt+Arrow
 no <down> ddp
 no <up> ddkP
-
-" some good mappings
-:nmap H 0
-:nmap L $
 
 " Moving through splits
 nnoremap gh <C-w>h
