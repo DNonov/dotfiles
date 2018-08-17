@@ -97,11 +97,6 @@ nmap K 5k
 xmap J 5j
 xmap K 5k
 
-d
-a
-b
-
-
 " Sort
 vmap <leader>sr :sort<CR>
 
