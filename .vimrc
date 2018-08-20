@@ -88,6 +88,10 @@ set smartindent
 set nofixendofline
 set nowrap
 
+" Highlights text that goes over 80 column limit
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%81v.\+/
+
 " Remove all trailing white spaces after save
 autocmd BufWritePre * :%s/\s\+$//e
 
