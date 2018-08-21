@@ -7,9 +7,9 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dnonov"
+ZSH_THEME="bullet-train"
 
-BULLETTRAIN_PROMPT_CHAR="  "
+BULLETTRAIN_PROMPT_CHAR=":>>"
 BULLETTRAIN_GIT_BG=black
 BULLETTRAIN_GIT_FG=white
 

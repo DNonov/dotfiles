@@ -74,7 +74,7 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
 autocmd FileType csharp setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
 
 filetype plugin on
-colorscheme tomorrow
+colorscheme codedark
 let mapleader = ","
 set nocompatible
 set updatetime=100
@@ -235,7 +235,7 @@ let g:auto_save_events = ["InsertLeave"]
 " Airline settings
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts        = 1
-let g:airline_theme                  = 'tomorrow'
+"let g:airline_theme                  = 'tomorrow'
 
 " Theme
 let g:javascript_plugin_flow  = 1
