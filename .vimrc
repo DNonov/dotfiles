@@ -206,6 +206,9 @@ let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
 
+" Add path completition on javascript.jsx filetype
+let g:ycm_filepath_blacklist = {}
+
 " Emmet
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key     = '<C-e>'
