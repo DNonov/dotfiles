@@ -50,11 +50,7 @@ Plugin 'nanotech/jellybeans.vim'
 " ======================================================
 " HTML CSS
 " ======================================================
-Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
-" ======================================================
-" CSharp
-" ======================================================
 Plugin 'ap/vim-css-color'
 call vundle#end()
 
@@ -69,22 +65,28 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 
-" Different indentation
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
-autocmd FileType csharp setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
+" vim-jsx seems does not work correct, so ...
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
-filetype plugin on
+" Different indentation
+autocmd FileType python setlocal tabstop=4 shiftwidth=4  expandtab
+
+"Default indentation
+filetype plugin indent on
+set smarttab
+set smartindent
+set autoindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+" Settins
 colorscheme codedark
 let mapleader = ","
-set nocompatible
 set updatetime=100
 set number
 set relativenumber
 set t_Co=256
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set smartindent
 set nofixendofline
 set nowrap
 
