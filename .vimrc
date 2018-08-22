@@ -47,6 +47,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'dnonov/vim-code-dark'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'romainl/Apprentice'
 " ======================================================
 " HTML CSS
 " ======================================================
@@ -235,7 +236,7 @@ map <C-g>c :Gcommit<CR>
 
 " vim-auto-save
 let g:auto_save        = 1
-let g:auto_save_events = ["InsertLeave"]
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Airline settings
 let g:airline#extensions#ale#enabled = 1
