@@ -35,6 +35,7 @@ Plugin 'honza/vim-snippets'
 " ======================================================
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
+Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
 Plugin 'pangloss/vim-javascript'
 " ======================================================
 " Python
@@ -48,11 +49,6 @@ Plugin 'cocopon/iceberg.vim'
 Plugin 'dnonov/vim-code-dark'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'romainl/Apprentice'
-" ======================================================
-" HTML CSS
-" ======================================================
-Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
-Plugin 'ap/vim-css-color'
 call vundle#end()
 
 "+-------------------------+
@@ -192,7 +188,10 @@ endfunction
 "+------------------+
 
 " Ale linters
-nmap <leader>l :ALEToggle <CR>
+nmap <leader>l :ALEToggle<CR>
+
+" Ack mapping
+nmap <leader>f :Ack<CR>
 
 "nerdtree config
 map <C-n> :NERDTreeToggle<CR>
