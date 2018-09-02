@@ -223,6 +223,8 @@ nmap <leader>t= :Tabularize /=<CR>
 vmap <leader>t= :Tabularize /=<CR>
 nmap <leader>t: :Tabularize /:\zs<CR>
 vmap <leader>t: :Tabularize /:\zs<CR>
+nmap <leader>tf :Tabularize /from<CR>
+vmap <leader>tf :Tabularize /from<CR>
 
 " vim-gitguter config
 let g:gitgutter_map_keys  = 0
