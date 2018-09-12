@@ -43,6 +43,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'hdima/python-syntax'
 Plugin 'lepture/vim-jinja'
 " ======================================================
+" Clojure
+" ======================================================
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+" ======================================================
 " Colors
 " ======================================================
 Plugin 'cocopon/iceberg.vim'
