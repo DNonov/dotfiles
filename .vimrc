@@ -73,6 +73,9 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 " Different indentation
 autocmd FileType python setlocal tabstop=4 shiftwidth=4  expandtab
 
+" HighLight function calls in python
+autocmd Syntax python syntax match pythonFunction /\v([^[:cntrl:][:space:][:punct:][:digit:]]|_)([^[:cntrl:][:punct:][:space:]]|_)*\ze(\s?\()/
+
 "Default indentation
 filetype plugin indent on
 set smarttab
