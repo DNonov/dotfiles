@@ -1,0 +1,46 @@
+# [<tag>] (if applied, this commit will ...) <subject>
+# |<--  Preferably using up to 50 chars -->|
+#
+# Example:
+# [feat] Implement automated commit messages
+
+
+# (Optional) Explain why this change is being made
+# |<-- Try To Limit Each Line to Maximum Of 72 Characters -->|
+
+# (Optional) Provide links to any relevant tickets, articles or other resources
+# Example: GitHub issue #23
+
+
+# --- COMMIT END ---
+#
+# Tag can be one of the following:
+#
+#   feat     ( new feature)
+#   fix      ( bug fix)
+#   refactor ( refactoring code)
+#   style    ( formatting, missing semi colons, etc; no code change)
+#   doc      ( changes to documentation)
+#   test     ( adding or refactoring test; no production code change)
+#   version  ( version bunp/new release; no production code change)
+#   dbg      ( changes in debugging code/frameworks; no production code change)
+#   license  ( edits regarding licensing; no production change)
+#   hack     ( Temporary fix to make things move forward; please avid it)
+#   WIP      ( Work In Progress; for intermediate commits to keep patches small)
+#   defaults ( changes default options)
+#
+#
+# Note: Multiple tags can be combined, e.g. [fix][defaults] Fix issue X in const
+# ------------------
+# Remember to:
+#
+#  * Capitalize the subject line
+#  * Use the imperative mood in the subject line
+#  * Do not end the subject line with a period
+#  * Separete subject from body with blank line
+#  * Use the body to explain what and why vs. how
+#  * Can use multiple lines with "-" or "*" for bullet points in body
+# -----------------
+#
+# Original source of the template:
+# "https://gist.github.com/zakkak/7e06725ebd1336bfebebe254de3de825"
