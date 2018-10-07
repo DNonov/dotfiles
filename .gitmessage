@@ -7,6 +7,14 @@
 
 # (Optional) Explain why this change is being made
 # |<-- Try To Limit Each Line to Maximum Of 72 Characters -->|
+#
+# Defaults:
+#   Style:
+# --- 80 chars wrap ---
+# - This helps in various aspects. One is related to the width of the
+# older terminals, which are 80 characters wide. Another is purely on
+# humans' ability to read text, lines wider than 80 characters are
+# hard to read.
 
 # (Optional) Provide links to any relevant tickets, articles or other resources
 # Example: GitHub issue #23
