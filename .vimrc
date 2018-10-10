@@ -96,6 +96,9 @@ set nowrap
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.\+/
 
+" Highlights function calls in python
+autocmd Syntax python syntax match pythonFunction /\v([^[:cntrl:][:space:][:punct:][:digit:]]|_)([^[:cntrl:][:punct:][:space:]]|_)*\ze(\s?\()/
+
 " Remove all trailing white spaces after save
 autocmd BufWritePre * :%s/\s\+$//e
 
