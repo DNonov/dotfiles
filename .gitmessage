@@ -1,28 +1,31 @@
 # [<tag>] (if applied, this commit will ...) <subject>
 # |<--  Preferably using up to 50 chars -->|
 #
-# Example:
+# EXAMPLE
 # [feat] Implement automated commit messages
 
-
 # (Optional) Explain why this change is being made
-# |<-- Try To Limit Each Line to Maximum Of 72 Characters -->|
+# |<--      Try To Limit Each Line to Maximum Of 72 Characters      -->|
 #
-# Defaults:
-#   Style:
+#  DEFAULTS
+#   STYLE
+#
 # --- 80 chars wrap ---
 # - This helps in various aspects. One is related to the width of the
 # older terminals, which are 80 characters wide. Another is purely on
 # humans' ability to read text, lines wider than 80 characters are
 # hard to read.
-
+#
+# --- typo ---
+# - Right spelling is essential to the project's codebase.
+#
 # (Optional) Provide links to any relevant tickets, articles or other resources
-# Example: GitHub issue #23
-
-
+# EXAMPLE GitHub issue #23
+#
+#
 # --- COMMIT END ---
 #
-# Tag can be one of the following:
+# Tag can be one of the following
 #
 #   feat     ( new feature)
 #   fix      ( bug fix)
@@ -38,9 +41,9 @@
 #   defaults ( changes default options)
 #
 #
-# Note: Multiple tags can be combined, e.g. [fix][defaults] Fix issue X in const
+# Note Multiple tags can be combined, e.g. [fix][defaults] Fix issue X in const
 # ------------------
-# Remember to:
+# Remember to
 #
 #  * Capitalize the subject line
 #  * Use the imperative mood in the subject line
@@ -50,5 +53,5 @@
 #  * Can use multiple lines with "-" or "*" for bullet points in body
 # -----------------
 #
-# Original source of the template:
+# Original source of the template
 # "https://gist.github.com/zakkak/7e06725ebd1336bfebebe254de3de825"
