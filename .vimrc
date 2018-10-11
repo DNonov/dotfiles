@@ -90,7 +90,7 @@ set number
 set relativenumber
 set t_Co=256
 set nofixendofline
-set nowrap
+set wrap
 
 " Highlights text that goes over 80 column limit
 highlight OverLength ctermbg=red ctermfg=white
