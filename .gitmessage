@@ -19,6 +19,10 @@
 # --- typo ---
 # - Right spelling is essential to the project's codebase.
 #
+#   DEBUG
+# --- remove console.log ---
+# - This will log information on user's console, if is not removed.
+#
 # (Optional) Provide links to any relevant tickets, articles or other resources
 # EXAMPLE GitHub issue #23
 #
