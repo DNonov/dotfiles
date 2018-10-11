@@ -73,6 +73,9 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 " Different indentation
 autocmd FileType python setlocal tabstop=4 shiftwidth=4  expandtab
 
+" Set spell automatically, once commit buffer is open
+autocmd FileType gitcommit setlocal spell spelllang=en_us
+
 "Default indentation
 filetype plugin indent on
 set smarttab
