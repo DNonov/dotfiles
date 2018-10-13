@@ -108,6 +108,10 @@ nmap K 5k
 xmap J 5j
 xmap K 5k
 
+" Faster yanking a line
+nmap <leader>k yyp
+nmap <leader>K yyP
+
 " Sort
 vmap <leader>sr :sort<CR>
 
