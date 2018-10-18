@@ -10,3 +10,4 @@ cp -Rp bin /home/dim;
 # VIM
 cp -p .vimrc /home/dim/.vim/vimrc;
 cp -Rp startup /home/dim/.vim/;
+cp -Rp colors /home/dim/.vim/;
