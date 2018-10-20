@@ -8,6 +8,6 @@ cp -p .zshrc /home/dim;
 cp -Rp bin /home/dim;
 
 # VIM
-cp -p .vimrc /home/dim/.vim/vimrc;
-cp -Rp startup /home/dim/.vim/;
-cp -Rp colors /home/dim/.vim/;
+cp -p vimrc /home/dim/.vim/vimrc;
+cp -Rp ./vim/startup /home/dim/.vim/;
+cp -Rp ./vim/colors /home/dim/.vim/;
