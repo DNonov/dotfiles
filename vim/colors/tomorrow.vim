@@ -280,7 +280,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
-	call <SID>X("Spellbad",s:background, s:red, "")
+	call <SID>X("Spellbad",s:background, s:red, "underline")
 	call <SID>X("Keyword", s:blue, "", "none")
 
 	"NERDTree slashes in nice blue color

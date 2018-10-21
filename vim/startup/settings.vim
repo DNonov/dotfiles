@@ -21,7 +21,10 @@ set relativenumber
 set t_Co=256
 set nofixendofline
 set wrap
-set colorcolumn=80
+set hlsearch
+
+" Error after 80th column
+match ErrorMsg '\%>80v.\+'
 
 " Remove all trailing white spaces after save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -29,9 +32,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
-" highlight all search matches
-:set hlsearch
 
 "Store temporary files in a central spot
 let vimtmp = $HOME . '/.tmp/' . getpid()
