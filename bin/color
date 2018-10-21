@@ -1,9 +1,0 @@
-#! /bin/bash
-# Color of choice variable (Black default)
-COLOR=${1:-000000};
-
-LINES=`curl -s www.0to255.com/$COLOR | grep 'class="hex_color"' | grep -Eio '#[A-Fa-f0-9]{6}'`;
-
-for line in $LINES; do
-	echo "i{color: "$line" }"
-done
