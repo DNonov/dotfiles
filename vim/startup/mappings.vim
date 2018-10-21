@@ -31,13 +31,16 @@ cnoremap %% <C-R>=expand("%:h")."/"<CR>
 map <leader>s :set spell! spelllang=en_us<CR>
 
 " remove highlighting from current search
-:nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
+nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
 
 " shows last search in quickfix
 nmap g/ :vimgrep /<C-R>//j %<CR>\|:cw<CR>
 
 " Edit Vimrc
-:nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Source Vimrc
-:nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Use load-dot.sh script
+nnoremap <leader>lo :!sudo ./load-dot.sh<CR>
