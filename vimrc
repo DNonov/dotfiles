@@ -41,6 +41,7 @@ Plugin 'pangloss/vim-javascript'
 " Python
 " =============================================================================
 Plugin 'hdima/python-syntax'
+Plugin 'python-mode/python-mode'
 Plugin 'lepture/vim-jinja'
 " =============================================================================
 " Clojure
