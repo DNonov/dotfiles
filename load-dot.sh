@@ -2,9 +2,10 @@
 
 # DOTS
 cp gitconfig  /home/dim/.gitconfig;
+cp gitignore  /home/dim/.gitignore;
 cp gitmessage /home/dim/.gitmessage;
 cp tmux.conf  /home/dim/.tmux;
-cp zshrc      /home/dim/.zshrc/.zshrc;
+cp zshrc      /home/dim/.zshrc;
 cp mongorc.js /home/dim/.mongorc;
 
 # BIN

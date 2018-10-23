@@ -1,0 +1,92 @@
+## Node ##
+
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+/node_modules
+/jspm_packages
+/bower_components
+
+# Yarn integrity file
+.yarn-integrity
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment file(s)
+.env
+.env.*
+
+# Build generated
+dist/
+build/
+
+# Serverless generated files
+.serverless/
+
+## SublimeText ##
+
+# cache files
+*.tmlanguage.cache
+*.tmPrefefences.cache
+*.stTheme.cache
+
+# workspace files are user specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+*.sublime-project
+
+*.sublime-project
+
+## VSC ##
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/task.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## VIM ##
+
+*.sw[a-p]
+
+## JetBrain ##
+
+/.idea
+modules.xml
+*.ipr
+*.iml
+
+## System files ##
+*.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# folder config file
+Desctop.ini
+
+# recycle bin used on file shares
+$RECYCLE.BIN/
+
+# thumbnails
+._*
+
+# files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fserventsd
+.Spotlight-V100
+.TemporaryItems
+.VolumeIcon.icon
+.com.apple.timemachine.donotpresent
