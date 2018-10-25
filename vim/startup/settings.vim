@@ -26,8 +26,9 @@ set hlsearch
 " Error after 80th column
 match ErrorMsg '\%>80v.\+'
 
-" Remove all trailing white spaces after save
-autocmd BufWritePre * :%s/\s\+$//e
+" Highlight trailing whitespace
+highlight TrailingWhiteSpace ctermbg=blue guibg=blue
+match TrailingWhiteSpace /\s\+$/
 
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
