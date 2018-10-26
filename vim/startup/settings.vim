@@ -26,10 +26,6 @@ set hlsearch
 " Error after 80th column
 match ErrorMsg '\%>80v.\+'
 
-" Highlight trailing whitespace
-highlight TrailingWhiteSpace ctermbg=blue guibg=blue
-match TrailingWhiteSpace /\s\+$/
-
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
