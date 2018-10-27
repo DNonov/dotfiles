@@ -23,8 +23,9 @@ set nofixendofline
 set wrap
 set hlsearch
 
-" Error after 80th column
-match ErrorMsg '\%>80v.\+'
+" Highlight text that goes over 80 column limit
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%81v.\+/
 
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
