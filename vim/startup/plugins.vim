@@ -62,6 +62,7 @@ let g:javascript_plugin_ngdoc = 1
 
 " Python-mode
 let g:pymode_options_colorcolumn = 0
+let g:pymode_lint_cwindow        = 0
 
 " vim-better-whitespace
 nmap <leader>st :StripWhitespace<CR>
