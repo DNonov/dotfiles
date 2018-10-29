@@ -1,7 +1,8 @@
 " vim-jsx seems does not work correct, so ...
 autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
-autocmd FileType python ALEToggle
+autocmd FileType python :ALEDisable
+
 " Set spell automatically, once commit buffer is open
 autocmd FileType gitcommit setlocal spell spelllang=en_us
 
