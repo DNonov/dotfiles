@@ -33,3 +33,13 @@ function! GenerateDOCComment()
   call cursor(l+1,i+3)
 endfunction
 map <leader>d :call GenerateDOCComment()<cr>
+
+" Checks syntax group under the cursor
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunction
+
+nnoremap <leader>S :call SynStack()<CR>
