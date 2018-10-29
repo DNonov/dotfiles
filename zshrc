@@ -34,6 +34,7 @@ function workspace(){
 alias nm='nodemon'
 alias npms="npm start"
 alias npmt="npm test"
+alias py="python3"
 
 function mongoon(){
   service mongod start;
