@@ -1,17 +1,4 @@
-" Rename current file
-function! RenameFile()
-	let old_name = expand("%")
-	let new_name = input("New file name: ", expand("%"))
-	if new_name != "" && new_name != old_name
-		exec ":saveas " . new_name
-		exec ":silent !rm " old_name
-		redraw!
-	endif
-endfunction
-map <leader>n :call RenameFile() <cr>
-
-" Documentation
-" source: https://stackoverflow.com/questions/7942738/vim-plugin-to-generate-javascript-documentation-comments
+" Generates doc comment
 function! GenerateDOCComment()
   let l    = line('.')
   let i    = indent(l)
@@ -41,5 +28,11 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunction
-
 nnoremap <leader>S :call SynStack()<CR>
+
+" Preserves indentation while pasting text from the clipboard
+nnoremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
+
+" Yank text to the clipboard
+nnoremap <leader>y "*y
+nnoremap <leader>yy "*Y
