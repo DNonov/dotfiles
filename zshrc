@@ -4,7 +4,6 @@ export EDITOR="vim"
 
 ZSH_THEME="bullet-train"
 
-
 # Bullet-train related stuff
 BULLETTRAIN_PROMPT_CHAR=" "
 BULLETTRAIN_GIT_BG=black
@@ -21,20 +20,19 @@ BULLETTRAIN_PROMPT_ORDER=(
 	hg
 	cmd_exec_time
 )
-
-plugins=(
-	vi-mode
-)
-
+plugins=(vi-mode)
 source $ZSH/oh-my-zsh.sh
-function workspace(){
-  cd Documents/workspace;
-}
 
+# Aliases
 alias nm='nodemon'
 alias npms="npm start"
 alias npmt="npm test"
 alias py="python3"
+
+# Functions
+function workspace(){
+  cd Documents/workspace;
+}
 
 function mongoon(){
   service mongod start;
