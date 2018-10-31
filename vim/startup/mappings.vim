@@ -41,6 +41,3 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Source Vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
-
-" Use load-dot.sh script
-nnoremap <leader>lo :!sudo ./load-dot.sh<CR>
