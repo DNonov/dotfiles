@@ -1,6 +1,4 @@
-" Tomorrow - Full Colour and 256 Colour
-" http://chriskempson.com
-"
+" Fork of tomorrow theme
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
@@ -22,7 +20,7 @@ set background=light
 hi clear
 syntax reset
 
-let g:colors_name = "Tomorrow"
+let g:colors_name = "dnonov-light"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
