@@ -21,3 +21,7 @@ function mongoon(){
 function mongooff(){
   service mongod stop;
 }
+
+function gitignore(){
+  cp -f ~/.gitignore ./.gitignore;
+}
