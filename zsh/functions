@@ -1,0 +1,23 @@
+#! /bin/zsh
+
+function wo(){
+  cd ~
+  cd Documents/workspace;
+}
+
+function dot(){
+  cd ~
+  cd Documents/workspace/dotfiles;
+}
+
+function pymod(){
+  touch __init__.py;
+}
+
+function mongoon(){
+  service mongod start;
+}
+
+function mongooff(){
+  service mongod stop;
+}

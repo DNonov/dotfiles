@@ -1,0 +1,7 @@
+#! bin/zsh
+
+alias nm="nodemon"
+alias npms="npm start"
+alias npmt="npm test"
+alias py="python3"
+alias ex="exec zsh"
