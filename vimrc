@@ -1,4 +1,4 @@
-" Plugins
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " =============================================================================
@@ -39,13 +39,13 @@ Plugin 'pangloss/vim-javascript'
 " =============================================================================
 " Python
 " =============================================================================
-Plugin 'python-mode/python-mode'
-Plugin 'lepture/vim-jinja'
+Plugin 'python-mode/python-mode', {'for': 'python'}
+Plugin 'lepture/vim-jinja', {'for': 'python'}
 " =============================================================================
 " Clojure
 " =============================================================================
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static', {'for': 'clojure'}
+Plugin 'tpope/vim-fireplace', {'for': 'clojure'}
 " =============================================================================
 " Colors
 " =============================================================================
