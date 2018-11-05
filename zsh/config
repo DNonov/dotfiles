@@ -22,5 +22,12 @@ BULLETTRAIN_PROMPT_ORDER=(
 	hg
 	cmd_exec_time
 )
-plugins=(vi-mode)
+plugins=(
+  vi-mode,
+  gulp,
+  heroku,
+  httpie,
+  ubuntu,
+  vundle
+)
 source $ZSH/oh-my-zsh.sh
