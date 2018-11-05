@@ -1,4 +1,5 @@
 filetype off
+set rtp+=~/.fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " =============================================================================
@@ -12,7 +13,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'godlygeek/tabular'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
