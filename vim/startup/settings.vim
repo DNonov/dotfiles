@@ -33,6 +33,7 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
+set laststatus=2
 set statusline=
 set statusline+=%#PmenuSel#
 set statusline+=%{StatuslineGit()}
