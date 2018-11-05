@@ -50,12 +50,7 @@ map <C-g>c :Gcommit<CR>
 let g:auto_save        = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
-" Airline settings
-let g:airline#extensions#ale#enabled = 1
-let g:airline_powerline_fonts        = 1
-let g:airline_theme                  = 'tomorrow'
-
-" Theme
+" Javascript highlight extra
 let g:javascript_plugin_flow  = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
