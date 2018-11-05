@@ -4,7 +4,7 @@ export ZSH=/home/dim/.oh-my-zsh
 export PATH=$HOME/bin:$PATH;
 export EDITOR="vim"
 
-ZSH_THEME="bullet-train"
+ZSH_THEME="dnonov"
 
 # Bullet-train related stuff
 BULLETTRAIN_PROMPT_CHAR=" "
