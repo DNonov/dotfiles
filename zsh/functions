@@ -25,3 +25,7 @@ function mongooff(){
 function gitignore(){
   cp -f ~/.gitignore ./.gitignore;
 }
+
+function search() {
+  find . -iname "*$@*" | less;
+}
