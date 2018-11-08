@@ -27,6 +27,10 @@ set hlsearch
 set laststatus=2
 set statusline=
 set statusline+=%#PmenuSel#
+" Tilling white space is there on purpose
+set statusline+=\ \ \ \ 
+set statusline+=%{gitbranch#name()}
+set statusline+=\ \ \ \ 
 set statusline+=\ %f
 
 " Different cursor on INSERT and NORMAL mode

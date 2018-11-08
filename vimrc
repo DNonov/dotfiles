@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/vim-gitbranch'
 " =============================================================================
 " Linting
 " =============================================================================
