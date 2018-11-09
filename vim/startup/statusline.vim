@@ -28,6 +28,13 @@ function! FileSize() abort
     endif
 endfunction
 
+function! ReadOnly() abort
+  if &readonly || !&modifiable
+    return ''
+  else
+    return ''
+endfunction
+
 set laststatus=2
 set statusline=
 set statusline+=%#PmenuSel#
@@ -40,6 +47,7 @@ set statusline+=\ \
 set statusline+=%{SpellOutput()}
 set statusline+=\ %f
 set statusline+=\ -\ %{FileSize()}
+set statusline+=\ %{ReadOnly()}
 set statusline+=%m
 set statusline+=%=
 set statusline+=\ %y
