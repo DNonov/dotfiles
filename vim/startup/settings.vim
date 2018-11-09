@@ -32,6 +32,13 @@ set statusline+=\ \ \ \
 set statusline+=%{gitbranch#name()}
 set statusline+=\ \ \ \ 
 set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
