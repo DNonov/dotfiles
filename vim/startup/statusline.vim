@@ -1,4 +1,5 @@
 hi User1 ctermbg=25 ctermfg=255 guibg=blue guifg=white
+hi User2 ctermbg=0 ctermfg=255 guibg=blue guifg=white
 
 function! SpellOutput()
   if &l:spell == 1
@@ -40,19 +41,20 @@ endfunction
 set laststatus=2
 set statusline=
 " Tilling white space is there on purpose
+set statusline=%1*
+set statusline+=\ \ 
+set statusline+=%2*\ 
+set statusline+=%2*%{toupper(gitbranch#name())}
+set statusline+=%2*\ 
 set statusline+=%1*\ \ 
-set statusline+=%1*\|\|
-set statusline+=%1*%{gitbranch#name()}
-set statusline+=%1*\|\|
-set statusline+=%1*\ \ 
-set statusline+=%1*%{SpellOutput()}
-set statusline+=%1*\ %f
-set statusline+=%1*\ -\ %{FileSize()}
-set statusline+=%1*\ %{ReadOnly()}
-set statusline+=%1*%m
-set statusline+=%1*%=
-set statusline+=%1*\ %y
-set statusline+=%1*\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=%1*\[%{&fileformat}\]
-set statusline+=%1*\ %p%%
-set statusline+=%1*\ %l:%c
+set statusline+=%{SpellOutput()}
+set statusline+=\ %f
+set statusline+=\ -\ %{FileSize()}
+set statusline+=\ %{ReadOnly()}
+set statusline+=%m
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
