@@ -14,6 +14,9 @@ nnoremap vv _vg_
 " Select till the end of the line, without the extra empty line below
 nnoremap <leader>4 v$h
 
+" Select a whole page
+nnoremap aa ggVG
+
 " Sort
 vmap <leader>sr :sort<CR>
 
