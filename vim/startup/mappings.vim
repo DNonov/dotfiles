@@ -15,7 +15,7 @@ nnoremap vv _vg_
 nnoremap <leader>4 v$h
 
 " Select a whole page
-nnoremap aa ggVG
+nnoremap <leader>a ggVG
 
 " Sort
 vmap <leader>sr :sort<CR>
@@ -35,9 +35,6 @@ cnoremap %% <C-R>=expand("%:h")."/"<CR>
 
 " Toggle spell check
 map <leader>s :set spell! spelllang=en_us<CR>
-
-" remove highlighting from current search
-nnoremap <silent> <Space> :nohlsearch<Bar>echo<CR>
 
 " shows last search in quickfix
 nmap g/ :vimgrep /<C-R>//j %<CR>\|:cw<CR>
