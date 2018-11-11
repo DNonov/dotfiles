@@ -20,8 +20,9 @@ set number
 set relativenumber
 set t_Co=256
 set nofixendofline
+set lazyredraw
+set incsearch
 set wrap
-set hlsearch
 
 " Different cursor on INSERT and NORMAL mode
 let &t_SI = "\e[6 q"
