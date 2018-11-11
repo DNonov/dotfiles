@@ -1,4 +1,4 @@
-hi User1 ctermbg=25 ctermfg=255 guibg=blue guifg=white
+hi User1 ctermbg=252 ctermfg=232 guibg=blue guifg=white
 hi User2 ctermbg=0 ctermfg=255 guibg=blue guifg=white
 
 function! SpellOutput()
@@ -53,8 +53,7 @@ set statusline+=\ -\ %{FileSize()}
 set statusline+=\ %{ReadOnly()}
 set statusline+=%m
 set statusline+=%=
+set statusline+=\ %l:%c
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
