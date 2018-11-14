@@ -56,8 +56,10 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
 " Python-mode
-let g:pymode_options_colorcolumn = 0
 let g:pymode_lint_cwindow        = 0
+let g:pymode_lint_ignore         = ["W0401"]
+let g:pymode_options_colorcolumn = 0
+let g:pymode_trim_whitespaces    = 0
 
 " vim-better-whitespace
 nmap <leader>st :StripWhitespace<CR>
