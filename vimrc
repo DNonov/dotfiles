@@ -39,6 +39,10 @@ Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
 Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
 Plugin 'pangloss/vim-javascript'
 " =============================================================================
+" TypeScript
+" =============================================================================
+Plugin 'leafgarland/typescript-vim', {'for': 'typescript'}
+" =============================================================================
 " Python
 " =============================================================================
 Plugin 'python-mode/python-mode', {'for': 'python'}
