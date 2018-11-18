@@ -321,9 +321,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonBuiltinObj", s:blue, "", "")
 	call <SID>X("pythonStatement", s:blue, "", "")
 	call <SID>X("pythonConditional", s:blue, "", "")
-	call <SID>X("pythonFunction", s:yellow, "", "")
-	call <SID>X("pythonClass", s:yellow, "", "")
-	call <SID>X("pythonBuiltinFunc", s:yellow, "", "")
+	call <SID>X("pythonFunction", s:aqua, "", "")
+	call <SID>X("pythonClass", s:foreground, "", "")
+	call <SID>X("pythonBuiltinFunc", s:aqua, "", "")
 	call <SID>X("pythonRepeat", s:blue, "", "")
 
 	" JavaScript Highlighting
@@ -335,8 +335,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptMember", s:orange, "", "")
 	call <SID>X("jsSuper", s:blue, "", "")
 	call <SID>X("jsReturn", s:blue, "", "")
-	call <SID>X("jsThis", s:aqua, "", "")
+	call <SID>X("jsThis", s:blue, "", "")
+  call <SID>X("jsFuncCall", s:aqua, "", "")
+  call <SID>X("jsFuncName", s:aqua, "", "")
+  call <SID>X("jsClassFuncName", s:blue, "", "")
 	call <SID>X("jsClassDefinition", s:foreground, "", "")
+	call <SID>X("jsClassProperty", s:blue, "", "")
 	call <SID>X("jsTemplateBraces", s:aqua, "", "")
 
 	" HTML Highlighting
