@@ -1,11 +1,27 @@
 hi User1 ctermbg=252 ctermfg=232 guibg=blue guifg=white
-hi User2 ctermbg=0 ctermfg=255 guibg=blue guifg=white
 
-function! SpellOutput()
+function! SpellOutput() abort
   if &l:spell == 1
-    return "spell "
+    hi User3 ctermbg=0 ctermfg=255 guibg=blue guifg=white
+    redrawstatus
+    return " SPELL "
   else
+    hi User3 ctermbg=252 ctermfg=232 guibg=blue guifg=white
+    redrawstatus
+    return " "
+  endif
+endfunction
+
+function! GitBranchName() abort
+  let l:branch = gitbranch#name()
+  if (branch == "")
+    hi User2 ctermbg=252 ctermfg=232 guibg=blue guifg=white
+    redrawstatus
     return ""
+  else
+    hi User2 ctermbg=0 ctermfg=255 guibg=blue guifg=white
+    redrawstatus
+    return toupper(branch)
   endif
 endfunction
 
@@ -44,11 +60,11 @@ set statusline=
 set statusline=%1*
 set statusline+=\ \ 
 set statusline+=%2*\ 
-set statusline+=%2*%{toupper(gitbranch#name())}
+set statusline+=%2*%{GitBranchName()}
 set statusline+=%2*\ 
 set statusline+=%1*\ \ 
-set statusline+=%{SpellOutput()}
-set statusline+=\ %t
+set statusline+=%3*%{SpellOutput()}
+set statusline+=%1*\ %t
 set statusline+=\ -\ %{FileSize()}
 set statusline+=\ %{ReadOnly()}
 set statusline+=%m
