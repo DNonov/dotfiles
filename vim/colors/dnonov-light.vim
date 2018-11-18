@@ -8,7 +8,7 @@ let s:selection  = "d6d6d6"
 let s:line       = "efefef"
 let s:comment    = "8e908c"
 let s:red        = "731718"
-let s:orange     = "ef8338"
+let s:orange     = "b3520e"
 let s:yellow     = "906a23"
 let s:green      = "256426"
 let s:aqua       = "3e999f"
@@ -321,9 +321,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonBuiltinObj", s:blue, "", "")
 	call <SID>X("pythonStatement", s:blue, "", "")
 	call <SID>X("pythonConditional", s:blue, "", "")
-	call <SID>X("pythonFunction", s:aqua, "", "")
-	call <SID>X("pythonClass", s:foreground, "", "")
-	call <SID>X("pythonBuiltinFunc", s:aqua, "", "")
+	call <SID>X("pythonFunction", s:orange, "", "")
+	call <SID>X("pythonClass", s:orange, "", "")
+	call <SID>X("pythonBuiltinFunc", s:orange, "", "")
 	call <SID>X("pythonRepeat", s:blue, "", "")
 
 	" JavaScript Highlighting
