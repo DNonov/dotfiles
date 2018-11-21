@@ -14,7 +14,7 @@ set tabstop=2
 
 " Settings
 colorscheme dnonov-light
-let mapleader = ","
+let mapleader = "\<space>"
 set updatetime=100
 set number
 set relativenumber
