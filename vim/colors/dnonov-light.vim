@@ -336,12 +336,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsSuper", s:blue, "", "")
 	call <SID>X("jsReturn", s:blue, "", "")
 	call <SID>X("jsThis", s:blue, "", "")
-  call <SID>X("jsFuncCall", s:aqua, "", "")
-  call <SID>X("jsFuncName", s:aqua, "", "")
+  call <SID>X("jsFuncCall", s:blue, "", "")
+  call <SID>X("jsFuncName", s:blue, "", "")
   call <SID>X("jsClassFuncName", s:blue, "", "")
 	call <SID>X("jsClassDefinition", s:foreground, "", "")
 	call <SID>X("jsClassProperty", s:blue, "", "")
-	call <SID>X("jsTemplateBraces", s:aqua, "", "")
+	call <SID>X("jsTemplateBraces", s:blue, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:foreground, "", "")
