@@ -12,7 +12,7 @@
 
 if [[ "$USER" == "root" ]]; then
   CARETCOLOR="red"
-elif [[ "$SOBOLE_THEME_MODE" == "dark" ]]; then
+elif [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
   CARETCOLOR="white"
 else
   CARETCOLOR="black"
@@ -37,7 +37,7 @@ function current_caret {
   else
     CARET_SIGN="λ"
 
-    if [[ "$SOBOLE_THEME_MODE" == "dark" ]]; then
+    if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
       CARET_COLOR="white"
     else
       CARET_COLOR="black"
@@ -60,7 +60,7 @@ function current_dir {
   local _max_pwd_length="65"
   local color
 
-  if [[ "$SOBOLE_THEME_MODE" == "dark" ]]; then
+  if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
     color="white"
   else
     color="black"
@@ -119,7 +119,7 @@ ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
 # Made with: http://geoff.greer.fm/lscolors/
 # ----------------------------------------------------------------------------
 
-if [[ "$SOBOLE_THEME_MODE" == "dark" ]]; then
+if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
   export LSCOLORS="gxfxcxdxbxegedabagacad"
   export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 else
@@ -159,7 +159,7 @@ if [[ -z "$SOBOLE_DONOTTOUCH_HIGHLIGHTING" ]]; then
   ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='none'
   ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='none'
 
-  if [[ "$SOBOLE_THEME_MODE" == "dark" ]]; then
+  if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
     ZSH_HIGHLIGHT_STYLES[path]='fg=white,underline'
   fi
 fi
