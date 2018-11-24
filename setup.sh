@@ -17,6 +17,7 @@ cp -r bin ~/;
 # VIM
 cp    vimrc         ~/.vim/vimrc;
 cp -r ./vim/startup ~/.vim/;
+cp -r ./vim/after   ~/.vim/;
 cp -r ./vim/colors  ~/.vim/;
 
 # ZSH
