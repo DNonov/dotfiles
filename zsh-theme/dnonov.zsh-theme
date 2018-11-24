@@ -107,12 +107,21 @@ function current_venv {
 # vcs-related stuff. We support only `git`.
 # ----------------------------------------------------------------------------
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
+if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
+  ZSH_THEME_GIT_PROMPT_PREFIX="$FG[076]"
+  ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_DIRTY=" $FG[196]✗%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
+else
+  ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
+  ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
+fi
 
 # ----------------------------------------------------------------------------
 # `ls` colors
