@@ -17,6 +17,10 @@ let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
 
+" Don't show YCM's preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 " Add path completition on javascript.jsx filetype
 let g:ycm_filepath_blacklist = {}
 
