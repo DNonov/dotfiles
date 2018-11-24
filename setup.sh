@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# DOTS
+# GIT
 cp gitconfig  /home/dim/.gitconfig;
 cp gitignore  /home/dim/.gitignore;
 cp gitmessage /home/dim/.gitmessage;
@@ -19,8 +19,11 @@ cp    vimrc         /home/dim/.vim/vimrc;
 cp -R ./vim/startup /home/dim/.vim/;
 cp -R ./vim/colors  /home/dim/.vim/;
 
-#ZSH
+# ZSH
 cp ./zsh/aliases   /home/dim/.zsh;
 cp ./zsh/config    /home/dim/.zsh;
 cp ./zsh/functions /home/dim/.zsh;
 cp zshrc           /home/dim/.zshrc;
+
+# TERN
+cp ./tern-config /home/dim/.tern-config
