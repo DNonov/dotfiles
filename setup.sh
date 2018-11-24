@@ -1,29 +1,27 @@
 #! /bin/bash
 
 # GIT
-cp gitconfig  /home/dim/.gitconfig;
-cp gitignore  /home/dim/.gitignore;
-cp gitmessage /home/dim/.gitmessage;
+cp gitconfig  ~/.gitconfig;
+cp gitignore  ~/.gitignore;
+cp gitmessage ~/.gitmessage;
 
 # TMUX
-cp tmux.conf  /home/dim/.tmux.conf;
+cp tmux.conf ~/.tmux.conf;
 
 # MONGO
-cp mongorc.js /home/dim/.mongorc.js;
+cp mongorc.js ~/.mongorc.js;
 
 # BIN
-cp -R bin /home/dim;
+cp -r bin ~/;
 
 # VIM
-cp    vimrc         /home/dim/.vim/vimrc;
-cp -R ./vim/startup /home/dim/.vim/;
-cp -R ./vim/colors  /home/dim/.vim/;
+cp    vimrc         ~/.vim/vimrc;
+cp -r ./vim/startup ~/.vim/;
+cp -r ./vim/colors  ~/.vim/;
 
 # ZSH
-cp ./zsh/aliases   /home/dim/.zsh;
-cp ./zsh/config    /home/dim/.zsh;
-cp ./zsh/functions /home/dim/.zsh;
-cp zshrc           /home/dim/.zshrc;
+cp    zshrc ~/.zshrc;
+cp -r ./zsh ~/.zsh
 
 # TERN
-cp ./tern-config /home/dim/.tern-config
+cp ./tern-config ~/.tern-config
