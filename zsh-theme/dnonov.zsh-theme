@@ -67,9 +67,9 @@ function current_dir {
   fi
 
   if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
-    echo "%{$fg_bold[$color]%}%-2~ ... %3~%{$reset_color%} "
+    echo "%{$fg[$color]%}%-2~ ... %3~%{$reset_color%} "
   else
-    echo "%{$fg_bold[$color]%}%~%{$reset_color%} "
+    echo "%{$fg[$color]%}%~%{$reset_color%} "
   fi
 }
 
