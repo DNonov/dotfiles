@@ -26,7 +26,7 @@ rm -rf ~/.zsh;
 cp -r  ./zsh ~/.zsh;
 
 # TERN
-cp ./tern-config ~/.tern-config
+cp ./tern-config ~/.tern-config;
 
 # ESLint
-cp ./eslintrc.json ~/.eslintrc.json
+cp ./eslintrc.json ~/.eslintrc.json;
