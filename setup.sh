@@ -21,8 +21,9 @@ cp -r ./vim/after   ~/.vim/;
 cp -r ./vim/colors  ~/.vim/;
 
 # ZSH
-cp    zshrc ~/.zshrc;
-cp -r ./zsh ~/.zsh
+cp     zshrc ~/.zshrc;
+rm -rf ~/.zsh;
+cp -r  ./zsh ~/.zsh;
 
 # TERN
 cp ./tern-config ~/.tern-config
