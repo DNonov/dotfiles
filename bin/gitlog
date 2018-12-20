@@ -4,7 +4,7 @@ HASH="%C(yellow)%h%C(reset)"
 RELATIVE_TIME="%C(cyan)%ar%C(reset)"
 AUTHOR="%C(blue)%an%C(reset)"
 REFS="%C(red)%d%C(reset)"
-SUBJECT="%C(white)%s%C(reset)"
+SUBJECT="%C(black)%s%C(reset)"
 
 FORMAT="$HASH{$RELATIVE_TIME{$AUTHOR{$REFS $SUBJECT"
 
