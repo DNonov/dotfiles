@@ -3,6 +3,7 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
 " Disable ALE for all python files
 autocmd FileType python :ALEDisable
+autocmd FileType htmldjango set filetype=jinja.html
 
 " Disable ALE for all html files
 autocmd FileType html :ALEDisable
