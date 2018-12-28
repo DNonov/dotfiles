@@ -36,7 +36,7 @@ Plugin 'honza/vim-snippets'
 " =============================================================================
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx', {'for': ['jsx', 'javascript.jsx']}
-Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css']}
+Plugin 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'css', 'jinja.html']}
 Plugin 'pangloss/vim-javascript'
 " =============================================================================
 " TypeScript
