@@ -34,3 +34,6 @@ plugins=(
   vundle
 )
 source $ZSH/oh-my-zsh.sh
+
+# Prevents inactive vim on Ctrl-s
+stty -ixon
