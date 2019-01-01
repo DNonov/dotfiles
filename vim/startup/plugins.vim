@@ -68,3 +68,7 @@ let g:pymode_trim_whitespaces    = 0
 " vim-better-whitespace
 nmap <leader>st :StripWhitespace<CR>
 highlight ExtraWhitespace ctermbg=gray
+
+" splitjoin mappings
+let g:splitjoin_split_mapping = '<C-s>'
+let g:splitjoin_join_mapping  = '<C-j>'
