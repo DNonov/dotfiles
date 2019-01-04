@@ -3,6 +3,8 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
 " Disable ALE for all python files
 autocmd FileType python :ALEDisable
+
+" Set all templates to use jinja.html
 autocmd FileType htmldjango set filetype=jinja.html
 
 " Disable ALE for all html files
@@ -10,6 +12,9 @@ autocmd FileType html :ALEDisable
 
 " Set spell automatically, once commit buffer is open
 autocmd FileType gitcommit setlocal spell spelllang=en_us
+
+" Detect Docker files with custom names
+autocmd BufNewFile,BufRead Dockerfile.* set filetype=dockerfile
 
 " Highlights function calls in python
 autocmd Syntax python syntax match pythonFunction /\v([^[:cntrl:][:space:][:punct:][:digit:]]|_)([^[:cntrl:][:punct:][:space:]]|_)*\ze(\s?\()/
