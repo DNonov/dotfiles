@@ -56,7 +56,7 @@ endfunction
 
 set laststatus=2
 set statusline=
-" Tilling white space is there on purpose
+" Trilling white space is there on purpose
 set statusline=%1*
 set statusline+=\ \ 
 set statusline+=%2*\ 
