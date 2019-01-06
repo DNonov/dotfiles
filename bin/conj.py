@@ -15,7 +15,10 @@ soup = BeautifulSoup(page, "html.parser")
 pronouns = soup.find_all("i", attrs={"class": "graytxt"})[0:12]
 verbs = soup.find_all("i", attrs={"class": "verbtxt"})[0:12]
 
-for i in range(12):
-    stripped_pronoun = pronouns[i].text.strip()
-    stripped_verb = verbs[i].text.strip()
-    print(stripped_pronoun + " " + stripped_verb)
+if verb_to_check in verbs:
+    for i in range(12):
+        stripped_pronoun = pronouns[i].text.strip()
+        stripped_verb = verbs[i].text.strip()
+        print(stripped_pronoun + " " + stripped_verb)
+else:
+    print("There is no such a verb.")
