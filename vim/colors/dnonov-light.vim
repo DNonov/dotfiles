@@ -320,7 +320,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonInclude", s:blue, "", "")
 	call <SID>X("pythonBuiltinObj", s:blue, "", "")
 	call <SID>X("pythonException", s:blue, "", "")
-	call <SID>X("pythonStatement", s:blue, "", "")
+	call <SID>X("pythonStatement", s:blue, "", "bold")
 	call <SID>X("pythonConditional", s:blue, "", "")
 	call <SID>X("pythonFunction", s:orange, "", "")
 	call <SID>X("pythonFunctionCall", s:blue, "", "")
