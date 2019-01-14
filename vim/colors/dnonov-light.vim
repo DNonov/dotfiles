@@ -287,9 +287,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Fix jsx bug (different color on closing tag)
 	hi link xmlEndTag xmlTag
 
-	" Vim Highlighting
-	call <SID>X("vimCommand", s:red, "", "none")
-
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
 	call <SID>X("cStorageClass", s:purple, "", "")
@@ -319,15 +316,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:blue, "", "")
 	call <SID>X("pythonBuiltinObj", s:blue, "", "")
-	call <SID>X("pythonException", s:blue, "", "")
+	call <SID>X("pythonException", s:blue, "", "bold")
 	call <SID>X("pythonStatement", s:blue, "", "bold")
-	call <SID>X("pythonConditional", s:blue, "", "")
+	call <SID>X("pythonConditional", s:blue, "", "bold")
+	call <SID>X("pythonOperator", s:blue, "", "bold")
 	call <SID>X("pythonFunction", s:orange, "", "")
 	call <SID>X("pythonFunctionCall", s:blue, "", "")
 	call <SID>X("pythonClass", s:orange, "", "bold")
 	call <SID>X("pythonSelf", s:blue, "", "")
 	call <SID>X("pythonBuiltinFunc", s:blue, "", "")
-	call <SID>X("pythonRepeat", s:blue, "", "")
+	call <SID>X("pythonRepeat", s:blue, "", "bold")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:foreground, "", "")
@@ -345,6 +343,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsClassDefinition", s:foreground, "", "")
 	call <SID>X("jsClassProperty", s:blue, "", "")
 	call <SID>X("jsTemplateBraces", s:blue, "", "")
+
+  " Vim Script Highlighting
+  call <SID>X("vimCommand", s:blue, "", "")
+  call <SID>X("vimOper", s:foreground, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:foreground, "", "")
