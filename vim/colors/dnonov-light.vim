@@ -2,7 +2,7 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "2b2b2b"
+let s:foreground = "4d4d4d"
 let s:background = "ffffff"
 let s:selection  = "d6d6d6"
 let s:line       = "efefef"
@@ -323,7 +323,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonStatement", s:blue, "", "")
 	call <SID>X("pythonConditional", s:blue, "", "")
 	call <SID>X("pythonFunction", s:orange, "", "")
-	call <SID>X("pythonClass", s:orange, "", "")
+	call <SID>X("pythonClass", s:orange, "", "bold")
 	call <SID>X("pythonBuiltinFunc", s:orange, "", "")
 	call <SID>X("pythonRepeat", s:blue, "", "")
 
@@ -334,12 +334,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:purple, "", "")
 	call <SID>X("javaScriptNumber", s:orange, "", "")
 	call <SID>X("javaScriptMember", s:orange, "", "")
-	call <SID>X("jsSuper", s:orange, "", "")
+	call <SID>X("jsSuper", s:blue, "", "")
 	call <SID>X("jsReturn", s:blue, "", "")
 	call <SID>X("jsThis", s:blue, "", "")
-  call <SID>X("jsFuncCall", s:orange, "", "")
-  call <SID>X("jsFuncName", s:orange, "", "")
-  call <SID>X("jsClassFuncName", s:orange, "", "")
+  call <SID>X("jsFuncCall", s:blue, "", "")
+  call <SID>X("jsFuncName", s:blue, "", "")
+  call <SID>X("jsClassFuncName", s:blue, "", "")
 	call <SID>X("jsClassDefinition", s:foreground, "", "")
 	call <SID>X("jsClassProperty", s:blue, "", "")
 	call <SID>X("jsTemplateBraces", s:blue, "", "")
