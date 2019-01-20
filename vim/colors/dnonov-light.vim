@@ -13,7 +13,7 @@ let s:yellow     = "906a23"
 let s:green      = "256426"
 let s:aqua       = "3e999f"
 let s:blue       = "1565c0"
-let s:purple     = "8959a8"
+let s:purple     = "6e4787"
 let s:window     = "efefef"
 
 set background=light
@@ -288,10 +288,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	hi link xmlEndTag xmlTag
 
 	" C Highlighting
-	call <SID>X("cType", s:yellow, "", "")
-	call <SID>X("cStorageClass", s:purple, "", "")
+	call <SID>X("cType", s:blue, "", "")
+	call <SID>X("cStorageClass", s:blue, "", "")
 	call <SID>X("cConditional", s:purple, "", "")
-	call <SID>X("cRepeat", s:purple, "", "")
+	call <SID>X("cRepeat", s:blue, "", "")
+	call <SID>X("cStatement", s:blue, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
