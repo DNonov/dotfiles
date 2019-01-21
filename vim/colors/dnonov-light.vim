@@ -288,9 +288,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	hi link xmlEndTag xmlTag
 
 	" C Highlighting
-	call <SID>X("cType", s:blue, "", "")
+	call <SID>X("cType", s:foreground, "", "")
 	call <SID>X("cStorageClass", s:blue, "", "")
-	call <SID>X("cConditional", s:purple, "", "")
+	call <SID>X("cConditional", s:blue, "", "")
 	call <SID>X("cRepeat", s:blue, "", "")
 	call <SID>X("cStatement", s:blue, "", "")
 
