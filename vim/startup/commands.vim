@@ -38,4 +38,4 @@ nnoremap <leader>y "*y
 nnoremap <leader>yy "*Y
 
 " Use load-dot.sh script
-nnoremap <leader>lo :!sudo ./setup.sh<CR>
+nnoremap <leader>lo :! ./setup.sh<CR>
