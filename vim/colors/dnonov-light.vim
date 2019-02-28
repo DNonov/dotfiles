@@ -281,7 +281,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Spellbad",s:background, s:red, "underline")
 	call <SID>X("Keyword", s:blue, "", "none")
 
-	"NERDTree slashes in nice blue color
+  " YCM remove anoing error colors from the text
+  call <SID>X("YcmErrorSection", s:foreground, "", "")
+
+  " YCM remove anoing error colors from the text
+	call <SID>X("ALEError",s:background, s:red, "")
+
+  "NERDTree slashes in nice blue color
 	call <SID>X("NERDTreeDirSlash",s:blue, "", "")
 
 	" Fix jsx bug (different color on closing tag)
@@ -293,6 +299,18 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cConditional", s:blue, "", "")
 	call <SID>X("cRepeat", s:blue, "", "")
 	call <SID>X("cStatement", s:blue, "", "")
+
+	" C# Highlighting
+	call <SID>X("csUserIdentifier", s:foreground, "", "")
+	call <SID>X("csUserType", s:aqua, "", "")
+	call <SID>X("csUnspecifiedStatement", s:blue, "", "")
+	call <SID>X("csStorage", s:blue, "", "")
+	call <SID>X("csClass", s:blue, "", "")
+	call <SID>X("csClassType", s:aqua, "", "")
+	call <SID>X("csRepeat", s:blue, "", "")
+	call <SID>X("csNew", s:blue, "", "")
+	call <SID>X("csLabel", s:blue, "", "")
+	call <SID>X("csException", s:blue, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
@@ -317,16 +335,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:blue, "", "")
 	call <SID>X("pythonBuiltinObj", s:blue, "", "")
-	call <SID>X("pythonException", s:blue, "", "bold")
-	call <SID>X("pythonStatement", s:blue, "", "bold")
-	call <SID>X("pythonConditional", s:blue, "", "bold")
-	call <SID>X("pythonOperator", s:blue, "", "bold")
+	call <SID>X("pythonException", s:blue, "", "")
+	call <SID>X("pythonStatement", s:blue, "", "")
+	call <SID>X("pythonConditional", s:blue, "", "")
+	call <SID>X("pythonOperator", s:blue, "", "")
 	call <SID>X("pythonFunction", s:orange, "", "")
 	call <SID>X("pythonFunctionCall", s:blue, "", "")
-	call <SID>X("pythonClass", s:orange, "", "bold")
+	call <SID>X("pythonClass", s:orange, "", "")
 	call <SID>X("pythonSelf", s:blue, "", "")
 	call <SID>X("pythonBuiltinFunc", s:blue, "", "")
-	call <SID>X("pythonRepeat", s:blue, "", "bold")
+	call <SID>X("pythonRepeat", s:blue, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:foreground, "", "")
