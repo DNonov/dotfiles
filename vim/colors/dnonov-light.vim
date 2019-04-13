@@ -381,8 +381,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("xmlEndTag", s:foreground, "", "")
 
 	" Diff Highlighting
-	call <SID>X("diffAdded", s:green, "", "")
-	call <SID>X("diffRemoved", s:red, "", "")
+	call <SID>X("DiffAdd", s:green, s:background, "")
+	call <SID>X("DiffChange", s:orange, s:background, "")
+	call <SID>X("DiffDelete", s:red, s:background, "")
 
 	" Delete Functions
 	delf <SID>X
