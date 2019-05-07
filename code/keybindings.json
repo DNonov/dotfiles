@@ -1,0 +1,21 @@
+[
+  {
+    "key": "Ctrl+;",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "Ctrl+'",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.kill"
+  },
+  {
+    "key": "Ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "Ctrl+i",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.focusNext"
+  },
+]

@@ -30,3 +30,7 @@ cp ./tern-config ~/.tern-config;
 
 # ESLint
 cp ./eslintrc.json ~/.eslintrc.json;
+
+# VS Code
+cp ./code/settings.json ~/.config/Code/User/settings.json
+cp ./code/keybindings.json ~/.config/Code/User/keybindings.json
