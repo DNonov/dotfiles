@@ -78,7 +78,7 @@
 
   "vim.useCtrlKeys": false,
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#444", "#fff"],
+  "vim.statusBarColors.normal": ["#333", "#fff"],
   "vim.statusBarColors.insert": ["#005faf", "#fff"],
   "vim.statusBarColors.visual": ["#850075", "#fff"],
   "vim.statusBarColors.visualline": ["#850075", "#fff"],
