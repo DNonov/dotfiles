@@ -1,8 +1,9 @@
 {
   "files.autoSave": "afterDelay",
+  "breadcrumbs.enabled": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"workbench.startupEditor": "newUntitledFile",
-	"window.zoomLevel": -1,
+	"window.zoomLevel": 1,
   "editor.parameterHints.enabled": false,
   "editor.lineNumbers": "relative",
   "editor.lineHeight": 20,
@@ -73,5 +74,12 @@
     "zmdi"
   ],
 
-	"vim.useCtrlKeys": false,
+  "vim.useCtrlKeys": false,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#005faf", "#fff"],
+  "vim.statusBarColors.insert": ["#850075", "#fff"],
+  "vim.statusBarColors.visual": ["#B48EAD", "#fff"],
+  "vim.statusBarColors.visualline": ["#ab6526", "#fff"],
+  "vim.statusBarColors.visualblock": ["#ab6526", "#fff"],
+  "vim.statusBarColors.replace": "#D08770",
 }
