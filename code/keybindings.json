@@ -18,4 +18,24 @@
     "when": "terminalFocus",
     "command": "workbench.action.terminal.focusNext"
   },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.toggleMaximizedPanel"
+  }
 ]
