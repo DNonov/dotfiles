@@ -2,8 +2,8 @@
   "files.autoSave": "afterDelay",
   "breadcrumbs.enabled": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-	"workbench.startupEditor": "newUntitledFile",
-	"window.zoomLevel": 1,
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 1,
   "editor.parameterHints.enabled": false,
   "editor.lineNumbers": "relative",
   "editor.lineHeight": 20,
@@ -15,16 +15,16 @@
   "python.linting.enabledWithoutWorkspace": false,
   "python.linting.pylintArgs":
   ["--load-plugins=pylint_django"],
-	"[python]": {
-		"editor.tabSize": 4,
-		"editor.insertSpaces": true,
-		"editor.detectIndentation": false,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
   },
   // CSharp specific
-	"[csharp]": {
-		"editor.tabSize": 4,
-		"editor.insertSpaces": true,
-		"editor.detectIndentation": false,
+  "[csharp]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
   },
 
   "editor.fontWeight": "normal",
@@ -35,7 +35,7 @@
   "editor.fontSize": 16,
   "terminal.integrated.fontFamily": "Liberation Mono",
   "terminal.integrated.fontSize": 16,
-	"terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.fontWeightBold": "normal",
   "editor.renderIndentGuides": false,
   "search.location": "panel",
   "zenMode.restore": true,
@@ -53,20 +53,22 @@
   },
 
   // This allows me to use emmet at every .js file
-	"files.associations": {
+  "files.associations": {
     "*.js": "javascriptreact",
     "Dockerfile.*": "dockerfile"
-	},
+  },
 
-	// Some gitLens settings
-	"editor.renderWhitespace": "none",
-	"gitlens.advanced.messages": {
-		"suppressShowKeyBindingsNotice": true
-	},
-	"gitlens.codeLens.enabled": false,
-	"gitlens.currentLine.enabled": false,
-	"gitlens.hovers.currentLine.over": "line",
-	"cSpell.language": "en",
+  // Some gitLens settings
+  "editor.renderWhitespace": "none",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+
+  "cSpell.language": "en",
+  "cSpell.showStatus": false,
   "cSpell.userWords": [
     "ecommerce",
     "endblock",
@@ -76,10 +78,10 @@
 
   "vim.useCtrlKeys": false,
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#005faf", "#fff"],
-  "vim.statusBarColors.insert": ["#850075", "#fff"],
-  "vim.statusBarColors.visual": ["#B48EAD", "#fff"],
-  "vim.statusBarColors.visualline": ["#ab6526", "#fff"],
-  "vim.statusBarColors.visualblock": ["#ab6526", "#fff"],
+  "vim.statusBarColors.normal": ["#444", "#fff"],
+  "vim.statusBarColors.insert": ["#005faf", "#fff"],
+  "vim.statusBarColors.visual": ["#850075", "#fff"],
+  "vim.statusBarColors.visualline": ["#850075", "#fff"],
+  "vim.statusBarColors.visualblock": ["#850075", "#fff"],
   "vim.statusBarColors.replace": "#D08770",
 }
