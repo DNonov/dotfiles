@@ -1,6 +1,5 @@
 {
   "files.autoSave": "afterDelay",
-  "breadcrumbs.enabled": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 1,
