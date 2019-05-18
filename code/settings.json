@@ -44,7 +44,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "webstorm-icons",
-  "workbench.colorTheme": "Light Delight",
+  "workbench.colorTheme": "Jellybeans Theme",
 
   // Add emmet support to all .ejs files
   "emmet.includeLanguages": {
