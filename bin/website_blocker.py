@@ -3,7 +3,7 @@ from datetime import datetime as dt
 
 host_path = "/etc/hosts"
 redirect = "127.0.0.1"
-black_list = ["www.facebook.com", "www.youtube.com", "www.twiter.com"]
+black_list = ["www.facebook.com", "www.youtube.com", "www.twitter.com"]
 
 
 def hour_bound(hour):
