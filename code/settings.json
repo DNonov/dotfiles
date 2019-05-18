@@ -76,13 +76,6 @@
   ],
 
   "vim.useCtrlKeys": false,
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#333", "#fff"],
-  "vim.statusBarColors.insert": ["#005faf", "#fff"],
-  "vim.statusBarColors.visual": ["#850075", "#fff"],
-  "vim.statusBarColors.visualline": ["#850075", "#fff"],
-  "vim.statusBarColors.visualblock": ["#850075", "#fff"],
-  "vim.statusBarColors.replace": "#D08770",
 
   // This is workaround of the undo bug
   // VSCodeVim's history stack differs from the VS Code's one.
