@@ -48,12 +48,12 @@
 
   // Add emmet support to all .ejs files
   "emmet.includeLanguages": {
-  "ejs": "html"
+    "ejs": "html",
+    "javascript": "javascriptreact"
   },
 
   // This allows me to use emmet at every .js file
   "files.associations": {
-    "*.js": "javascriptreact",
     "Dockerfile.*": "dockerfile"
   },
 
