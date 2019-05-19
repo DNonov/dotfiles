@@ -26,6 +26,11 @@
     "editor.detectIndentation": false,
   },
 
+  // Git specific
+  "[git-commit, git-rebase]": {
+    "editor.rulers": [50, 72],
+  },
+
   "editor.fontWeight": "normal",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
