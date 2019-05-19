@@ -48,7 +48,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "simple-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Jellybeans Theme",
 
   // Add emmet support to all .ejs files
