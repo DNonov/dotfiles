@@ -1,0 +1,17 @@
+{
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 0.15,
+  "search.location": "panel",
+  "zenMode.restore": true,
+  "markdown.preview.breaks": true,
+  "workbench.list.keyboardNavigation": "simple",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.fontFamily": "Liberation Mono",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeightBold": "normal",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Jellybeans Theme",
+}

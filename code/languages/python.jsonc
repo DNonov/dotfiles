@@ -1,0 +1,11 @@
+{
+  "python.pythonPath": "/usr/bin/python3",
+  "python.linting.enabledWithoutWorkspace": false,
+  "python.linting.pylintArgs":
+  ["--load-plugins=pylint_django"],
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+  },
+}

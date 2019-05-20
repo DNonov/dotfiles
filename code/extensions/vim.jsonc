@@ -1,0 +1,29 @@
+{
+  "vim.useCtrlKeys": false,
+
+  // This is workaround of the undo bug
+  // VSCodeVim's history stack differs from the VS Code's one.
+  // So "undo" and "redo" actions will be mapped to VS Code's history stack.
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo",
+          "args": []
+        }
+      ]
+    }
+  ],
+}

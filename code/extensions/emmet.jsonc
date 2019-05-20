@@ -1,0 +1,7 @@
+{
+  // Add emmet support to all .ejs and javascript files
+  "emmet.includeLanguages": {
+    "ejs": "html",
+    "javascript": "javascriptreact"
+  },
+}
