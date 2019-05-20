@@ -1,5 +1,6 @@
 {
   "vim.useCtrlKeys": false,
+  "vim.leader": "<space>",
 
   // This is workaround of the undo bug
   // VSCodeVim's history stack differs from the VS Code's one.
@@ -24,6 +25,72 @@
           "args": []
         }
       ]
-    }
+    },
+    // Fast movements in normal mode
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    //Faster yank a line
+    {
+      "before": ["leader", "k"],
+      "after": ["y", "y", "p"]
+    },
+    {
+      "before": ["leader", "K"],
+      "after": ["y", "y", "P"]
+    },
+    // Select whole file
+    {
+      "before": ["leader", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+    // Moving through "splits"
+    {
+      "before": ["g", "h"],
+      "commands":["workbench.action.focusLeftGroup"],
+    },
+    {
+      "before": ["g", "l"],
+      "commands":["workbench.action.focusRightGroup"],
+    },
+    {
+      "before": ["g", "j"],
+      "commands":["workbench.action.focusBelowGroup"],
+    },
+    {
+      "before": ["g", "k"],
+      "commands":["workbench.action.focusAboveGroup"],
+    },
+    // Trim whitespace
+    {
+      "before": ["leader", "w"],
+      "commands":["editor.action.trimTrailingWhitespace"],
+    },
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Fast movements in visual mode
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    // Sort a selection in ascending order
+    {
+      "before": ["leader", "s"],
+      "commands": ["editor.action.sortLinesAscending"]
+    },
+    // Align a selection
+    {
+      "before": ["leader", "t"],
+      "commands": ["wwm.aligncode"]
+    },
+],
 }
