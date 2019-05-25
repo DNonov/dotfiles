@@ -13,7 +13,7 @@ set shiftwidth=2
 set tabstop=2
 
 " Settings
-colorscheme dnonov-light
+colorscheme apprentice
 let mapleader = "\<space>"
 set updatetime=100
 set number
