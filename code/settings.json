@@ -233,6 +233,7 @@
       "commands": ["wwm.aligncode"]
     },
 ],
+  "eslint.options": { "configFile": "/home/dim/.eslintrc.json" }
   "files.associations": {
     "Dockerfile.*": "dockerfile"
   },
