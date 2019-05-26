@@ -2,11 +2,12 @@
     "env": {
         "browser": true,
         "commonjs": true,
+        "jasmine": true,
         "es6": true,
         "node": true
     },
     "parser": "babel-eslint",
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "plugin:jasmine/recommended"],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -16,7 +17,8 @@
     },
     "plugins": [
         "react",
-        "babel"
+        "babel",
+        "jasmine"
     ],
     "rules": {
         "indent": [
@@ -29,7 +31,7 @@
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
@@ -40,6 +42,7 @@
         ],
         "react/jsx-uses-vars": [
             "error"
-        ]
+        ],
+        "jasmine/new-line-before-expect": 0
     }
 }
