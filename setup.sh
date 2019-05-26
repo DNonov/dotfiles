@@ -28,17 +28,17 @@ echo -e "${Green}--> Copy" "${Blue}.mongorc.js" "${Green}successfully!"
 
 # TERN
 rm ~/.tern-config;
-cp ./tern-config ~/.tern-config;
+cp --preserve=all ./tern-config ~/.tern-config;
 echo -e "${Green}--> Copy" "${Blue}.tern-config" "${Green}successfully!"
 
 # ESLint
 rm ~/.eslintrc.json
-cp ./eslintrc.json ~/.eslintrc.json;
+cp --preserve=all ./eslintrc.json ~/.eslintrc.json;
 echo -e "${Green}--> Copy" "${Blue}.eslintrc.json" "${Green}successfully!"
 
 # ZSH
 rm ~/.zshrc;
-cp zshrc ~/.zshrc;
+cp --preserve=all zshrc ~/.zshrc;
 echo -e "${Green}--> Copy" "${Blue}.zshrc" "${Green}successfully!"
 
 # VIM
@@ -71,7 +71,7 @@ echo -e "${Green}--> Copy" "${Blue}.vim/colors" "${Green}successfully!"
 
 # ZSH
 rm -rf ~/.zsh;
-cp -r  ./zsh ~/.zsh;
+cp --preserve=all -r ./zsh ~/.zsh;
 echo -e "${Green}--> Copy" "${Blue}.zsh" "${Green}successfully!"
 echo -e "${Orange}Copying of folders has been finished!"
 
@@ -88,5 +88,5 @@ link_code_settings
 # Move settings.json file
 rm ~/.config/Code/User/settings.json
 cp  --preserve=all ./code/settings.json ~/.config/Code/User/settings.json
-cp ./code/keybindings.json ~/.config/Code/User/keybindings.json
+cp --preserve=all ./code/keybindings.json ~/.config/Code/User/keybindings.json
 echo -e "${Orange}Copying of vs code files has been finished!"
