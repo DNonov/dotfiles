@@ -35,7 +35,7 @@ function current_caret {
     CARET_COLOR="red"
     CARET_SIGN="$"
   else
-    CARET_SIGN="λ"
+    CARET_SIGN="$"
 
     if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
       CARET_COLOR="white"
