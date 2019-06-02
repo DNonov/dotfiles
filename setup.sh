@@ -10,41 +10,41 @@ rm ~/.gitconfig;
 rm ~/.gitignore;
 rm ~/.gitmessage;
 cp --preserve=all gitconfig  ~/.gitconfig;
-echo -e "${Green}--> Copy" "${Blue}.gitconfig" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.gitconfig" "${Black}successfully!"
 cp --preserve=all gitignore  ~/.gitignore;
-echo -e "${Green}--> Copy" "${Blue}.gitignore" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.gitignore" "${Black}successfully!"
 cp --preserve=all gitmessage ~/.gitmessage;
-echo -e "${Green}--> Copy" "${Blue}.gitmessage" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.gitmessage" "${Black}successfully!"
 
 # TMUX
 rm ~/.tmux.conf;
 cp --preserve=all tmux.conf ~/.tmux.conf;
-echo -e "${Green}--> Copy" "${Blue}.tmux.conf" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.tmux.conf" "${Black}successfully!"
 
 # MONGO
 rm ~/.mongorc.js;
 cp --preserve=all mongorc.js ~/.mongorc.js;
-echo -e "${Green}--> Copy" "${Blue}.mongorc.js" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.mongorc.js" "${Black}successfully!"
 
 # TERN
 rm ~/.tern-config;
 cp --preserve=all ./tern-config ~/.tern-config;
-echo -e "${Green}--> Copy" "${Blue}.tern-config" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.tern-config" "${Black}successfully!"
 
 # ESLint
 rm ~/.eslintrc.json
 cp --preserve=all ./eslintrc.json ~/.eslintrc.json;
-echo -e "${Green}--> Copy" "${Blue}.eslintrc.json" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.eslintrc.json" "${Black}successfully!"
 
 # ZSH
 rm ~/.zshrc;
 cp --preserve=all zshrc ~/.zshrc;
-echo -e "${Green}--> Copy" "${Blue}.zshrc" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.zshrc" "${Black}successfully!"
 
 # VIM
 rm ~/.vim/vimrc
 cp --preserve=all vimrc ~/.vim/vimrc;
-echo -e "${Green}--> Copy" "${Blue}vimrc" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}vimrc" "${Black}successfully!"
 
 echo -e "${Orange}Copying of files has been finished!"
 
@@ -55,7 +55,7 @@ echo -e "${Orange}Copying of folders has been started!"
 # BIN
 rm -rf ~/bin;
 cp --preserve=all -r bin ~/bin;
-echo -e "${Green}--> Copy" "${Blue}bin" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}bin" "${Black}successfully!"
 
 
 # VIM
@@ -63,16 +63,16 @@ rm -rf ~/.vim/startup
 rm -rf ~/.vim/after
 rm -rf ~/.vim/colors
 cp --preserve=all -r ./vim/startup ~/.vim/startup;
-echo -e "${Green}--> Copy" "${Blue}.vim/startup" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.vim/startup" "${Black}successfully!"
 cp --preserve=all -r ./vim/after   ~/.vim/after;
-echo -e "${Green}--> Copy" "${Blue}.vim/after" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.vim/after" "${Black}successfully!"
 cp --preserve=all -r ./vim/colors  ~/.vim/colors;
-echo -e "${Green}--> Copy" "${Blue}.vim/colors" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.vim/colors" "${Black}successfully!"
 
 # ZSH
 rm -rf ~/.zsh;
 cp --preserve=all -r ./zsh ~/.zsh;
-echo -e "${Green}--> Copy" "${Blue}.zsh" "${Green}successfully!"
+echo -e "${Black}--> Copy" "${Blue}.zsh" "${Black}successfully!"
 echo -e "${Orange}Copying of folders has been finished!"
 
 #===============================================================================
@@ -89,4 +89,4 @@ link_code_settings
 rm ~/.config/Code/User/settings.json
 cp  --preserve=all ./code/settings.json ~/.config/Code/User/settings.json
 cp --preserve=all ./code/keybindings.json ~/.config/Code/User/keybindings.json
-echo -e "${Orange}Copying of vs code files has been finished!"
+echo -e "${Orange}Copying of vs code files has been finished!${Reset}"

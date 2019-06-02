@@ -37,14 +37,14 @@ SETTINGS=(
 
 # Link everything together
 function link_code_settings() {
-  echo -e "${LightGreen}Linking of" "${LightBlue}$SETTINGS_FILE" "${LightGreen}has been started!"
+  echo -e "${Black}Linking of" "${Blue}$SETTINGS_FILE" "${Black}has been started!"
   clear_file $SETTINGS_FILE
 
   for aSetting in "${SETTINGS[@]}"; do
     cat $aSetting | sed '1d;$d' >> $SETTINGS_FILE
-    echo -e "${Green}--> Link" "${Blue}$aSetting" "${Green}successfully!"
+    echo -e "${Black}--> Link" "${Blue}$aSetting" "${Black}successfully!"
   done
 
   add_json_brackets $SETTINGS_FILE
-  echo -e "${LightGreen}Linking of" "${LightBlue}$SETTINGS_FILE" "${LightGreen}has been finished!"
+  echo -e "${Black}Linking of" "${Blue}$SETTINGS_FILE" "${Black}has been finished!"
 }
