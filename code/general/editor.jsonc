@@ -8,7 +8,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Liberation Mono",
+  "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 16,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,

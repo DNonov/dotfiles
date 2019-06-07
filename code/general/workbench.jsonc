@@ -9,7 +9,7 @@
   "workbench.list.keyboardNavigation": "simple",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.fontFamily": "Liberation Mono",
+  "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeightBold": "normal",
   "workbench.iconTheme": "material-icon-theme",
