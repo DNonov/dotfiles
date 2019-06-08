@@ -3,7 +3,7 @@
 # Add colors util
 . ./utils/colors.sh
 
-echo -e "${Orange}Copying of files has been started!"
+echo -e "${Green}Copying of files has been started!"
 
 # GIT
 rm ~/.gitconfig;
@@ -46,11 +46,11 @@ rm ~/.vim/vimrc
 cp --preserve=all vimrc ~/.vim/vimrc;
 echo -e "${Black}--> Copy" "${Blue}vimrc" "${Black}successfully!"
 
-echo -e "${Orange}Copying of files has been finished!"
+echo -e "${Green}Copying of files has been finished!"
 
 #===============================================================================
 
-echo -e "${Orange}Copying of folders has been started!"
+echo -e "${Green}Copying of folders has been started!"
 
 # BIN
 rm -rf ~/bin;
@@ -73,7 +73,7 @@ echo -e "${Black}--> Copy" "${Blue}.vim/colors" "${Black}successfully!"
 rm -rf ~/.zsh;
 cp --preserve=all -r ./zsh ~/.zsh;
 echo -e "${Black}--> Copy" "${Blue}.zsh" "${Black}successfully!"
-echo -e "${Orange}Copying of folders has been finished!"
+echo -e "${Green}Copying of folders has been finished!"
 
 #===============================================================================
 
@@ -89,4 +89,4 @@ link_code_settings
 rm ~/.config/Code/User/settings.json
 cp  --preserve=all ./code/settings.json ~/.config/Code/User/settings.json
 cp --preserve=all ./code/keybindings.json ~/.config/Code/User/keybindings.json
-echo -e "${Orange}Copying of vs code files has been finished!${Reset}"
+echo -e "${Green}Copying of vs code files has been finished!${Reset}"
