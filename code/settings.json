@@ -61,7 +61,10 @@
     "ecommerce",
     "endblock",
     "gmail",
-    "zmdi"
+    "zmdi",
+    "defn",
+    "println",
+    "cond"
   ],
   "cSpell.enabledLanguageIds": [
     "git-commit",

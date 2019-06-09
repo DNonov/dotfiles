@@ -4,7 +4,11 @@
     "ecommerce",
     "endblock",
     "gmail",
-    "zmdi"
+    "zmdi",
+    // Clojure keywords or function
+    "defn",
+    "println",
+    "cond"
   ],
   "cSpell.enabledLanguageIds": [
     "git-commit",
