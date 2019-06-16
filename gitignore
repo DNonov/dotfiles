@@ -56,7 +56,7 @@ build/
 !.vscode/extensions.json
 
 ## VIM ##
-
+vim/bundle/*
 *.sw[a-p]
 
 ## JetBrain ##
