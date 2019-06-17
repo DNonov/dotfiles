@@ -11,7 +11,7 @@
 	st = stage
 	co = commit
 	ca = commit --amend
-	cob = checkout -b
+	chb = checkout -b
 	ch = checkout
 	pom = push origin master
 	phm = push heroku  master
