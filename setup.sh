@@ -17,3 +17,4 @@ ln -s "$(pwd)"/bin ~/;
 ln -sfT "$(pwd)"/zsh ~/.zsh;
 ln -s "$(pwd)"/code/settings.json ~/.config/Code/User/settings.json
 ln -s "$(pwd)"/code/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s "$(pwd)"/zsh-theme/dnonov.zsh-theme ~/.oh-my-zsh/themes/dnonov.zsh-theme
