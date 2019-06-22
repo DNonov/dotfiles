@@ -1,0 +1,54 @@
+#! /bin/bash
+
+# Prevent silent errors.
+set -e
+
+# Terminal colors.
+Red="\033[0;31m";
+Green="\033[0;32m";
+
+# Assign "unknown" to "input_path" if a parameter is missing.
+input_path=${1:-"unknown"};
+
+# Check if this file already exist.
+if [ -e "$input_path.js" ]; then
+  rm "$input_path.js";
+  rm "$input_path.test.js";
+  rm "$input_path.css";
+fi
+
+# Check if a parameter is missing.
+if [ "$input_path" = "unknown" ]; then
+  echo -e "${Red} Missing path to the component.";
+else
+  # Create all dirs and files required.
+  mkdir -p $(dirname "$input_path") && touch $input_path{.js,.css,.test.js};
+
+  # Get component's name.
+  component_name=$(echo $input_path | sed -e 's/^.*\///');
+
+  # React component's content.
+  rows=(
+    "import React, {Component} from 'react';"
+    "import './${component_name^}.css';"
+    ""
+    "class ${component_name^} extends Component {"
+    "  constructor(props) {"
+    "    super(props);"
+    "  }"
+    ""
+    "  render() {"
+    "    return();"
+    "  }"
+    "}"
+    ""
+    "export default ${component_name^};"
+  )
+
+  # Dump all the content to the file.
+  for row in "${rows[@]}"; do
+    echo "$row" >> "$input_path.js"
+  done
+
+  echo -e "${Green} ${component_name^} component has been created.";
+fi
