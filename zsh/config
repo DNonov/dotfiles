@@ -4,6 +4,9 @@ export ZSH=/home/dim/.oh-my-zsh
 export PATH=$HOME/bin:$PATH;
 export EDITOR="vim"
 
+# FZF config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 ZSH_THEME="dnonov"
 
 # Dnonov theme settings
