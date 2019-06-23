@@ -6,9 +6,10 @@ set -e
 # Terminal colors.
 Red="\033[0;31m";
 Green="\033[0;32m";
+White="\033[1;37m";
 
-# Assign "unknown" to "input_path" if a parameter is missing.
-input_path=${1:-"unknown"};
+package="react-component";
+input_path=$2;
 
 # Check if this file already exist.
 if [ -e "$input_path.js" ]; then
@@ -17,18 +18,68 @@ if [ -e "$input_path.js" ]; then
   rm "$input_path.css";
 fi
 
-# Check if a parameter is missing.
-if [ "$input_path" = "unknown" ]; then
-  echo -e "${Red} Missing path to the component.";
-else
+# Check number of params
+if [ $# -gt 0 ]; then
+  # Check for flags
+  while test $# -gt 0; do
+    case "$1" in
+      -h|--help)
+        echo "$package - scaffolds a react component";
+        echo " ";
+        echo "$package [options] path";
+        echo " ";
+        echo "options:";
+        echo "-h, --help                show brief help";
+        echo "-f, --functional          scaffolds a functional react component";
+        echo "-c, --class-based         scaffolds a class based react component";
+        echo ""
+        echo -e "${Green}Example:"
+        echo -e "${White}$package -f ./home/View"
+        echo -e "${Green}Result:"
+        echo -e "${White}./home"
+        echo -e "├── View.css"
+        echo -e "├── View.js"
+        echo -e "└── View.test.js"
+        exit 0;
+        ;;
+      -f|--functional)
+        shift;
+        if test $# -gt 0; then
+          component_type="functional";
+        else
+          echo -e "${Red} Missing path to the component.";
+          echo -e "${Red} Try ${White}$package --help";
+        fi
+        shift;
+        ;;
+      -c|--class-based)
+        shift;
+        if test $# -gt 0; then
+          component_type="class-based";
+        else
+          echo -e "${Red} Missing path to the component.";
+          echo -e "${Red} Try ${White}$package --help";
+        fi
+        shift;
+        ;;
+      *)
+        component_type="functional";
+        input_path=$1
+        break;
+        ;;
+    esac
+  done
+
   # Create all dirs and files required.
-  mkdir -p $(dirname "$input_path") && touch $input_path{.js,.css,.test.js};
+  dir=`dirname "$input_path"`;
+  mkdir -p $dir && touch $input_path{.js,.css,.test.js};
+  touch "$dir/index.js"
 
   # Get component's name.
-  component_name=$(echo $input_path | sed -e 's/^.*\///');
+  component_name=`echo $input_path | sed -e 's/^.*\///'`;
 
-  # React component's content.
-  rows=(
+  # React class based component's content.
+  class_based=(
     "import React, {Component} from 'react';"
     "import './${component_name^}.css';"
     ""
@@ -45,10 +96,35 @@ else
     "export default ${component_name^};"
   )
 
-  # Dump all the content to the file.
-  for row in "${rows[@]}"; do
-    echo "$row" >> "$input_path.js"
-  done
+  # React functional component's content.
+  functional=(
+    "import React from 'react';"
+    "import './${component_name^}.css';"
+    ""
+    "function ${component_name^}() {"
+    "  return();"
+    "}"
+    ""
+    "export default ${component_name^};"
+  )
+
+  index_content="export {default} from './${component_name^}';";
+
+  # Generate file's content.
+  if [ "$component_type" == "functional" ]; then
+    for row in "${functional[@]}"; do
+      echo "$row" >> "$input_path.js"
+    done
+  else
+    for rowa in "${class_based[@]}"; do
+      echo "$rowa" >> "$input_path.js"
+    done
+  fi
+
+  echo $index_content >> "$dir/index.js";
 
   echo -e "${Green} ${component_name^} component has been created.";
+else
+  echo -e "${Red} Missing path to the component.";
+  echo -e "${Red} Try ${White}$package --help";
 fi
