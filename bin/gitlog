@@ -6,11 +6,7 @@ AUTHOR="%C(blue)%an%C(reset)"
 REFS="%C(red)%d%C(reset)"
 SUBJECT="%C(black)%s%C(reset)"
 
-FORMAT="$HASH{$RELATIVE_TIME{$AUTHOR{$REFS $SUBJECT"
+FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME"
 
 git log --graph --pretty="tformat:$FORMAT" $* |
-sed -e 's/ago//' |
-sed -e 's/\,\ .*month//' |
-sed -e 's/1\ years/1 year/' |
-column -ts "{" |
 less -FXRS
