@@ -1,8 +1,8 @@
 #! /bin/bash
 
 HASH="%C(red)%h%C(reset)"
-RELATIVE_TIME="%C(green)%ar%C(reset)"
-AUTHOR="%C(blue)%an%C(reset)"
+RELATIVE_TIME="%C(green)[%ar]%C(reset)"
+AUTHOR="%C(blue)<%an>%C(reset)"
 REFS="%C(red)%d%C(reset)"
 SUBJECT="%C(black)%s%C(reset)"
 
