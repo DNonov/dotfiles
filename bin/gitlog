@@ -9,4 +9,15 @@ SUBJECT="%C(black)%s%C(reset)"
 FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME"
 
 git log --graph --pretty="tformat:$FORMAT" $* |
-less -FXRS
+  fzf --ansi --preview "echo {} |
+  grep -o '[a-f0-9]\{7\}' |
+  head -1 |
+  xargs -I % sh -c 'git show --color=always %'" \
+    --bind "enter:execute:
+        (grep -o '[a-f0-9]\{7\}' |
+          head -1 |
+          xargs -I % sh -c 'git show --color=always % |
+          less -R'
+        ) << 'FZF-EOF'
+        {}
+  FZF-EOF"
