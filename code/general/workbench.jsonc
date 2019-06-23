@@ -13,6 +13,6 @@
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeightBold": "normal",
-  "workbench.iconTheme": "webstorm-icons",
-  "workbench.colorTheme": "Light Delight",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Jellybeans Theme",
 }
