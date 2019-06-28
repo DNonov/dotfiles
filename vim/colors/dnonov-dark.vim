@@ -1,18 +1,18 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "d0d0d0"
-let s:background = "232323"
+let s:foreground = "e8e8d3"
+let s:background = "262626"
 let s:line = "efefef"
-let s:selection = "00699f"
-let s:comment = "757772"
-let s:red = "ce9167"
-let s:orange = "dcb135"
-let s:yellow = "eab700"
-let s:green = "80b057"
-let s:aqua = "fefefe"
-let s:blue = "4271ae"
-let s:purple = "8959a8"
+let s:selection = "888888"
+let s:comment = "888888"
+let s:red = "cf6a4c"
+let s:orange = "fdab58"
+let s:yellow = "fad07a"
+let s:green = "99ad6a"
+let s:aqua = "6796e6"
+let s:blue = "8197bf"
+let s:purple = "b267e6"
 let s:window = "efefef"
 
 set background=dark
@@ -267,18 +267,18 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Conditional", s:foreground, "", "")
 	call <SID>X("Repeat", s:foreground, "", "")
 	call <SID>X("Structure", s:purple, "", "")
-	call <SID>X("Function", s:aqua, "", "")
+	call <SID>X("Function", s:yellow, "", "")
 	call <SID>X("Constant", s:aqua, "", "")
-	call <SID>X("Number", s:orange, "", "")
-	call <SID>X("String", s:red, "", "")
+	call <SID>X("Number", s:red, "", "")
+	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
-	call <SID>X("PreProc", s:purple, "", "")
+	call <SID>X("PreProc", s:blue, "", "")
 	call <SID>X("Operator", s:foreground, "", "none")
-	call <SID>X("Type", s:green, "", "none")
+	call <SID>X("Type", s:yellow, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
-	call <SID>X("Include", s:green, "", "")
+	call <SID>X("Include", s:blue, "", "")
 	call <SID>X("Spellbad",s:background, s:red, "")
-	call <SID>X("Keyword", s:green, "", "none")
+	call <SID>X("Keyword", s:blue, "", "none")
 
 	"NERDTree slashes in nice blue color
 	call <SID>X("NERDTreeDirSlash",s:blue, "", "")
@@ -287,7 +287,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	hi link xmlEndTag xmlTag
 
 	" Vim Highlighting
-	call <SID>X("vimCommand", s:red, "", "none")
+	call <SID>X("vimCommand", s:blue, "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
@@ -328,24 +328,25 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:purple, "", "")
 	call <SID>X("javaScriptNumber", s:orange, "", "")
 	call <SID>X("javaScriptMember", s:orange, "", "")
-	call <SID>X("jsSuper", s:green, "", "")
-	call <SID>X("jsReturn", s:green, "", "")
-	call <SID>X("jsThis", s:aqua, "", "")
-	"call <SID>X("jsClassFuncName", s:foreground, "", "")
-	call <SID>X("jsClassDefinition", s:foreground, "", "")
-	call <SID>X("jsTemplateBraces", s:aqua, "", "")
+	call <SID>X("jsSuper", s:blue, "", "")
+	call <SID>X("jsReturn", s:blue, "", "")
+	call <SID>X("jsThis", s:blue, "", "")
+	call <SID>X("jsClassDefinition", s:orange, "", "")
+	call <SID>X("jsExportDefault", s:blue, "", "")
+	call <SID>X("jsTemplateBraces", s:green, "", "")
 
 	" HTML Highlighting
-	call <SID>X("htmlTag", s:foreground, "", "")
-	call <SID>X("htmlEndTag", s:foreground, "", "")
-	call <SID>X("htmlTagName", s:green, "", "")
+	call <SID>X("htmlTag", s:comment, "", "")
+	call <SID>X("htmlEndTag", s:comment, "", "")
+	call <SID>X("htmlTagName", s:orange, "", "")
 	call <SID>X("htmlArg", s:blue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
 	" XML Highlighting
-	call <SID>X("xmlTag", s:foreground, "", "")
-	call <SID>X("xmlTagName", s:green, "", "")
-	call <SID>X("xmlEndTag", s:foreground, "", "")
+	call <SID>X("xmlTag", s:comment, "", "")
+	call <SID>X("xmlTagName", s:orange, "", "")
+	call <SID>X("xmlAttrib", s:blue, "", "")
+	call <SID>X("xmlEndTag", s:comment, "", "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
