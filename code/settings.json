@@ -46,6 +46,9 @@
   "[git-commit, git-rebase]": {
     "editor.rulers": [50, 72],
   },
+  "[javascript]": {
+    "javascript.updateImportsOnFileMove.enabled": "always",
+  },
   // Add emmet support to all .ejs and javascript files
   "emmet.includeLanguages": {
     "ejs": "html",

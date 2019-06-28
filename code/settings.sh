@@ -12,6 +12,7 @@ WORKBENCH_SETTINGS="./general/workbench.jsonc"
 PYTHON_SETTINGS="./languages/python.jsonc"
 CSHARP_SETTINGS="./languages/csharp.jsonc"
 GIT_SETTINGS="./languages/git.jsonc"
+JAVASCRIPT_SETTINGS="./languages/javascript.jsonc"
 EMMET_SETTINGS="./extensions/emmet.jsonc"
 GITLENS_SETTINGS="./extensions/gitlens.jsonc"
 CSPELL_SETTINGS="./extensions/cspell.jsonc"
@@ -27,6 +28,7 @@ SETTINGS=(
   $PYTHON_SETTINGS
   $CSHARP_SETTINGS
   $GIT_SETTINGS
+  $JAVASCRIPT_SETTINGS
   $EMMET_SETTINGS
   $GITLENS_SETTINGS
   $CSPELL_SETTINGS
