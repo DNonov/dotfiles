@@ -1,25 +1,26 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "e8e8d3"
+let s:foreground = "e2e2c8"
 let s:background = "262626"
-let s:line = "efefef"
-let s:selection = "888888"
+let s:menu_background = "3f3f3f"
+let s:line = "1e1e1e"
+let s:selection = "3f3f3f"
 let s:comment = "888888"
 let s:red = "cf6a4c"
-let s:orange = "fdab58"
+let s:orange = "ffaf5f"
 let s:yellow = "fad07a"
 let s:green = "99ad6a"
 let s:aqua = "6796e6"
 let s:blue = "8197bf"
 let s:purple = "b267e6"
-let s:window = "efefef"
+let s:window = "151515"
 
 set background=dark
 hi clear
 syntax reset
 
-let g:colors_name = "Tomorrow"
+let g:colors_name = "dnonov-dark"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
@@ -231,7 +232,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-  highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:foreground, s:selection, "")
@@ -245,14 +245,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("MoreMsg", s:green, "", "")
 	call <SID>X("Question", s:green, "", "")
 	call <SID>X("WarningMsg", s:red, "", "")
-	call <SID>X("MatchParen", "", s:selection, "")
+	call <SID>X("MatchParen", "", s:comment, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
+	call <SID>X("LineNr", s:comment, s:background, "")
+	call <SID>X("LineNr", s:comment, s:background, "")
+	call <SID>X("CursorLineNr", s:orange, s:background, "")
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
-		call <SID>X("PMenu", s:foreground, s:selection, "none")
-		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
+		call <SID>X("PMenu", s:foreground, s:menu_background, "none")
+		call <SID>X("PMenuSel", s:foreground, s:menu_background, "reverse")
+		call <SID>X("PMenuSbar", s:foreground, s:menu_background, "reverse")
+		call <SID>X("PMenuThumb", s:foreground, s:menu_background, "reverse")
 	end
 	if version >= 703
 		call <SID>X("ColorColumn", "", s:line, "none")
@@ -273,15 +278,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:blue, "", "")
-	call <SID>X("Operator", s:foreground, "", "none")
+	call <SID>X("Operator", s:blue, "", "none")
 	call <SID>X("Type", s:yellow, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
-	call <SID>X("Spellbad",s:background, s:red, "")
+	call <SID>X("SpellBad", "", s:background, "underline")
+	call <SID>X("SpellCap", "", s:background, "underline")
+	call <SID>X("SpellRare", "", s:background, "underline")
+	call <SID>X("SpellLocal", "", s:background, "underline")
 	call <SID>X("Keyword", s:blue, "", "none")
 
-	"NERDTree slashes in nice blue color
+	"NERDTree
 	call <SID>X("NERDTreeDirSlash",s:blue, "", "")
+	call <SID>X("NERDTreeExecFile",s:yellow, "", "")
 
 	" Fix jsx bug (different color on closing tag)
 	hi link xmlEndTag xmlTag
@@ -289,49 +298,38 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Vim Highlighting
 	call <SID>X("vimCommand", s:blue, "", "none")
 
-	" C Highlighting
-	call <SID>X("cType", s:yellow, "", "")
-	call <SID>X("cStorageClass", s:purple, "", "")
-	call <SID>X("cConditional", s:purple, "", "")
-	call <SID>X("cRepeat", s:purple, "", "")
-
-	" PHP Highlighting
-	call <SID>X("phpVarSelector", s:red, "", "")
-	call <SID>X("phpKeyword", s:purple, "", "")
-	call <SID>X("phpRepeat", s:purple, "", "")
-	call <SID>X("phpConditional", s:purple, "", "")
-	call <SID>X("phpStatement", s:purple, "", "")
-	call <SID>X("phpMemberSelector", s:foreground, "", "")
-
-	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
-	call <SID>X("rubyConstant", s:yellow, "", "")
-	call <SID>X("rubyAttribute", s:blue, "", "")
-	call <SID>X("rubyInclude", s:blue, "", "")
-	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
-	call <SID>X("rubyCurlyBlock", s:orange, "", "")
-	call <SID>X("rubyStringDelimiter", s:green, "", "")
-	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
-	call <SID>X("rubyConditional", s:purple, "", "")
-	call <SID>X("rubyRepeat", s:purple, "", "")
-
 	" Python Highlighting
-	call <SID>X("pythonInclude", s:purple, "", "")
-	call <SID>X("pythonStatement", s:purple, "", "")
-	call <SID>X("pythonConditional", s:purple, "", "")
-	call <SID>X("pythonFunction", s:blue, "", "")
+	call <SID>X("pythonInclude", s:blue, "", "")
+	call <SID>X("pythonStatement", s:blue, "", "")
+	call <SID>X("pythonConditional", s:blue, "", "")
+	call <SID>X("pythonSelf", s:blue, "", "")
+	call <SID>X("pythonFunction", s:yellow, "", "")
+	call <SID>X("pythonFunctionCall", s:yellow, "", "")
+	call <SID>X("pythonStrFormat", s:green, "", "")
+	call <SID>X("pythonClass", s:orange, "", "")
+	call <SID>X("pythonBuiltinType", s:orange, "", "")
+	call <SID>X("pythonBuiltinObj", s:blue, "", "")
+	call <SID>X("pythonRepeat", s:blue, "", "")
 
 	" JavaScript Highlighting
-	call <SID>X("javaScriptBraces", s:foreground, "", "")
-	call <SID>X("javaScriptFunction", s:purple, "", "")
-	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:orange, "", "")
-	call <SID>X("javaScriptMember", s:orange, "", "")
+	call <SID>X("jsFunction", s:blue, "", "")
+	call <SID>X("jsConditional", s:blue, "", "")
+	call <SID>X("jsStatement", s:blue, "", "")
+	call <SID>X("jsLabel", s:blue, "", "")
 	call <SID>X("jsSuper", s:blue, "", "")
 	call <SID>X("jsReturn", s:blue, "", "")
 	call <SID>X("jsThis", s:blue, "", "")
+	call <SID>X("jsNull", s:blue, "", "")
+	call <SID>X("jsRepeat", s:blue, "", "")
+  call <SID>X("jsException", s:blue, "", "")
+  call <SID>X("jsExceptions", s:orange, "", "")
+	call <SID>X("jsStorageClass", s:blue, "", "")
+	call <SID>X("jsBooleanFalse", s:blue, "", "")
+	call <SID>X("jsBooleanTrue", s:blue, "", "")
+	call <SID>X("jsArrowFunction", s:blue, "", "")
 	call <SID>X("jsClassDefinition", s:orange, "", "")
+	call <SID>X("jsGlobalObjects", s:orange, "", "")
+	call <SID>X("jsGlobalNodeObjects", s:orange, "", "")
 	call <SID>X("jsExportDefault", s:blue, "", "")
 	call <SID>X("jsTemplateBraces", s:green, "", "")
 
@@ -348,9 +346,20 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("xmlAttrib", s:blue, "", "")
 	call <SID>X("xmlEndTag", s:comment, "", "")
 
-	" Diff Highlighting
+  " Vim Highlighting
+  call <SID>X("vimFunction", s:yellow, "", "")
+  call <SID>X("vimUserFunc", s:yellow, "", "")
+  call <SID>X("vimNotation", s:yellow, "", "")
+  call <SID>X("vimFuncSID", s:yellow, "", "")
+
+  " Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
+
+  " GitGutter
+	call <SID>X("GitGutterAdd", s:green, "", "")
+	call <SID>X("GitGutterChange", s:aqua, "", "")
+	call <SID>X("GitGutterDelete", s:red, "", "")
 
 	" Delete Functions
 	delf <SID>X
