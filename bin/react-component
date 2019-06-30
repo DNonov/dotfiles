@@ -12,8 +12,8 @@ package="react-component";
 input_path=$2;
 
 # Check if this file already exist.
-if [ -e "$input_path.js" ]; then
-  rm "$input_path.js";
+if [ -e "$input_path.jsx" ]; then
+  rm "$input_path.jsx";
   rm "$input_path.test.js";
   rm "$input_path.css";
 fi
@@ -38,7 +38,7 @@ if [ $# -gt 0 ]; then
         echo -e "${Green}Result:"
         echo -e "${White}./home"
         echo -e "├── View.css"
-        echo -e "├── View.js"
+        echo -e "├── View.jsx"
         echo -e "└── View.test.js"
         exit 0;
         ;;
@@ -72,7 +72,7 @@ if [ $# -gt 0 ]; then
 
   # Create all dirs and files required.
   dir=`dirname "$input_path"`;
-  mkdir -p $dir && touch $input_path{.js,.css,.test.js};
+  mkdir -p $dir && touch $input_path{.jsx,.css,.test.js};
   touch "$dir/index.js"
 
   # Get component's name.
@@ -113,11 +113,11 @@ if [ $# -gt 0 ]; then
   # Generate file's content.
   if [ "$component_type" == "functional" ]; then
     for row in "${functional[@]}"; do
-      echo "$row" >> "$input_path.js"
+      echo "$row" >> "$input_path.jsx"
     done
   else
-    for rowa in "${class_based[@]}"; do
-      echo "$rowa" >> "$input_path.js"
+    for row in "${class_based[@]}"; do
+      echo "$row" >> "$input_path.jsx"
     done
   fi
 
