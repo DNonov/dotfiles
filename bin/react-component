@@ -11,11 +11,16 @@ White="\033[1;37m";
 package="react-component";
 input_path=$2;
 
+# Get component and dir name
+dir=`dirname "$input_path"`;
+component_name=`echo $input_path | sed -e 's/^.*\///'`;
+
 # Check if this file already exist.
 if [ -e "$input_path.jsx" ]; then
   rm "$input_path.jsx";
   rm "$input_path.test.js";
   rm "$input_path.css";
+  rm "$dir/index.js";
 fi
 
 # Check number of params
@@ -71,12 +76,9 @@ if [ $# -gt 0 ]; then
   done
 
   # Create all dirs and files required.
-  dir=`dirname "$input_path"`;
   mkdir -p $dir && touch $input_path{.jsx,.css,.test.js};
   touch "$dir/index.js"
 
-  # Get component's name.
-  component_name=`echo $input_path | sed -e 's/^.*\///'`;
 
   # React class based component's content.
   class_based=(
