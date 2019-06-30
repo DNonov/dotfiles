@@ -28,7 +28,6 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeightBold": "normal",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Jellybeans Theme",
   "python.pythonPath": "/usr/bin/python3",
   "python.linting.enabledWithoutWorkspace": false,
   "python.linting.pylintArgs":
@@ -247,5 +246,6 @@
   "files.associations": {
     "Dockerfile.*": "dockerfile"
   },
+  "workbench.colorTheme": "Jellybeans Theme",
 
 }
