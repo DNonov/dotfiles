@@ -9,9 +9,6 @@ export EDITOR="vim"
 
 ZSH_THEME="dnonov"
 
-# Dnonov theme settings
-DNONOV_THEME_MODE="dark"
-
 # Bullet-train theme setting
 BULLETTRAIN_PROMPT_CHAR=" "
 BULLETTRAIN_GIT_BG=black
