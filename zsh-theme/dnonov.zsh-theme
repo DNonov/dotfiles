@@ -1,13 +1,5 @@
-#
-# Dnonov Theme - Fork of Sobole ZSH Theme
-#
-# Author: Nikita Sobolev, github.com/sobolevn
-# License: WTFPL
-# https://github.com/sobolevn/sobole-zsh-theme
-
 # ----------------------------------------------------------------------------
-# PROMPT settings
-# These settings changes how your terminal prompt looks like
+# Prompt
 # ----------------------------------------------------------------------------
 
 if [[ "$USER" == "root" ]]; then
@@ -19,18 +11,17 @@ else
 fi
 
 PROMPT='
-$(current_venv)$(user_info)$(current_dir) $(git_time_since_commit)
-$(current_caret) '
+┌─$(current_dir)$(current_venv)$(javascript_env)$(git_time_since_commit)
+└─$(current_caret) '
 
 PROMPT2='. '
 
 _return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
 
-RPROMPT='%{$(echotc UP 1)%} $(vcs_status) ${_return_status}%{$(echotc DO 1)%}'
+RPROMPT='%{$(echotc UP 1)%}${_return_status} $(current_time)%{$(echotc DO 1)%}'
 
+# Get caret
 function current_caret {
-  # This function sets caret color and sign
-  # based on theme and privileges.
   if [[ "$USER" == "root" ]]; then
     CARET_COLOR="red"
     CARET_SIGN="$"
@@ -48,8 +39,8 @@ function current_caret {
 }
 
 
+# Get PWD
 function current_dir {
-  # Settings up current directory and settings max width for it:
   local _max_pwd_length="65"
   local color
 
@@ -60,27 +51,19 @@ function current_dir {
   fi
 
   if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
-    echo "%{$fg[$color]%}%-2~ ... %3~%{$reset_color%} "
+    echo "[%{$fg[$color]%}%-2~ ... %3~%{$reset_color%}] "
   else
-    echo "%{$fg[$color]%}%~%{$reset_color%} "
+    echo "[%{$fg[$color]%}%~%{$reset_color%}] "
   fi
 }
 
-function user_info {
-  # Shows user in the PROMPT if needed.
-  if [[ ! -z "$SOBOLE_DEFAULT_USER" ]] &&
-     [[ "$USER" != "$SOBOLE_DEFAULT_USER" ]]; then
-    # This only works if `$SOBOLE_DEFAULT_USER` is not empty.
-    # So, when you log in as other user, using `su` for example,
-    # your shell tells you who you are. Otherwise it stays silent.
-    # You should set `$SOBOLE_DEFAULT_USER` somewhere in your `.zshrc`:
-    echo "@$USER "
-  fi
+# Get current time.
+function current_time() {
+  echo "[`date | cut -d ' ' -f '5'`]"
 }
 
 # ----------------------------------------------------------------------------
-# virtualenv settings
-# These settings changes how virtualenv is displayed.
+# Environments
 # ----------------------------------------------------------------------------
 
 # Disable the standard prompt:
@@ -88,46 +71,58 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 function current_venv {
   if [[ ! -z "$VIRTUAL_ENV" ]]; then
-    # Show this info only if virtualenv is activated:
+    python_version=`python --version`
     local dir=$(basename "$VIRTUAL_ENV")
-    echo "[$dir] "
+    local env="%{$fg[blue]%}ENV: %{$reset_color%}"
+    python="%{$fg[green]%}$python_version%{$reset_color%}"
+    echo "[$env$python]"
+  fi
+}
+
+
+
+function javascript_env() {
+  detect_package=`ls | grep -c 'package.json'`;
+
+  if [[ $detect_package -gt 0 ]]; then
+    local detect_react=`find . -path '*/node_modules/*' -prune -o -iname 'package.json' -print | xargs egrep -c '\"react\"' | grep -c '1'`;
+    if [[ $detect_react -gt 0 ]]; then
+      react_version=`find . -path '*/node_modules/*' -prune -o -iname 'package.json' -print |
+        xargs egrep '\"react\"' |
+        cut -d ':' -f '3' |
+        sed -E "s/\"|\^|\,//g"`;
+
+      react_symbol="%{$fg[blue]%}⚛️%{$reset_color%}";
+      _react_version="%{$fg[blue]%}$react_version%{$reset_color%}";
+
+      echo "[$react_symbol$_react_version]"
+    else
+      node_version=`node --version`;
+
+      echo "%{$fg[green]%}[⬡ $node_version]%{$reset_color%}";
+    fi
   fi
 }
 
 # ----------------------------------------------------------------------------
-# VCS specific colors and icons
-# These settings defines how icons and text is displayed for
-# vcs-related stuff. We support only `git`.
+# Git
 # ----------------------------------------------------------------------------
-
-if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
-  ZSH_THEME_GIT_PROMPT_PREFIX="$FG[076]"
-  ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_DIRTY="$FG[196]✗%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
-else
-  ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-  ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§%{$reset_color%}"
-  ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%}"
-fi
 
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[cyan]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[blue]%}"
 
-function vcs_prompt_info {
-  git_prompt_info
-}
+function git_info {
+  git_branch=`git branch | cut -d ' ' -f '2'`;
+  is_git_dirty=`git status | grep -ic 'nothing to commit'`
 
-function vcs_status {
-  git_prompt_status
+  if [[ $is_git_dirty -gt 0 ]]; then
+    echo "%{$fg[green]%}$git_branch%{$reset_color%}";
+  else
+    echo "%{$fg[red]%}$git_branch%{$reset_color%}";
+  fi
 }
 
 # Determine the time since last commit. If branch is clean,
@@ -163,62 +158,12 @@ function git_time_since_commit() {
             fi
 
             if [ "$HOURS" -gt 24 ]; then
-                echo "[$COLOR${DAYS}d ${SUB_HOURS}h ${SUB_MINUTES}m%{$reset_color%}|$(vcs_prompt_info)]"
+                echo "[$COLOR${DAYS}d ${SUB_HOURS}h ${SUB_MINUTES}m%{$reset_color%}|$(git_info)]"
             elif [ "$MINUTES" -gt 60 ]; then
-                echo "[$COLOR${HOURS}h ${SUB_MINUTES}m%{$reset_color%}|$(vcs_prompt_info)]"
+                echo "[$COLOR${HOURS}h ${SUB_MINUTES}m%{$reset_color%}|$(git_info)]"
             else
-                echo "[$COLOR${MINUTES}m%{$reset_color%}|$(vcs_prompt_info)]"
+                echo "[$COLOR${MINUTES}m%{$reset_color%}|$(git_info)]"
             fi
         fi
     fi
 }
-
-# ----------------------------------------------------------------------------
-# `ls` colors
-# Made with: http://geoff.greer.fm/lscolors/
-# ----------------------------------------------------------------------------
-
-if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
-  export LSCOLORS="gxfxcxdxbxegedabagacad"
-  export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
-else
-  export LSCOLORS="exfxcxdxBxegedabagacab"
-  export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=1;31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;41"
-fi
-
-# Turns on colors with default unix `ls` command:
-export CLICOLOR=1
-
-# ----------------------------------------------------------------------------
-# `grep` colors and options
-# ----------------------------------------------------------------------------
-
-export GREP_COLOR='1;31'
-
-# ----------------------------------------------------------------------------
-# `zstyle` colors
-# Internal zsh styles: completions, suggestions, etc
-# ----------------------------------------------------------------------------
-
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:descriptions' format "%B--- %d%b"
-
-# ----------------------------------------------------------------------------
-# zsh-syntax-highlighting tweaks
-# This setting works only unless `$SOBOLE_DONOTTOUCH_HIGHLIGHTING`
-# is set. Any value is fine. For exmaple, you can set it to `true`.
-# Anyway, it will only take effect if `zsh-syntax-highlighting`
-# is installed, otherwise it does nothing.
-# ----------------------------------------------------------------------------
-
-if [[ -z "$SOBOLE_DONOTTOUCH_HIGHLIGHTING" ]]; then
-  typeset -A ZSH_HIGHLIGHT_STYLES
-
-  # Disable strings highlighting:
-  ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='none'
-  ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='none'
-
-  if [[ "$DNONOV_THEME_MODE" == "dark" ]]; then
-    ZSH_HIGHLIGHT_STYLES[path]='fg=white,underline'
-  fi
-fi
