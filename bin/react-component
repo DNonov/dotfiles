@@ -83,6 +83,7 @@ if [ $# -gt 0 ]; then
   # React class based component's content.
   class_based=(
     "import React, {Component} from 'react';"
+    "import PropTypes from 'prop-types';"
     "import './${component_name^}.css';"
     ""
     "class ${component_name^} extends Component {"
@@ -95,17 +96,22 @@ if [ $# -gt 0 ]; then
     "  }"
     "}"
     ""
+    "${component_name^}.propTypes = {};"
+    ""
     "export default ${component_name^};"
   )
 
   # React functional component's content.
   functional=(
     "import React from 'react';"
+    "import PropTypes from 'prop-types';"
     "import './${component_name^}.css';"
     ""
     "function ${component_name^}() {"
     "  return();"
     "}"
+    ""
+    "${component_name^}.propTypes = {};"
     ""
     "export default ${component_name^};"
   )
