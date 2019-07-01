@@ -15,6 +15,13 @@ ln -s "$(pwd)"/zshrc ~/.zshrc;
 ln -sfT "$(pwd)"/vim ~/.vim;
 ln -s "$(pwd)"/bin ~/;
 ln -sfT "$(pwd)"/zsh ~/.zsh;
-ln -s "$(pwd)"/code/settings.json ~/.config/Code/User/settings.json
-ln -s "$(pwd)"/code/keybindings.json ~/.config/Code/User/keybindings.json
-ln -s "$(pwd)"/zsh-theme/dnonov.zsh-theme ~/.oh-my-zsh/themes/dnonov.zsh-theme
+
+# Make sure settings.json is present, since is ignored by git.
+if [ -e ./code/settings.json ]; then
+  ln -s "$(pwd)"/code/settings.json ~/.config/Code/User/settings.json;
+else
+  touch ./code/settings.json && ln -s "$(pwd)"/code/settings.json ~/.config/Code/User/settings.json;
+fi
+
+ln -s "$(pwd)"/code/keybindings.json ~/.config/Code/User/keybindings.json;
+ln -s "$(pwd)"/zsh-theme/dnonov.zsh-theme ~/.oh-my-zsh/themes/dnonov.zsh-theme;

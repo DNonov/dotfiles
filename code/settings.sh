@@ -49,4 +49,9 @@ function link_code_settings() {
   echo -e "${Black}Linking of" "${Blue}$SETTINGS_FILE" "${Black}has been finished!"
 }
 
-link_code_settings
+if [ -e $SETTINGS_FILE ]; then
+  link_code_settings;
+else
+  touch ${SETTINGS_FILE} && link_code_settings;
+fi
+
