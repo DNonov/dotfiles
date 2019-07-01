@@ -1,24 +1,24 @@
 #! /bin/bash
 
 # Add util functions
-. ../utils/clear_file.sh
-. ../utils/add_json_brackets.sh
-. ../utils/colors.sh
+. ./utils/clear_file.sh
+. ./utils/add_json_brackets.sh
+. ./utils/colors.sh
 
 # Get all files
-SETTINGS_FILE="./settings.json"
-EDITOR_SETTINGS="./general/editor.jsonc"
-WORKBENCH_SETTINGS="./general/workbench.jsonc"
-PYTHON_SETTINGS="./languages/python.jsonc"
-CSHARP_SETTINGS="./languages/csharp.jsonc"
-GIT_SETTINGS="./languages/git.jsonc"
-JAVASCRIPT_SETTINGS="./languages/javascript.jsonc"
-EMMET_SETTINGS="./extensions/emmet.jsonc"
-GITLENS_SETTINGS="./extensions/gitlens.jsonc"
-CSPELL_SETTINGS="./extensions/cspell.jsonc"
-VIM_SETTINGS="./extensions/vim.jsonc"
-ESLINT_SETTINGS="./extensions/eslint.jsonc"
-ASSOCIATIONS="./general/associations.jsonc"
+SETTINGS_FILE="./code/settings.json"
+EDITOR_SETTINGS="./code/general/editor.jsonc"
+WORKBENCH_SETTINGS="./code/general/workbench.jsonc"
+PYTHON_SETTINGS="./code/languages/python.jsonc"
+CSHARP_SETTINGS="./code/languages/csharp.jsonc"
+GIT_SETTINGS="./code/languages/git.jsonc"
+JAVASCRIPT_SETTINGS="./code/languages/javascript.jsonc"
+EMMET_SETTINGS="./code/extensions/emmet.jsonc"
+GITLENS_SETTINGS="./code/extensions/gitlens.jsonc"
+CSPELL_SETTINGS="./code/extensions/cspell.jsonc"
+VIM_SETTINGS="./code/extensions/vim.jsonc"
+ESLINT_SETTINGS="./code/extensions/eslint.jsonc"
+ASSOCIATIONS="./code/general/associations.jsonc"
 
 
 # Create an array
@@ -39,12 +39,10 @@ SETTINGS=(
 
 # Link everything together
 function link_code_settings() {
-  echo -e "${Black}Linking of" "${Blue}$SETTINGS_FILE" "${Black}has been started!"
   clear_file $SETTINGS_FILE
 
   for aSetting in "${SETTINGS[@]}"; do
     cat $aSetting | sed '1d;$d' >> $SETTINGS_FILE
-    echo -e "${Black}--> Link" "${Blue}$aSetting" "${Black}successfully!"
   done
 
   add_json_brackets $SETTINGS_FILE
