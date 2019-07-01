@@ -65,25 +65,11 @@ function javascript_env() {
   detect_package=`ls | grep -c 'package.json'`;
 
   if [[ $detect_package -gt 0 ]]; then
-    local detect_react=`find . -path '*/node_modules/*' -prune -o -iname 'package.json' -print | xargs egrep -c '\"react\"' | grep -c '1'`;
-    if [[ $detect_react -gt 0 ]]; then
-      react_version=`find . -path '*/node_modules/*' -prune -o -iname 'package.json' -print |
-        xargs egrep '\"react\"' |
-        cut -d ':' -f '3' |
-        sed -E "s/\"|\,//g"|
-        sed "s/\^/v/";`
+    node_version=`node --version`;
+    node_symbol="%{$fg[green]%}⬡️%{$reset_color%}";
+    _node_version="%{$fg[green]%}$node_version%{$reset_color%}";
 
-      react_symbol="%{$fg[blue]%}⚛️%{$reset_color%}";
-      _react_version="%{$fg[blue]%}$react_version%{$reset_color%}";
-
-      echo "[$react_symbol$_react_version]"
-    else
-      node_version=`node --version`;
-      node_symbol="%{$fg[green]%}⬡️%{$reset_color%}";
-      _node_version="%{$fg[green]%}$node_version%{$reset_color%}";
-
-      echo "[$node_symbol $_node_version]";
-    fi
+    echo "[$node_symbol $_node_version]";
   fi
 }
 
