@@ -1,14 +1,20 @@
 #! /bin/bash
 
-HASH="%C(red)%h%C(reset)"
-RELATIVE_TIME="%C(green)[%ar]%C(reset)"
-AUTHOR="%C(blue)<%an>%C(reset)"
-REFS="%C(red)%d%C(reset)"
-SUBJECT="%C(white)%s%C(reset)"
+HASH="%C(red)%h%C(reset)";
+RELATIVE_TIME="%C(green)[%ar]%C(reset)";
+AUTHOR="%C(blue)<%an>%C(reset)";
+REFS="%C(red)%d%C(reset)";
+SUBJECT="%C(white)%s%C(reset)";
 
-FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME"
+FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME";
 
-git log --graph --pretty="tformat:$FORMAT" $* |
+if [[ $1 == "-r" ]]; then
+  form="--reverse";
+else
+  form="--graph";
+fi
+
+git log $form --pretty="tformat:$FORMAT" $* |
   fzf --ansi --preview "echo {} |
   grep -o '[a-f0-9]\{7\}' |
   head -1 |
