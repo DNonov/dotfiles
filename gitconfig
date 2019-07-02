@@ -5,6 +5,7 @@
 	name = Dimitar Nonov
 [alias]
 	a = add
+  r = reset
 	d = diff
   dc = diff --cached
 	aa = add -A
