@@ -26,6 +26,7 @@ alias pymod="touch __init__.py"
 alias mongoon="service mongod start"
 alias mongooff="service mongod stop"
 alias gitignore="cp -f ~/.gitignore ./.gitignore"
+alias http="http --style lovelace"
 alias ex="exec zsh"
 
 # Javascript
