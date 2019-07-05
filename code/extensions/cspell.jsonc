@@ -8,7 +8,22 @@
     // Clojure keywords or function
     "defn",
     "println",
-    "cond"
+    "cond",
+    // Bash keywords and unix tools
+    "mkdir",
+    "esac",
+    "elif",
+    "xargs",
+    "tformat",
+    "lsof",
+    "cupsd",
+    "dnsmasq",
+    "eval",
+    "tmux",
+    // Git related
+    "repo",
+    "untracked"
+
   ],
   "cSpell.enabledLanguageIds": [
     "git-commit",
