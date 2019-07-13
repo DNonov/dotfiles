@@ -13,6 +13,7 @@
   "terminal.integrated.fontFamily": "Liberation Mono",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeightBold": "normal",
+  "workbench.activityBar.visible": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Jellybeans Theme",
 }
