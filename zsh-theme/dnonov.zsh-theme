@@ -39,7 +39,7 @@ function current_dir {
 
 # Get current time.
 function current_time() {
-  echo "[`date | cut -d ' ' -f '5'`]"
+  echo "[`date | cut -d ' ' -f '4'`]"
 }
 
 # ----------------------------------------------------------------------------
