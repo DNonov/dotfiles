@@ -61,6 +61,7 @@ Plugin 'tpope/vim-fireplace', {'for': 'clojure'}
 " =============================================================================
 Plugin 'cocopon/iceberg.vim'
 Plugin 'dnonov/vim-code-dark'
+Plugin 'dnonov/light-delight'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'romainl/Apprentice'
 call vundle#end()
