@@ -4,6 +4,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "breadcrumbs.enabled": false,
   "window.zoomLevel": 0,
+  "window.menuBarVisibility": "hidden",
   "search.location": "panel",
   "zenMode.restore": true,
   "markdown.preview.breaks": true,
