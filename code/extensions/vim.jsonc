@@ -71,6 +71,21 @@
       "before": ["leader", "w"],
       "commands":["editor.action.trimTrailingWhitespace"],
     },
+    // Open git panel
+    {
+      "before": ["leader", "g"],
+      "commands":["workbench.view.scm"],
+    },
+    // Open debug panel
+    {
+      "before": ["leader", "d"],
+      "commands":["workbench.view.debug"],
+    },
+    // Open extensions panel
+    {
+      "before": ["leader", "x"],
+      "commands":["workbench.view.extensions"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Fast movements in visual mode
@@ -92,5 +107,5 @@
       "before": ["leader", "t"],
       "commands": ["wwm.aligncode"]
     },
-],
+  ],
 }
