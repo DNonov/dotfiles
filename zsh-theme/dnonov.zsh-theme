@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------------
 
 PROMPT='
-$(current_dir)$(current_venv)$(javascript_env)$(git_info)
+$(current_dir)$(git_info)
 $(current_caret) '
 
 PROMPT2='. '
@@ -40,35 +40,6 @@ function current_dir {
 # Get current time.
 function current_time() {
   echo "[`date | rev | cut -d ' ' -f '3' | rev`]"
-}
-
-# ----------------------------------------------------------------------------
-# Environments
-# ----------------------------------------------------------------------------
-
-# Disable the standard prompt:
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-function current_venv {
-  if [[ ! -z "$VIRTUAL_ENV" ]]; then
-    python_version=`python --version`
-    local dir=$(basename "$VIRTUAL_ENV")
-    local env="%{$fg[blue]%}ENV: %{$reset_color%}"
-    python="%{$fg[green]%}$python_version%{$reset_color%}"
-    echo "$env$python "
-  fi
-}
-
-function javascript_env() {
-  detect_package=`ls | grep -c 'package.json'`;
-
-  if [[ $detect_package -gt 0 ]]; then
-    node_version=`node --version`;
-    node_symbol="%{$fg[green]%}⬡️%{$reset_color%}";
-    _node_version="%{$fg[green]%}$node_version%{$reset_color%}";
-
-    echo "$node_symbol $_node_version ";
-  fi
 }
 
 # ----------------------------------------------------------------------------
