@@ -10,7 +10,7 @@ alias t="tmux"
 
 # Python
 alias py="python3.7"
-alias pip="pip3.7"
+alias pip="python3.7 -m pip"
 alias dr="python3.7 manage.py runserver"
 alias dt="python3.7 manage.py test"
 alias dmm="python3.7 manage.py makemigrations"
