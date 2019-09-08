@@ -6,7 +6,7 @@
 [alias]
 	a = add
   ap = add -p
-  r = reset
+  rh = reset HEAD --
 	d = diff
   dc = diff --cached
 	aa = add -A
