@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------------
 
 PROMPT='
-$(current_venv)$(current_dir)$(git_info)
+$(virtualenv_prompt_info)$(current_dir)$(git_info)
 $(current_caret) '
 
 PROMPT2='. '
@@ -48,15 +48,6 @@ function current_time() {
 
 # Disable the standard prompt:
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-function current_venv {
-  if [[ ! -z "$VIRTUAL_ENV" ]]; then
-    python_version=`python --version`
-    local dir=$(basename "$VIRTUAL_ENV")
-    python="%{$fg[green]%}$python_version%{$reset_color%}"
-    echo "$python "
-  fi
-}
 
 # ----------------------------------------------------------------------------
 # Git

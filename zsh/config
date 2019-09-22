@@ -31,7 +31,8 @@ plugins=(
   heroku,
   httpie,
   ubuntu,
-  vundle
+  vundle,
+  virtualenv
 )
 source $ZSH/oh-my-zsh.sh
 
