@@ -1,22 +1,23 @@
 [core]
   editor = code -r --wait
 [user]
-	email = d.nonov@gmail.com
-	name = Dimitar Nonov
+  email = d.nonov@gmail.com
+  name = Dimitar Nonov
 [alias]
-	a = add
+  a = add
   ap = add -p
   rh = reset HEAD --
-	d = diff
+  rp = reset -p
+  d = diff
   dc = diff --cached
-	aa = add -A
-	s = status
-	st = stage
-	co = commit
-	ca = commit --amend
-	chb = checkout -b
-	ch = checkout
-	pom = push origin master
-	phm = push heroku  master
+  aa = add -A
+  s = status
+  st = stage
+  co = commit
+  ca = commit --amend
+  chb = checkout -b
+  ch = checkout
+  pom = push origin master
+  phm = push heroku  master
 [commit]
   template = ~/.gitmessage
