@@ -3,7 +3,7 @@
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "workbench.startupEditor": "newUntitledFile",
   "breadcrumbs.enabled": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "window.menuBarVisibility": "hidden",
   "search.location": "panel",
   "zenMode.restore": true,
