@@ -16,10 +16,10 @@ if len(sys.argv) > 1:
     pronouns = soup.find_all("i", attrs={"class": "graytxt"})[0:12]
     verbs = soup.find_all("i", attrs={"class": "verbtxt"})[0:12]
 
-    if len(verbs) != 0:
-        for i in range(12):
-            stripped_pronoun = pronouns[i].text.strip()
-            stripped_verb = verbs[i].text.strip()
+    if verbs:
+        for pronoun, verb in zip(pronouns, verbs):
+            stripped_pronoun = pronoun.text.strip()
+            stripped_verb = verb.text.strip()
             print(stripped_pronoun + " " + stripped_verb)
     else:
         print("There is no such a verb.")
