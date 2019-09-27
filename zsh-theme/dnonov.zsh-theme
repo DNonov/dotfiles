@@ -10,7 +10,7 @@ PROMPT2='. '
 
 _return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
 
-RPROMPT='%{$(echotc UP 1)%}${_return_status} $(current_time)%{$(echotc DO 1)%}'
+RPROMPT='%{$(echotc UP 1)%}${_return_status} $(current_time)$(battery_info)%{$(echotc DO 1)%}'
 
 # Get caret
 function current_caret {
@@ -64,5 +64,21 @@ function git_info {
     else
       echo "%{$fg[red]%}$git_branch%{$reset_color%}";
     fi
+  fi
+}
+
+# ----------------------------------------------------------------------------
+# Battery
+# ----------------------------------------------------------------------------
+function battery_info() {
+  battery_path="/sys/class/power_supply/BAT0";
+  capacity=`cat $battery_path/capacity`;
+
+  if [[ $capacity -ge 50 ]]; then
+    echo "[%{$fg[green]%}$capacity%%%{$reset_color%}]";
+  elif [[ $capacity -le 20 ]] then
+    echo "[%{$fg[red]%}$capacity%%%{$reset_color%}]";
+  else
+    echo "[%{$fg[yellow]%}$capacity%%%{$reset_color%}]";
   fi
 }
