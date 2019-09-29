@@ -56,8 +56,8 @@ function git_info {
   inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
   if [ "$inside_git_repo" ]; then
-    git_branch=`git branch | cut -d ' ' -f '2'`;
-    is_git_dirty=`git status | grep -ic 'nothing to commit'`
+    git_branch=`_git_branch | cut -d '*' -f '2' | cut -d ' ' -f '2'`;
+    is_git_dirty=`git status | grep -ic 'nothing to commit'`;
 
     if [[ $is_git_dirty -gt 0 ]]; then
       echo "%{$fg[green]%}$git_branch%{$reset_color%}";
@@ -67,3 +67,7 @@ function git_info {
   fi
 }
 
+# This will smash all branches on one line
+function _git_branch() {
+  echo `git branch`
+}
