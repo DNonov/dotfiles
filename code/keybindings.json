@@ -23,6 +23,11 @@
     "command": "workbench.action.terminal.focus"
   },
   {
+    "key": "ctrl+j",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
     "key": "ctrl+n",
     "command": "explorer.newFile"
   },
@@ -69,7 +74,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+right",
+    "key": "ctrl+h",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
