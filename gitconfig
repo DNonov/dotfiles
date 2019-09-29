@@ -16,6 +16,7 @@
   co = commit
   ca = commit --amend
   chb = checkout -b
+  br = branch
   ch = checkout
   pom = push origin master
   phm = push heroku  master
