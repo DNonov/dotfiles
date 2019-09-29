@@ -17,6 +17,8 @@
   ca = commit --amend
   chb = checkout -b
   br = branch
+  bl = blame
+  bll = blame -L
   me = merge
   mea = merge --abort
   ch = checkout
