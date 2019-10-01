@@ -1,0 +1,34 @@
+/* Font workbench interface */
+.linux {
+  font-family: "Roboto";
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* Statusbar */
+.monaco-workbench
+.part.statusbar {
+  font-size: 16px;
+}
+
+/* Explorer */
+.monaco-workbench .part>.content {
+  font-size: 16px;
+}
+
+/* File tabs */
+.monaco-workbench
+.part.editor>.content
+.editor-group-container>.title
+.tabs-container>.tab .tab-label a,
+.monaco-workbench .part.editor>.content
+.editor-group-container>.title .title-label a {
+  font-size: 16px;
+}
+
+
+/* Icons */
+.monaco-icon-label:before {
+  background-size: 17px;
+}

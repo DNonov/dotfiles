@@ -18,6 +18,7 @@ GITLENS_SETTINGS="./code/extensions/gitlens.jsonc"
 CSPELL_SETTINGS="./code/extensions/cspell.jsonc"
 VIM_SETTINGS="./code/extensions/vim.jsonc"
 ESLINT_SETTINGS="./code/extensions/eslint.jsonc"
+CUSTOM_CSS_SETTINGS="./code/extensions/customCss.jsonc"
 ASSOCIATIONS="./code/general/associations.jsonc"
 
 
@@ -34,6 +35,7 @@ SETTINGS=(
   $CSPELL_SETTINGS
   $VIM_SETTINGS
   $ESLINT_SETTINGS
+  $CUSTOM_CSS_SETTINGS
   $ASSOCIATIONS
 )
 
