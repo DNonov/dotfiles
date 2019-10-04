@@ -8,7 +8,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "AnonymousPro Nerd Font",
+  "editor.fontFamily": "Roboto Mono Light",
   "editor.fontSize": 18,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
