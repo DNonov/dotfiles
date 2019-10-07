@@ -25,10 +25,6 @@ set lazyredraw
 set incsearch
 set wrap
 
-" Different cursor on INSERT and NORMAL mode
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
 "Store temporary files in a central spot
 let vimtmp = $HOME . '/.tmp/' . getpid()
 silent! call mkdir(vimtmp, "p", 0700)
