@@ -2,6 +2,8 @@
 let g:airline_theme = 'jellybeans'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
 
 " Ale linters
 nmap <leader>l :ALEToggle<CR>
