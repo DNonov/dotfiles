@@ -13,4 +13,5 @@
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "none",
+  "editor.occurrencesHighlight": false,
 }
