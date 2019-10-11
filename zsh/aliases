@@ -28,6 +28,7 @@ alias mongooff="service mongod stop"
 alias gitignore="cp -f ~/.gitignore ./.gitignore"
 alias http="http --style lovelace"
 alias ex="exec zsh"
+alias cl="clear"
 
 # Javascript
 alias nm="nodemon"
