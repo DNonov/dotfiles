@@ -8,7 +8,7 @@ function! SpellOutput() abort
   else
     hi User3 ctermbg=252 ctermfg=232 guibg=blue guifg=white
     redrawstatus
-    return " "
+    return ""
   endif
 endfunction
 
@@ -62,7 +62,7 @@ set statusline+=\ \
 set statusline+=%2*\ 
 set statusline+=%2*%{GitBranchName()}
 set statusline+=%2*\ 
-set statusline+=%1*\ \ 
+"set statusline+=%1*\ \ 
 set statusline+=%3*%{SpellOutput()}
 set statusline+=%1*\ %t
 set statusline+=\ -\ %{FileSize()}
