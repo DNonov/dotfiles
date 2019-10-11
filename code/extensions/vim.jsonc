@@ -86,6 +86,11 @@
       "before": ["leader", "x"],
       "commands":["workbench.view.extensions"],
     },
+    // Open explorer panel
+    {
+      "before": ["leader", "e"],
+      "commands":["workbench.view.explorer"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Fast movements in visual mode

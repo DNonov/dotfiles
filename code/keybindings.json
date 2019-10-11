@@ -20,15 +20,32 @@
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.action.terminal.focus"
+    "command": "workbench.action.navigateDown"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+[",
+    "when": "editorFocus",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+shift+j",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.resizePaneDown"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+shift+k",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.resizePaneUp"
   },
@@ -39,10 +56,6 @@
   {
     "key": "ctrl+f",
     "command": "explorer.newFolder"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.files.action.focusFilesExplorer"
   },
   {
     "key": "ctrl+o",
@@ -89,7 +102,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+left",
+    "key": "ctrl+l",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
   },
