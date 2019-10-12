@@ -18,8 +18,8 @@
   "workbench.activityBar.visible": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
-  "workbench.iconTheme": "simple-icons",
-  "workbench.colorTheme": "Jellybeans Theme",
+  "workbench.iconTheme": "webstorm-icons",
+  "workbench.colorTheme": "Light Delight",
   // Scrollbar indicators hidden
   "workbench.colorCustomizations": {
     "editorOverviewRuler.addedForeground": "#0000",
