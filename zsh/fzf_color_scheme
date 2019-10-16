@@ -1,0 +1,15 @@
+#! /bin/zsh
+
+# Light Delight theme
+# export FZF_DEFAULT_OPTS='
+#   --color=bg+:#eeeeee,bg:#ffffff,spinner:#000080,hl:#000080
+#   --color=fg:#000000,header:#000080,info:#000080,pointer:#000080
+#   --color=marker:#000080,fg+:#000080,prompt:#000080,hl+:#000080
+# '
+
+# Jellybeans theme
+export FZF_DEFAULT_OPTS='
+  --color=bg+:#000000,bg:#151515,spinner:#8197bf,hl:#8197bf
+  --color=fg:#e8e8d3,header:#8197bf,info:#8197bf,pointer:#8197bf
+  --color=marker:#8197bf,fg+:#8197bf,prompt:#8197bf,hl+:#8197bf
+'
