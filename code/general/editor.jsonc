@@ -8,7 +8,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Anonymous Pro",
+  "editor.fontFamily": "Roboto Mono Light",
   "editor.fontSize": 20,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,

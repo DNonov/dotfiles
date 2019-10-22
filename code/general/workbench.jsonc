@@ -11,7 +11,7 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.fontFamily": "Anonymous Pro",
+  "terminal.integrated.fontFamily": "Roboto Mono Light",
   "terminal.integrated.fontSize": 20,
   "terminal.integrated.fontWeightBold": "normal",
   "terminal.integrated.renderType": "canvas",
