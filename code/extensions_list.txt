@@ -1,0 +1,15 @@
+DavidAnson.vscode-markdownlint
+DimitarNonov.lightDelight
+ecmel.vscode-html-css
+justusadam.language-haskell
+LaurentTreguier.vscode-simple-icons
+ms-python.python
+ms-vscode.cpptools
+msjsdiag.debugger-for-chrome
+PKief.material-icon-theme
+pmsandhu.webstorm-icons
+streetsidesoftware.code-spell-checker
+UCL.haskelly
+vscodevim.vim
+wholroyd.jinja
+ybaumes.highlight-trailing-white-spaces

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./code/settings.sh
+./code/settings.sh;
+./code/get_extensions.sh;
