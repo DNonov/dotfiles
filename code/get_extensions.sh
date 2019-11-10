@@ -1,17 +1,19 @@
-#! /bin/bash
+#!/bin/bash
 
 set -e;
 
+extension_list_path='./code/extensions_list.txt';
+
 # Get all installed extensions
 function get_extensions() {
-  touch ./code/extensions_list.txt;
-  code --list-extensions >> extensions_list.txt;
+  touch $extension_list_path;
+  code --list-extensions >> $extension_list_path;
 }
 
 # Does extensions_list.txt exist
-if [ -e "./code/extensions_list.txt" ]; then
-  rm ./code/extensions_list.txt;
-  get_extensions
+if [ -e $extension_list_path ]; then
+  rm $extension_list_path;
+  get_extensions;
 else
-  get_extensions
+  get_extensions;
 fi
