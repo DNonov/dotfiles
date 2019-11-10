@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 function add_json_brackets() {
   sed -i '1i {' $1;

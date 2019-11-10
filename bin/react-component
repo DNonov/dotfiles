@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Prevent silent errors.
 set -e

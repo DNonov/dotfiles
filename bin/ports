@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 watch -n 1 "sudo lsof -i -n -P |
 grep -v dnsmasq |

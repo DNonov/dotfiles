@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Add util functions
 . ./utils/clear_file.sh
@@ -56,4 +56,3 @@ if [ -e $SETTINGS_FILE ]; then
 else
   touch ${SETTINGS_FILE} && link_code_settings;
 fi
-
