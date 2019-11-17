@@ -1,5 +1,7 @@
 {
   "files.associations": {
-    "Dockerfile.*": "dockerfile"
+    "Dockerfile.*": "dockerfile",
+    "vimrc": "viml"
+
   },
 }
