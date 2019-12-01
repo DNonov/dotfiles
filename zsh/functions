@@ -15,3 +15,11 @@ function search_easy() {
 
   find . -path "${exclude_regex}" -prune -o -iname "${file_name_regex}" -print;
 }
+
+function mirror() {
+  if [ $# -eq 0 ]; then
+    echo "Need a URL"
+  else
+    wget -mkEpnp $1
+  fi
+}
