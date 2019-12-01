@@ -9,7 +9,7 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Anonymous Pro",
-  "editor.fontSize": 18,
+  "editor.fontSize": 20,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "none",
