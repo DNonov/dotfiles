@@ -91,6 +91,11 @@
       "before": ["leader", "e"],
       "commands":["workbench.view.explorer"],
     },
+    // Open peek problem
+    {
+      "before": ["leader", "p"],
+      "commands":["editor.action.marker.nextInFiles"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Fast movements in visual mode
