@@ -18,7 +18,7 @@
   "workbench.activityBar.visible": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
-  "workbench.iconTheme": "simple-icons",
+  "workbench.iconTheme": "minimalistic-icons",
   "workbench.colorTheme": "Light Delight",
   // Scrollbar indicators hidden
   "workbench.colorCustomizations": {
