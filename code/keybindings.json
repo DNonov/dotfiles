@@ -62,6 +62,11 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
+    "key": "ctrl+;",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+[",
     "command": "editor.action.referenceSearch.trigger",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
