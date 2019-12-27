@@ -19,6 +19,11 @@ alias dsh="python3.7 manage.py shell"
 alias dsa="python3.7 manage.py startapp"
 alias dcs="python3.7 manage.py collectstatic"
 
+# Python venv
+alias cv="python3.7 -m venv"
+alias av="source venv/bin/activate"
+alias dv="deactivate"
+
 # Util
 alias wo="cd ~ && cd Documents/workspace"
 alias dot="cd ~ && cd Documents/workspace/dotfiles"
