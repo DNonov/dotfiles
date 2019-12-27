@@ -39,3 +39,7 @@ alias cl="clear"
 alias nm="nodemon"
 alias npms="npm start"
 alias npmt="npm test"
+
+# Documentation mirrors
+alias docpython="google-chrome --app=file:///home/dim/Documents/workspace/Docs/docs.python.org/3/index.html"
+alias docdjango="google-chrome --app=file:///home/dim/Documents/workspace/Docs/docs.djangoproject.com/en/3.0/index.html"
