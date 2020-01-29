@@ -16,6 +16,7 @@ HTML_SETTINGS="./code/languages/html.jsonc"
 JAVASCRIPT_SETTINGS="./code/languages/javascript.jsonc"
 EMMET_SETTINGS="./code/extensions/emmet.jsonc"
 GITLENS_SETTINGS="./code/extensions/gitlens.jsonc"
+POLACODE_SETTINGS="./code/extensions/polacode.jsonc"
 CSPELL_SETTINGS="./code/extensions/cspell.jsonc"
 VIM_SETTINGS="./code/extensions/vim.jsonc"
 ESLINT_SETTINGS="./code/extensions/eslint.jsonc"
@@ -34,6 +35,7 @@ SETTINGS=(
   $JAVASCRIPT_SETTINGS
   $EMMET_SETTINGS
   $GITLENS_SETTINGS
+  $POLACODE_SETTINGS
   $CSPELL_SETTINGS
   $VIM_SETTINGS
   $ESLINT_SETTINGS
