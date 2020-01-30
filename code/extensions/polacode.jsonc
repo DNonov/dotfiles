@@ -1,4 +1,5 @@
 {
   "polacode.shadow": "none",
-  "polacode.backgroundColor": "#fff",
+  "polacode.transparentBackground": true,
+  "polacode.target": "snippet",
 }
