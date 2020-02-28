@@ -19,7 +19,7 @@
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
   "workbench.iconTheme": "simple-icons",
-  "workbench.colorTheme": "Light Delight",
+  "workbench.colorTheme": "Jellybeans Theme",
   // Scrollbar indicators hidden
   "workbench.colorCustomizations": {
     "editorOverviewRuler.addedForeground": "#0000",
