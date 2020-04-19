@@ -3,7 +3,7 @@
 # Programs
 alias c="code -r ."
 alias f="fzf"
-alias v="vim ."
+alias v="nvim ."
 alias g="git"
 alias gr="grep"
 alias t="tmux"
