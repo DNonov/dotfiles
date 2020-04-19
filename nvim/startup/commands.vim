@@ -39,3 +39,6 @@ nnoremap <leader>yy "*Y
 
 " Use load-dot.sh script
 nnoremap <leader>lo :!sudo ./setup.sh<CR>
+
+" Open current file in chrome
+nnoremap <leader>o :!google-chrome --new-window %<CR>
