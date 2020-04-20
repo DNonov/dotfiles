@@ -34,11 +34,11 @@ nnoremap <leader>S :call SynStack()<CR>
 nnoremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
 
 " Yank text to the clipboard
-nnoremap <leader>y "*y
-nnoremap <leader>yy "*Y
+nnoremap <leader>y "*Y
+vnoremap <leader>y "*Y
 
-" Use load-dot.sh script
-nnoremap <leader>lo :!sudo ./setup.sh<CR>
+" Paste text to the clipboard
+nnoremap <leader>p "*p
 
-" Open current file in chrome
+"Open current file in chrome
 nnoremap <leader>o :!google-chrome --new-window %<CR>
