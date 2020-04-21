@@ -8,7 +8,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Victor Mono",
+  "editor.fontFamily": "Iosevka Fixed SS07 Light",
   "editor.fontSize": 18,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
