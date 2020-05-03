@@ -3,6 +3,11 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = ' '
 let g:NERDTreeDirArrowCollapsible = ' '
 
+" Git gutter
+let g:gitgutter_sign_added = '++'
+let g:gitgutter_sign_modified = '~~'
+let g:gitgutter_sign_removed = '--'
+
 " Tabularize config
 nmap <leader>t= :Tabularize /=<CR>
 vmap <leader>t= :Tabularize /=<CR>
