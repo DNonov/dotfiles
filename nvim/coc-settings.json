@@ -1,3 +1,10 @@
 {
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "eslint.filetypes":
+  [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }
