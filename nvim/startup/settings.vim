@@ -16,6 +16,7 @@ set tabstop=2
 colorscheme dnd
 let mapleader = "\<space>"
 set updatetime=100
+set signcolumn=yes
 set number
 set relativenumber
 set colorcolumn=80
