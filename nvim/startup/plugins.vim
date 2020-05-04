@@ -8,6 +8,18 @@ let g:gitgutter_sign_added = '++'
 let g:gitgutter_sign_modified = '~~'
 let g:gitgutter_sign_removed = '--'
 
+" Magit
+nnoremap <leader>m :Magit<CR>
+
+" Git fugitive
+nnoremap <leader>g :Gstatus<CR>
+
+" Splitting and joining code blocks
+nmap <silent> sj <Plug>SplitjoinSplit
+nmap <silent> sk <Plug>SplitjoinJoin
+" Execute normal vim join if in visual mode
+xnoremap sk J
+
 " Tabularize config
 nmap <leader>t= :Tabularize /=<CR>
 vmap <leader>t= :Tabularize /=<CR>
@@ -69,7 +81,6 @@ let g:fzf_layout = {'down': '100%'}
 autocmd! FileType fzf
 autocmd FileType fzf set laststatus=0 noshowmode noruler
 \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
 
 " Polyglot
 let g:python_highlight_all = 1
