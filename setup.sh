@@ -12,7 +12,6 @@ ln -s "$(pwd)"/mongorc.js ~/.mongorc.js;
 ln -s "$(pwd)"/tern-config ~/.tern-config;
 ln -s "$(pwd)"/eslintrc.json ~/.eslintrc.json;
 ln -s "$(pwd)"/zshrc ~/.zshrc;
-ln -sfT "$(pwd)"/vim ~/.vim;
 ln -sfT "$(pwd)"/nvim ~/.config/nvim
 ln -s "$(pwd)"/bin ~/;
 ln -sfT "$(pwd)"/zsh ~/.zsh;
