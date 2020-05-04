@@ -54,7 +54,6 @@ function link_code_settings() {
   done
 
   add_json_brackets $SETTINGS_FILE
-  echo -e "${Black}Linking of" "${Blue}$SETTINGS_FILE" "${Black}has been finished!"
 }
 
 if [ -e $SETTINGS_FILE ]; then
