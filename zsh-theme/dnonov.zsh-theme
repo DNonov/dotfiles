@@ -10,8 +10,6 @@ PROMPT2='. '
 
 _return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
 
-RPROMPT='%{$(echotc UP 1)%}${_return_status} $(current_time)%{$(echotc DO 1)%}'
-
 # Get caret
 function current_caret {
   if [[ "$USER" == "root" ]]; then
@@ -35,11 +33,6 @@ function current_dir {
   else
     echo "%{$fg[$color]%}%~%{$reset_color%} "
   fi
-}
-
-# Get current time.
-function current_time() {
-  echo "[`date | rev | cut -d ' ' -f '3' | rev`]"
 }
 
 # ----------------------------------------------------------------------------
