@@ -3,10 +3,6 @@ set rtp+=~/.fzf
 
 call plug#begin()
 " Style
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " General
