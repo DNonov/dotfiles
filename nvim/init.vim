@@ -4,7 +4,6 @@ set rtp+=~/.fzf
 call plug#begin()
 " Style
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 " General
 Plug 'vimwiki/vimwiki'
 Plug '907th/vim-auto-save'
@@ -17,6 +16,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'jreybert/vimagit'
+Plug 'tpope/vim-fugitive'
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
