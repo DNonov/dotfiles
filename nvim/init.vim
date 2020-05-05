@@ -30,8 +30,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'romainl/Apprentice'
 call plug#end()
 
-runtime startup/autocomands.vim
 runtime startup/settings.vim
+runtime startup/autocomands.vim
 runtime startup/mappings.vim
 runtime startup/commands.vim
 runtime startup/plugins.vim
