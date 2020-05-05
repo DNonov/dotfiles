@@ -38,6 +38,14 @@ function! FileSize() abort
     endif
 endfunction
 
+function! Fugitive() abort
+  if (exists('g:loaded_fugitive'))
+    return FugitiveStatusline()
+  else
+    return ''
+  endif
+endfunction
+
 function! ReadOnly() abort
   if &readonly || !&modifiable
     return '  '
@@ -46,7 +54,7 @@ function! ReadOnly() abort
 endfunction
 
 set statusline=%1*
-set statusline+=%1*%{FugitiveStatusline()}
+set statusline+=%1*%{Fugitive()}
 set statusline+=%1*\ %{SpellOutput()}
 set statusline+=%1*\ \ %f
 set statusline+=\ -\ %{FileSize()}
