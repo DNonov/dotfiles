@@ -45,11 +45,10 @@ function! ReadOnly() abort
     return ''
 endfunction
 
-set laststatus=2
-set statusline=
 set statusline=%1*
-set statusline+=%3*%{SpellOutput()}
-set statusline+=%1*\ \ \ %f
+set statusline+=%1*%{FugitiveStatusline()}
+set statusline+=%1*\ %{SpellOutput()}
+set statusline+=%1*\ \ %f
 set statusline+=\ -\ %{FileSize()}
 set statusline+=\ %{ReadOnly()}
 set statusline+=%m
