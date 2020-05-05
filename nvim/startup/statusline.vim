@@ -38,6 +38,14 @@ function! FileSize() abort
     endif
 endfunction
 
+function! Coc() abort
+  if (exists('g:coc_status'))
+    return g:coc_status
+  else
+    return ''
+  endif
+endfunction
+
 function! Fugitive() abort
   if (exists('g:loaded_fugitive'))
     return FugitiveStatusline()
@@ -60,6 +68,7 @@ set statusline+=%1*\ \ %f
 set statusline+=\ -\ %{FileSize()}
 set statusline+=\ %{ReadOnly()}
 set statusline+=%m
+set statusline+=%1*\ %{Coc()}
 set statusline+=%=
 set statusline+=\ %l:%c
 set statusline+=\ %y
