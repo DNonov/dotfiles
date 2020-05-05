@@ -1,4 +1,8 @@
-hi User1 ctermbg=236 ctermfg=251 guibg=blue guifg=white
+if &background == 'dark'
+  hi User1 ctermbg=236 ctermfg=251 guibg=blue guifg=white
+else
+  hi User1 ctermbg=250 ctermfg=233 guibg=blue guifg=white
+endif
 
 function! SpellOutput() abort
   if &l:spell == 1
