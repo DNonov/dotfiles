@@ -6,7 +6,6 @@
 echo -e "${Black}Create symbolic links!"
 ln -s "$(pwd)"/gitconfig  ~/.gitconfig;
 ln -s "$(pwd)"/gitignore  ~/.gitignore;
-ln -s "$(pwd)"/gitmessage ~/.gitmessage;
 ln -s "$(pwd)"/tmux.conf ~/.tmux.conf;
 ln -s "$(pwd)"/mongorc.js ~/.mongorc.js;
 ln -s "$(pwd)"/tern-config ~/.tern-config;

@@ -25,5 +25,3 @@
   ch = checkout
   pom = push origin master
   phm = push heroku  master
-[commit]
-  template = ~/.gitmessage
