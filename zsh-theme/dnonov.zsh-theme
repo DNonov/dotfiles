@@ -7,7 +7,7 @@ $(virtualenv_prompt_info)$(current_dir)$(git_info)
 $(current_caret) '
 
 PROMPT2='. '
-RPROMPT='%{$(echotc UP 1)%}${_return_status} %{$(echotc DO 1)%}'
+RPROMPT='%{$(echotc UP 1)%}${_return_status} $(vi_mode_prompt_info)%{$(echotc DO 1)%}'
 
 _return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
 
