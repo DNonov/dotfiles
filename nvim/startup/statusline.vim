@@ -48,7 +48,7 @@ endfunction
 
 function! Fugitive() abort
   if (exists('g:loaded_fugitive'))
-    return FugitiveStatusline()
+    return toupper(split(split(FugitiveStatusline(), '(')[1], ')')[0])
   else
     return ''
   endif
@@ -62,9 +62,9 @@ function! ReadOnly() abort
 endfunction
 
 set statusline=%1*
-set statusline+=%1*%{Fugitive()}
+set statusline+=%1*\ \ \ \|\ %{Fugitive()}\ \|
 set statusline+=%1*\ %{SpellOutput()}
-set statusline+=%1*\ \ %f
+set statusline+=%1*\ %f
 set statusline+=\ -\ %{FileSize()}
 set statusline+=\ %{ReadOnly()}
 set statusline+=%m
