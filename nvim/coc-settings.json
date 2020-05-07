@@ -1,4 +1,7 @@
 {
+  "npm.binPath": "/usr/bin/npm",
+  "tsserver.npm": "/usr/bin/npm",
+  "codeLens.enable": true,
   "python.jediEnabled": false,
   "eslint.filetypes":
   [
