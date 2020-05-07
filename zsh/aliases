@@ -8,6 +8,9 @@ alias g="git"
 alias gr="grep"
 alias t="tmux"
 
+# Tmuxp sessions
+alias tdot="tmuxp load dot"
+
 # Python
 alias py="python3.7"
 alias pip="python3.7 -m pip"

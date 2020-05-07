@@ -12,6 +12,7 @@ ln -s "$(pwd)"/tern-config ~/.tern-config;
 ln -s "$(pwd)"/eslintrc.json ~/.es_lintrc.json;
 ln -s "$(pwd)"/zshrc ~/.zshrc;
 ln -sfT "$(pwd)"/nvim ~/.config/nvim
+ln -sfT "$(pwd)"/tmuxp ~/.tmuxp
 ln -s "$(pwd)"/bin ~/;
 ln -sfT "$(pwd)"/zsh ~/.zsh;
 
