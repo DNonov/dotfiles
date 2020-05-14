@@ -59,6 +59,7 @@ function! ReadOnly() abort
     return '  '
   else
     return ''
+  endif
 endfunction
 
 set statusline=%1*
@@ -71,4 +72,5 @@ set statusline+=%m
 set statusline+=%1*\ %{Coc()}
 set statusline+=%=
 set statusline+=\ %l:%c
+set statusline+=\ %{wordcount().words}
 set statusline+=\ %y
