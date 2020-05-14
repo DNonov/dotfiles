@@ -1,5 +1,9 @@
+[color "diff"]
+  meta = cyan
+  frag = yellow
 [core]
   editor = nvim
+  excludesFile = ~/.gitignore
 [user]
   email = d.nonov@gmail.com
   name = Dimitar Nonov
