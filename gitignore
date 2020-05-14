@@ -10,9 +10,9 @@ yarn-error.log*
 .npm
 
 # Dependency directories
-/node_modules
-/jspm_packages
-/bower_components
+node_modules/
+jspm_packages/
+bower_components/
 
 # Yarn integrity file
 .yarn-integrity
@@ -27,6 +27,7 @@ yarn-error.log*
 # Build generated
 dist/
 build/
+out/
 
 # Serverless generated files
 .serverless/
