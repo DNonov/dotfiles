@@ -7,24 +7,13 @@ export EDITOR="vim"
 # FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Ag config
+if type ag &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore --hidden -g ""'
+fi
+
 ZSH_THEME="dnonov"
 
-# Bullet-train theme setting
-BULLETTRAIN_PROMPT_CHAR=" "
-BULLETTRAIN_GIT_BG=black
-BULLETTRAIN_GIT_FG=white
-
-BULLETTRAIN_PROMPT_ORDER=(
-	status
-	custom
-	dir
-	screen
-	virtualenv
-	aws
-	git
-	hg
-	cmd_exec_time
-)
 plugins=(
   vi-mode
   gulp
