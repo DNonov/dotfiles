@@ -13,7 +13,6 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
@@ -31,7 +30,7 @@ Plug 'romainl/Apprentice'
 call plug#end()
 
 runtime startup/settings.vim
-runtime startup/autocomands.vim
+runtime startup/autocommands.vim
 runtime startup/mappings.vim
 runtime startup/commands.vim
 runtime startup/plugins.vim
