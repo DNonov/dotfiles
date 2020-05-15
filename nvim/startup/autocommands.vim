@@ -8,3 +8,10 @@ autocmd BufReadPost *
 
 " Add nice syntax highlight to jsonc comments
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" Clean all useless whitespace
+autocmd BufWritePre *
+  \ if !exists('g:skip_clean_whitespace') && !exists('b:skip_clean_whitespace')|
+  \   call lib#WithSavedState('%s/\s\+$//e')|
+  \ endif
+
