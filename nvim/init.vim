@@ -2,13 +2,13 @@ filetype off
 set rtp+=~/.fzf
 
 call plug#begin()
-" Style
-Plug 'airblade/vim-gitgutter'
 " General
+Plug 'airblade/vim-gitgutter'
 Plug 'vimwiki/vimwiki'
 Plug '907th/vim-auto-save'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'kamykn/spelunker.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
@@ -20,7 +20,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Colors
-Plug 'kamykn/spelunker.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'dnonov/vim-code-dark'
 Plug 'dnonov/dnd'
