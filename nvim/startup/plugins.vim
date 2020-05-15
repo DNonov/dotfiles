@@ -1,12 +1,14 @@
 " Nerdtree config
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '|'
-let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '⯈ '
+let g:NERDTreeDirArrowCollapsible = '⯆ '
 
 " Git gutter
-let g:gitgutter_sign_added = '++'
-let g:gitgutter_sign_modified = '~~'
-let g:gitgutter_sign_removed = '--'
+let g:gitgutter_sign_added = '▊ '
+let g:gitgutter_sign_modified = '▊ '
+let g:gitgutter_sign_removed = '▊ '
+let g:gitgutter_sign_removed_first_line = '▊ '
+let g:gitgutter_sign_modified_removed = '▊ '
 
 " Magit
 nnoremap <leader>m :Magit<CR>
@@ -93,6 +95,18 @@ endfunction
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-tslint-plugin',
+  \ 'coc-sh',
+  \ 'coc-python',
+  \ 'coc-vimlsp',
+  \ 'coc-emmet',
+  \ ]
 
 " Fzf
 nmap <c-p> :FZF <CR>
