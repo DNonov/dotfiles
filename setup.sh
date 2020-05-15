@@ -3,7 +3,6 @@
 # Add colors util
 . ./utils/colors.sh
 
-echo -e "${Black}Create symbolic links!"
 ln -s "$(pwd)"/gitconfig  ~/.gitconfig;
 ln -s "$(pwd)"/gitignore  ~/.gitignore;
 ln -s "$(pwd)"/tmux.conf ~/.tmux.conf;
