@@ -42,3 +42,17 @@ nnoremap <leader>p "*p
 
 "Open current file in chrome
 nnoremap <leader>o :!google-chrome --new-window %<CR>
+
+function! ExtractVariable()
+  let name = input('Variable name: ')
+  if name == ''
+    return
+  endif
+  normal! gv
+  exec 'normal c' . name
+  exec 'normal! O' . 'let ' . name . ' = @'
+  normal! $p
+  exec ':%s/=\ @/= /'
+endfunction
+
+vnoremap <leader>rv :call ExtractVariable()<CR>
