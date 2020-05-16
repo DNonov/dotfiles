@@ -8,7 +8,6 @@ Plug 'vimwiki/vimwiki'
 Plug '907th/vim-auto-save'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'kamykn/spelunker.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'

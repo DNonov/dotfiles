@@ -106,6 +106,7 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-vimlsp',
   \ 'coc-emmet',
+  \ 'coc-spell-checker',
   \ ]
 
 " Fzf
@@ -119,5 +120,6 @@ autocmd FileType fzf set laststatus=0 noshowmode noruler
 " Polyglot
 let g:python_highlight_all = 1
 
-" Spelunker
-let g:spelunker_target_min_char_len = 1
+" Coc-spell-checker
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)

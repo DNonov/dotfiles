@@ -10,4 +10,34 @@
     "typescript",
     "typescriptreact"
   ]
+  ],
+  "cSpell.enabledLanguageIds": [
+        "c",
+        "clojure",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "markdown",
+        "php",
+        "plaintext",
+        "typescript",
+        "typescriptreact",
+        "vim",
+        "vimwiki",
+        "yml"
+    ],
+    "cSpell.import": [
+      "~/Documents/workspace/dotfiles/code/extensions/cspell.jsonc"
+    ],
+    "cSpell.userWords": [
+      "Tabularize",
+      "gitguter",
+      "jsdoc",
+      "ngdoc"
+    ]
 }
