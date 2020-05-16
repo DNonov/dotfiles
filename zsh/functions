@@ -23,3 +23,8 @@ function mirror() {
     wget -mkEpnp $1
   fi
 }
+function _cloc() {
+  exclude_dirs=${1:-'node_modules'};
+
+  cloc --exclude-dir="${exclude_dirs}" .
+}
