@@ -1,31 +1,57 @@
-[color "diff"]
-  meta = cyan
-  frag = yellow
 [core]
-  editor = nvim
+  editor       = nvim
   excludesFile = ~/.gitignore
 [user]
   email = d.nonov@gmail.com
-  name = Dimitar Nonov
+  name  = Dimitar Nonov
+[pager]
+  # Use npm install -g diff-so-fancy
+  diff = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): '
+  show = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): '
+[color]
+	ui = auto
+[color "diff"]
+	commit     = "green"
+	frag       = "blue"
+	meta       = "blue"
+	new        = "green"
+	old        = "red"
+	whitespace = "red reverse"
+  newMoved   = "cyan"
+  oldMoved   = "blue"
+[color "diff-highlight"]
+	newHighlight = "green 22"
+	newNormal    = "green"
+	oldHighlight = "red 52"
+	oldNormal    = "red"
+[color "branch"]
+	current = "yellow reverse"
+	local   = "yellow"
+	remote  = "green"
+[color "status"]
+	added     = "yellow"
+	changed   = "green"
+	untracked = "cyan"
 [alias]
-  a = add
-  ap = add -p
-  rh = reset HEAD --
-  uco = reset --soft HEAD^
-  rp = reset -p
-  d = diff
-  dc = diff --cached
-  aa = add -A
-  s = status
-  st = stage
-  co = commit
-  ca = commit --amend
-  chb = checkout -b
-  br = branch
-  bl = blame
-  bll = blame -L
-  me = merge
-  mea = merge --abort
-  ch = checkout
-  pom = push origin master
-  phm = push heroku  master
+  a      = add
+  aa     = add -A
+  ap     = add -p
+  bl     = blame
+  bll    = blame -L
+  br     = branch
+  ca     = commit --amend
+  ch     = checkout
+  chb    = checkout -b
+  co     = commit
+  d      = diff
+  dc     = diff --cached
+  me     = merge
+  mea    = merge --abort
+  phm    = push heroku  master
+  pom    = push origin master
+  rh     = reset HEAD --
+  rp     = reset -p
+  s      = status
+  st     = stage
+  uco    = reset --soft HEAD^
+  unpush = push origin +HEAD^:master
