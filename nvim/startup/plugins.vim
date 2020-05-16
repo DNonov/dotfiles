@@ -125,6 +125,11 @@ let g:mkdp_preview_options = {'content_editable': v:true}
 let g:vim_markdown_math = 1
 nnoremap <leader>o :MarkdownPreview<CR>
 
+" Vim Wiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.vimwiki'}]
+let g:vimwiki_conceallevel=0
+
 " Coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
