@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vimwiki/vimwiki'
 Plug '907th/vim-auto-save'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
+Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()}}
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'

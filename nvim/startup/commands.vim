@@ -40,9 +40,6 @@ vnoremap <leader>y "*Y
 " Paste text to the clipboard
 nnoremap <leader>p "*p
 
-"Open current file in chrome
-nnoremap <leader>o :!google-chrome --new-window %<CR>
-
 function! ExtractVariable()
   let name = input('Variable name: ')
   if name == ''

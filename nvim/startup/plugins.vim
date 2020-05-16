@@ -120,6 +120,11 @@ autocmd FileType fzf set laststatus=0 noshowmode noruler
 " Polyglot
 let g:python_highlight_all = 1
 
+" Markdown Preview
+let g:mkdp_preview_options = {'content_editable': v:true}
+let g:vim_markdown_math = 1
+nnoremap <leader>o :MarkdownPreview<CR>
+
 " Coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
