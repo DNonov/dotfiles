@@ -15,15 +15,16 @@ else
 fi
 
 git log $form --pretty="tformat:$FORMAT" $* |
-  fzf --ansi --preview "echo {} |
-  grep -o '[a-f0-9]\{7\}' |
-  head -1 |
-  xargs -I % sh -c 'git show --color=always %'" \
+  fzf --ansi \
+    --preview "echo {} |
+    grep -o '[a-f0-9]\{7\}' |
+    head -1 |
+    xargs -I % sh -c 'git show % | diff-so-fancy'" \
     --bind "enter:execute:
         (grep -o '[a-f0-9]\{7\}' |
           head -1 |
-          xargs -I % sh -c 'git show --color=always % |
-          less -R'
+          xargs -I % sh -c 'git show % | diff-so-fancy |
+          less --tabs=2 -R'
         ) << 'FZF-EOF'
         {}
   FZF-EOF"

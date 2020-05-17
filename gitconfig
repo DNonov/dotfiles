@@ -20,9 +20,9 @@
   newMoved   = "cyan"
   oldMoved   = "blue"
 [color "diff-highlight"]
-	newHighlight = "green 22"
+	newHighlight = "green 237"
 	newNormal    = "green"
-	oldHighlight = "red 52"
+	oldHighlight = "red 237"
 	oldNormal    = "red"
 [color "branch"]
 	current = "yellow reverse"
@@ -45,6 +45,8 @@
   co     = commit
   d      = diff
   dc     = diff --cached
+  l      = "!bash ~/bin/gitlog"
+  lr     = "!bash ~/bin/gitlog -r"
   me     = merge
   mea    = merge --abort
   phm    = push heroku  master
