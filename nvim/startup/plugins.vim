@@ -53,11 +53,6 @@ let g:javascript_plugin_flow  = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
-
-" vim-better-whitespace
-nmap <leader>w :StripWhitespace<CR>
-highlight ExtraWhitespace ctermbg=red
-
 " Coc
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
