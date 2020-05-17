@@ -24,3 +24,4 @@ if ! has('gui_running')
   augroup END
 endif
 
+autocmd FileType vimwiki set filetype=markdown
