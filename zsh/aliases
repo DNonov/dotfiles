@@ -4,8 +4,8 @@
 alias c="code -r ."
 alias f="fzf"
 alias v="nvim ."
+alias vi="nvim"
 alias g="git"
-alias gr="grep"
 alias t="tmux"
 
 # Tmuxp sessions
