@@ -48,7 +48,7 @@ endfunction
 
 function! Fugitive() abort
   if (exists('g:loaded_fugitive'))
-    return FugitiveStatusline()
+    return toupper(fugitive#head())."  "
   else
     return ''
   endif
