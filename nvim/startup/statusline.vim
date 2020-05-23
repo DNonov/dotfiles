@@ -19,20 +19,20 @@ endfunction
 function! FileSize() abort
     let l:bytes = getfsize(expand('%p'))
     if (l:bytes >= 1024)
-        let l:kbytes = l:bytes / 1025
+        let kilo_bytes = l:bytes / 1025
     endif
-    if (exists('kbytes') && l:kbytes >= 1000)
-        let l:mbytes = l:kbytes / 1000
+    if (exists('kilo_bytes') && kilo_bytes >= 1000)
+        let mega_bytes = kilo_bytes / 1000
     endif
 
     if l:bytes <= 0
         return '0'
     endif
 
-    if (exists('mbytes'))
-        return l:mbytes . ' MB '
-    elseif (exists('kbytes'))
-        return l:kbytes . ' KB '
+    if (exists('mega_bytes'))
+        return mega_bytes . ' MB '
+    elseif (exists('kilo_bytes'))
+        return kilo_bytes . ' KB '
     else
         return l:bytes . ' B '
     endif
