@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Add colors util
-. ./utils/colors.sh
-
 ln -s "$(pwd)"/gitconfig  ~/.gitconfig;
 ln -s "$(pwd)"/gitignore  ~/.gitignore;
 ln -s "$(pwd)"/tmux.conf ~/.tmux.conf;
