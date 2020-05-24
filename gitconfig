@@ -6,8 +6,8 @@
   name  = Dimitar Nonov
 [pager]
   # Use npm install -g diff-so-fancy
-  diff = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): '
-  show = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): '
+  diff = diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
+  show = diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
 [color]
 	ui = auto
 [color "diff"]
@@ -28,10 +28,6 @@
 	current = "yellow reverse"
 	local   = "yellow"
 	remote  = "green"
-[color "status"]
-	added     = "yellow"
-	changed   = "green"
-	untracked = "cyan"
 [alias]
   a      = add
   aa     = add -A
