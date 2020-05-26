@@ -20,9 +20,15 @@
   newMoved   = "cyan"
   oldMoved   = "blue"
 [color "diff-highlight"]
-	newHighlight = "green 237"
+  # Diff dark
+	; newHighlight = "green 237"
+	; newNormal    = "green"
+	; oldHighlight = "red 237"
+	; oldNormal    = "red"
+  # Diff light
+	newHighlight = "green 254"
 	newNormal    = "green"
-	oldHighlight = "red 237"
+	oldHighlight = "red 254"
 	oldNormal    = "red"
 [color "branch"]
 	current = "yellow reverse"
