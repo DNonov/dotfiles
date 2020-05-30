@@ -3,6 +3,13 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 
+" Colorscheme
+if trim(system("echo $theme_color")) == 'light'
+  colorscheme light-delight
+else
+  colorscheme dnd
+endif
+
 "Default indentation
 filetype plugin indent on
 set smarttab
@@ -13,7 +20,6 @@ set shiftwidth=2
 set tabstop=2
 
 " Settings
-colorscheme light-delight
 let mapleader = "\<space>"
 set updatetime=100
 set signcolumn=yes

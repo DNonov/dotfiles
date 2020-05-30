@@ -1,0 +1,8 @@
+# Light style
+set -g status-style 'bg=colour250, fg=colour233'
+set -g status-right ' '
+set -g status-left '   '
+set-window-option -g window-status-format " #I #W "
+set-window-option -g window-status-current-format " #I #W "
+set-window-option -g window-status-current-format \
+"#[bg=colour246,bold, fg=colour238] #I #W "
