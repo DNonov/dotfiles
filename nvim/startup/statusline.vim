@@ -64,22 +64,9 @@ function! ReadOnly() abort
   endif
 endfunction
 
-function! BufferGitStatus() abort
-  let l:file_name = expand('%')
-  let l:is_modified = trim(system('git status '.l:file_name.'
-        \ | grep '.l:file_name.'
-        \ | cut -d ":" -f "1"'))
-  if l:is_modified == 'modified'
-    return 'M'
-  else
-    return ''
-  endif
-endfunction
-
 set statusline=%2*
 set statusline+=%2*\ \ \ %{Fugitive()}
 set statusline+=%2*\ %{SpellOutput()}
-set statusline+=%3*\ %{BufferGitStatus()}
 set statusline+=%1*\ %f
 set statusline+=%1*\ -\ %{FileSize()}
 set statusline+=%1*\ %{ReadOnly()}
