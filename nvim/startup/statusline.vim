@@ -1,16 +1,18 @@
 if &background == 'dark'
-  hi User1 ctermbg=236 ctermfg=251 guibg=blue guifg=white
+  hi User1 ctermbg=236 ctermfg=251
+  hi User2 ctermbg=236 ctermfg=251
+  hi User3 ctermbg=236 ctermfg=251
 else
-  hi User1 ctermbg=250 ctermfg=233 guibg=blue guifg=white
+  hi User1 ctermbg=254 ctermfg=233
+  hi User2 ctermbg=25 ctermfg=254
+  hi User3 ctermbg=254 ctermfg=88
 endif
 
 function! SpellOutput() abort
   if &l:spell == 1
-    hi User3 ctermbg=236 ctermfg=251 guibg=blue guifg=white
     redrawstatus
     return " SPELL "
   else
-    hi User3 ctermbg=252 ctermfg=232 guibg=blue guifg=white
     redrawstatus
     return ""
   endif
@@ -62,15 +64,28 @@ function! ReadOnly() abort
   endif
 endfunction
 
-set statusline=%1*
-set statusline+=%1*\ \ \ %{Fugitive()}
-set statusline+=%1*\ %{SpellOutput()}
+function! BufferGitStatus() abort
+  let l:file_name = expand('%')
+  let l:is_modified = trim(system('git status '.l:file_name.'
+        \ | grep '.l:file_name.'
+        \ | cut -d ":" -f "1"'))
+  if l:is_modified == 'modified'
+    return 'M'
+  else
+    return ''
+  endif
+endfunction
+
+set statusline=%2*
+set statusline+=%2*\ \ \ %{Fugitive()}
+set statusline+=%2*\ %{SpellOutput()}
+set statusline+=%3*\ %{BufferGitStatus()}
 set statusline+=%1*\ %f
-set statusline+=\ -\ %{FileSize()}
-set statusline+=\ %{ReadOnly()}
-set statusline+=%m
+set statusline+=%1*\ -\ %{FileSize()}
+set statusline+=%1*\ %{ReadOnly()}
+set statusline+=%3*\%m
 set statusline+=%1*\ %{Coc()}
 set statusline+=%=
-set statusline+=\ %l:%c
-set statusline+=\ %{wordcount().words}
-set statusline+=\ %y
+set statusline+=%2*\%6l:%-6c
+set statusline+=%2*%{wordcount().words}
+set statusline+=%2*\ %y
