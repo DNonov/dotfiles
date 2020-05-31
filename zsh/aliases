@@ -28,13 +28,18 @@ alias av="source venv/bin/activate"
 alias dv="deactivate"
 
 # Util
+if [ $theme_color = 'light' ]; then
+  alias http="http --style xcode"
+else
+  alias http="http --style lovelace"
+fi
+
 alias wo="cd ~ && cd Documents/workspace"
 alias dot="cd ~ && cd Documents/workspace/dotfiles"
 alias pymod="touch __init__.py"
 alias mongoon="service mongod start"
 alias mongooff="service mongod stop"
 alias gitignore="cp -f ~/.gitignore ./.gitignore"
-alias http="http --style lovelace"
 alias ex="exec zsh"
 alias cl="clear"
 
