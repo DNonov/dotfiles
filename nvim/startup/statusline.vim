@@ -73,6 +73,5 @@ set statusline+=%1*\ %{ReadOnly()}
 set statusline+=%3*\%m
 set statusline+=%1*\ %{Coc()}
 set statusline+=%=
-set statusline+=%2*\%6l:%-6c
-set statusline+=%2*%{wordcount().words}
+set statusline+=%2*\%4{wordcount().words}
 set statusline+=%2*\ %y
