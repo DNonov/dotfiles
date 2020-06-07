@@ -37,6 +37,8 @@
   co     = commit
   d      = "!bash ~/bin/gitdiff"
   dc     = "!bash ~/bin/gitdiff -c"
+  ds     = "!bash ~/bin/gitdiffstat"
+  dcs    = "!bash ~/bin/gitdiffstat -c"
   l      = "!bash ~/bin/gitlog"
   lr     = "!bash ~/bin/gitlog -r"
   me     = merge

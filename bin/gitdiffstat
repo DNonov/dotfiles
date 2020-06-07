@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $1 == "-c" ]]; then
+  git diff --cached --stat | col
+else
+  git diff --stat | col
+fi
