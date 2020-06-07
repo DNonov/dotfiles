@@ -50,7 +50,7 @@ endfunction
 
 function! Fugitive() abort
   if (exists('g:loaded_fugitive'))
-    return toupper(fugitive#head())."  "
+    return toupper(fugitive#head())
   else
     return ''
   endif
@@ -58,20 +58,20 @@ endfunction
 
 function! ReadOnly() abort
   if &readonly || !&modifiable
-    return '  '
+    return '    '
   else
     return ''
   endif
 endfunction
 
 set statusline=%2*
-set statusline+=%2*\ \ \ %{Fugitive()}
+set statusline+=%2*\ %{Fugitive()}
 set statusline+=%2*\ %{SpellOutput()}
 set statusline+=%1*\ %f
 set statusline+=%1*\ -\ %{FileSize()}
-set statusline+=%1*\ %{ReadOnly()}
+set statusline+=%1*\%{ReadOnly()}
 set statusline+=%3*\%m
-set statusline+=%1*\ %{Coc()}
+set statusline+=%1*\%{Coc()}
 set statusline+=%=
-set statusline+=%2*\%4{wordcount().words}
+set statusline+=%2*\ %{wordcount().words}
 set statusline+=%2*\ %y
