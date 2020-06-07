@@ -4,10 +4,6 @@
 [user]
   email = d.nonov@gmail.com
   name  = Dimitar Nonov
-[pager]
-  # Use npm install -g diff-so-fancy
-  diff = diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
-  show = diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
 [color]
 	ui = auto
 [color "diff"]
@@ -45,8 +41,8 @@
   ch     = checkout
   chb    = checkout -b
   co     = commit
-  d      = diff
-  dc     = diff --cached
+  d      = "!bash ~/bin/gitdiff"
+  dc     = "!bash ~/bin/gitdiff -c"
   l      = "!bash ~/bin/gitlog"
   lr     = "!bash ~/bin/gitlog -r"
   me     = merge

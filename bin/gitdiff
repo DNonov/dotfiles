@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $1 == "-c" ]]; then
+  git diff --cached | diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
+else
+  git diff | diff-so-fancy | less --tabs=2 -RFS --pattern '^(Date|added|deleted|modified): '
+fi
