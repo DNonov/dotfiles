@@ -31,6 +31,9 @@ set nofixendofline
 set wrap
 set nohlsearch
 
+" Split separator
+set fillchars+=vert:\|
+
 " Preserves indentation while pasting text from the clipboard
 nnoremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
 
