@@ -1,7 +1,7 @@
 " Nerdtree config
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable  = '+'
 
 " Magit
 nnoremap <leader>m :Magit<CR>
@@ -33,13 +33,13 @@ let g:gitgutter_max_signs = 100
 
 " vim-auto-save
 let g:auto_save        = 1
-let g:auto_save_silent = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
+let g:auto_save_silent = 1
 
 " Airline settings
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme           = 'papercolor'
+let g:airline_powerline_fonts            = 1
+let g:airline_theme                      = 'papercolor'
 
 " Theme
 let g:javascript_plugin_flow  = 1
@@ -104,7 +104,7 @@ let g:python_highlight_all = 1
 
 " Markdown Preview
 let g:mkdp_preview_options = {'content_editable': v:true}
-let g:vim_markdown_math = 1
+let g:vim_markdown_math    = 1
 nnoremap <leader>o :MarkdownPreview<CR>
 
 " Vim Wiki
