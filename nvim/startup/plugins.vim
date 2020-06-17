@@ -110,7 +110,8 @@ nnoremap <leader>o :MarkdownPreview<CR>
 " Vim Wiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_conceallevel=0
+let g:vimwiki_conceallevel = 0
+let g:vimwiki_global_ext   = 0
 
 " Coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
