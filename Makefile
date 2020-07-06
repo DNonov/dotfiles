@@ -9,6 +9,7 @@ neovim:
 
 zsh:
 	@ln -sfT "$(DIR)"/zsh ~/.zsh
+	@ln -sf "$(DIR)"/zshrc ~/.zshrc
 	@ln -sf "$(DIR)"/zsh-theme/dnonov.zsh-theme \
 		~/.oh-my-zsh/themes/dnonov.zsh-theme
 
