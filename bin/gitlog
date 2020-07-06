@@ -4,7 +4,7 @@ HASH="%C(red)%h%C(reset)";
 RELATIVE_TIME="%C(green)[%ar]%C(reset)";
 AUTHOR="%C(blue)<%an>%C(reset)";
 REFS="%C(red)%d%C(reset)";
-SUBJECT="%C(white)%s%C(reset)";
+SUBJECT="%s";
 
 FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME";
 
@@ -14,7 +14,7 @@ else
   form="--graph";
 fi
 
-git log $form --pretty="tformat:$FORMAT" $* |
+git log $form --pretty="tformat:$FORMAT" $* --color |
   fzf --ansi \
     --preview "echo {} |
     grep -o '[a-f0-9]\{7\}' |
