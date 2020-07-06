@@ -1,5 +1,5 @@
 # Light style
-set -g status-style 'bg=colour254, fg=colour7'
+set -g status-style 'bg=colour254, fg=colour0'
 set -g status-right ' '
 set -g status-left '   '
 
