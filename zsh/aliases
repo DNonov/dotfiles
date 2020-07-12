@@ -12,20 +12,15 @@ alias t="tmux"
 alias tdot="tmuxp load dot"
 
 # Python
-alias py="python"
-alias pip="python -m pip"
-alias dr="python manage.py runserver"
-alias dt="python manage.py test"
-alias dmm="python manage.py makemigrations"
-alias dm="python manage.py migrate"
-alias dsh="python manage.py shell"
-alias dsa="python manage.py startapp"
-alias dcs="python manage.py collectstatic"
-
-# Python venv
-alias cv="python3.7 -m venv"
-alias av="source venv/bin/activate"
-alias dv="deactivate"
+alias python="python3"
+alias pip="python3 -m pip"
+alias dr="./manage.py runserver"
+alias dt="./manage.py test"
+alias dmm="./manage.py makemigrations"
+alias dm="./manage.py migrate"
+alias dsh="./manage.py shell"
+alias dsa="./manage.py startapp"
+alias dcs="./manage.py collectstatic"
 
 # Util
 if [ $theme_color = 'light' ]; then
