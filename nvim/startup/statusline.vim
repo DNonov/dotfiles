@@ -1,6 +1,6 @@
 if &background == 'dark'
   hi User1 ctermbg=236 ctermfg=251
-  hi User2 ctermbg=236 ctermfg=251
+  hi User2 ctermbg=238 ctermfg=251
   hi User3 ctermbg=236 ctermfg=251
 else
   hi User1 ctermbg=254 ctermfg=233
