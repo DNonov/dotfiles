@@ -1,5 +1,8 @@
 ## Node ##
 
+# Git
+.git
+
 # Logs
 logs
 npm-debug.log*
