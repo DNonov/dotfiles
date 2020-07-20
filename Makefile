@@ -1,6 +1,6 @@
 DIR="${HOME}/Documents/workspace/dotfiles"
 
-.PHONY: tmux tmuxp neovim git zsh code bin all
+.PHONY: tmux tmuxp neovim git zsh code bin all help
 
 all: neovim zsh tmux tmuxp bin git code
 
@@ -32,3 +32,18 @@ code:
 		~/.config/Code/User/settings.json
 	@ln -sf "$(DIR)"/code/keybindings.json \
 		~/.config/Code/User/keybindings.json
+
+help:
+	@echo 'Makefile for my dotfiles                                     '
+	@echo '                                                             '
+	@echo 'Usage:                                                       '
+	@echo '   make all                            Setup all dotfiles    '
+	@echo '   make zsh                            Setup zsh settings    '
+	@echo '   make neovim                         Setup neovim settings '
+	@echo '   make tmux                           Setup tmux settings   '
+	@echo '   make tmuxp                          Setup tmuxp settings  '
+	@echo '   make bin                            Setup bin settings    '
+	@echo '   make git                            Setup git settings    '
+	@echo '   make code                           Setup vs code settings'
+	@echo '                                                             '
+
