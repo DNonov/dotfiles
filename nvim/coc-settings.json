@@ -61,5 +61,8 @@
       "tmux",
       "repo",
       "untracked"
-    ]
+    ],
+    "emmet.includeLanguages": {
+      "htmldjango": "html"
+    }
 }
