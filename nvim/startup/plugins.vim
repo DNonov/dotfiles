@@ -1,7 +1,7 @@
 " Nerdtree config
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowCollapsible = '-'
-let g:NERDTreeDirArrowExpandable  = '+'
+let g:NERDTreeDirArrowCollapsible = '| -'
+let g:NERDTreeDirArrowExpandable  = '| +'
 
 " Magit
 nnoremap <leader>m :Magit<CR>
