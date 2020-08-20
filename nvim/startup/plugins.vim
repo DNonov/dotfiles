@@ -29,7 +29,7 @@ nmap <C-c> :Commentary<CR>
 
 " vim-gitguter config
 let g:gitgutter_map_keys  = 0
-let g:gitgutter_max_signs = 100
+let g:gitgutter_max_signs = 500
 
 " vim-auto-save
 let g:auto_save        = 1
