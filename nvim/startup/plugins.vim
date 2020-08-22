@@ -10,8 +10,8 @@ nnoremap <leader>m :Magit<CR>
 nnoremap <leader>g :Gstatus<CR>
 
 " Splitting and joining code blocks
-nmap <silent> sj <Plug>SplitjoinSplit
-nmap <silent> sk <Plug>SplitjoinJoin
+nmap <silent> sk <Plug>SplitjoinSplit
+nmap <silent> sj <Plug>SplitjoinJoin
 " Execute normal vim join if in visual mode
 xnoremap sk J
 
