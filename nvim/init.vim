@@ -23,6 +23,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cocopon/iceberg.vim'
 Plug 'dnonov/vim-code-dark'
 Plug 'dnonov/dnd'
+Plug 'dnonov/dnl'
 Plug 'dnonov/light-delight'
 Plug 'nanotech/jellybeans.vim'
 Plug 'romainl/Apprentice'
