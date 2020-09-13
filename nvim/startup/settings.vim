@@ -5,7 +5,7 @@ endif
 
 " Colorscheme
 if trim(system("echo $theme_color")) == 'light'
-  colorscheme dnl
+  colorscheme dnonov-light
 else
   colorscheme dnd
 endif
