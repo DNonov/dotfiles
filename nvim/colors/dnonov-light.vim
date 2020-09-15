@@ -267,7 +267,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Structure", s:red, "", "")
 	call <SID>X("Function", s:red, "", "")
 	call <SID>X("Constant", s:blue, "", "bold")
-	call <SID>X("Number", s:green, "", "")
+	call <SID>X("Number", s:orange, "", "")
 	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:blue, "", "")
