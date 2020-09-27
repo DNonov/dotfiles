@@ -100,7 +100,9 @@ autocmd FileType fzf set laststatus=0 noshowmode noruler
 \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Polyglot
-let g:python_highlight_all = 1
+let g:python_highlight_all           = 1
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors  = 0
 
 " Markdown Preview
 let g:mkdp_preview_options = {'content_editable': v:true}
