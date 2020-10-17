@@ -514,6 +514,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("CocHoverRange", s:foreground, s:selection, "")
   call <SID>X("CocCursorRange", s:foreground, s:selection, "")
 
+  call <SID>X("CocWarningSign", s:aqua, "", "")
+  call <SID>X("CocInfoSign", s:aqua, "", "")
+
   " Spelunker
   " TODO: This need to be done with call.
   highlight SpelunkerSpellBad cterm=underline gui=underline
