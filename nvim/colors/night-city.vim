@@ -1,14 +1,14 @@
 " Default GUI Colours
-let s:foreground = "ffffff"
-let s:background = "121212"
+let s:foreground = "ffffd7"
+let s:background = "222222"
 let s:selection  = "353535"
 let s:line       = "151515"
 let s:comment    = "888888"
-let s:red        = "F17E73"
+let s:red        = "ce9167"
 let s:orange     = "F7D67A"
 let s:yellow     = "FBFC77"
-let s:green      = "64D569"
-let s:aqua       = "6CC7E1"
+let s:green      = "99ad6a"
+let s:aqua       = "9CDCFE"
 let s:blue       = "4BA4D6"
 let s:purple     = "D884FF"
 let s:window     = "151515"
@@ -259,11 +259,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Statement", s:foreground, "", "")
 	call <SID>X("Conditional", s:foreground, "", "")
 	call <SID>X("Repeat", s:foreground, "", "")
-	call <SID>X("Structure", s:red, "", "")
-	call <SID>X("Function", s:red, "", "")
+	call <SID>X("Structure", s:orange, "", "")
+	call <SID>X("Function", s:orange, "", "")
 	call <SID>X("Constant", s:blue, "", "")
-	call <SID>X("Number", s:yellow, "", "")
-	call <SID>X("String", s:green, "", "")
+	call <SID>X("Number", s:green, "", "")
+	call <SID>X("String", s:red, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:blue, "", "")
 	call <SID>X("Operator", s:aqua, "", "none")
@@ -274,7 +274,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("SpellCap", "", s:background, "underline")
 	call <SID>X("SpellRare", "", s:background, "underline")
 	call <SID>X("SpellLocal", "", s:background, "underline")
-	call <SID>X("Keyword", s:blue, "", "none")
+	call <SID>X("Keyword", s:blue, "", "")
 
   " YCM remove anoing error colors from the text
   call <SID>X("YcmErrorSection", s:foreground, "", "")
@@ -294,9 +294,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonConditional", s:blue, "", "")
 	call <SID>X("pythonSelf", s:blue, "", "")
 	call <SID>X("pythonClassVar", s:blue, "", "")
-	call <SID>X("pythonFunction", s:red, "", "")
-	call <SID>X("pythonFunctionCall", s:red, "", "")
-	call <SID>X("pythonStrFormat", s:green, "", "")
+	call <SID>X("pythonFunction", s:orange, "", "")
+	call <SID>X("pythonFunctionCall", s:orange, "", "")
+	call <SID>X("pythonStrFormat", s:red, "", "")
 	call <SID>X("pythonExtraOperator", s:blue, "", "")
 	call <SID>X("pythonOperator", s:blue, "", "")
 	call <SID>X("pythonClass", s:orange, "", "")
@@ -328,7 +328,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsGlobalObjects", s:orange, "", "")
 	call <SID>X("jsGlobalNodeObjects", s:orange, "", "")
 	call <SID>X("jsExportDefault", s:blue, "", "")
-	call <SID>X("jsTemplateBraces", s:green, "", "")
+	call <SID>X("jsTemplateBraces", s:red, "", "")
 	call <SID>X("jsFlowobjectKey", s:foreground, "", "")
 	call <SID>X("jsxAttrib", s:blue, "", "")
 	call <SID>X("jsxTagName", s:orange, "", "")
@@ -348,7 +348,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("typescriptBranch", s:blue, "", "")
 	call <SID>X("typescriptAssign", s:blue, "", "")
 	call <SID>X("typescriptBinaryOp", s:blue, "", "")
-	call <SID>X("typescriptRegexpString", s:green, "", "")
+	call <SID>X("typescriptRegexpString", s:red, "", "")
 	call <SID>X("typescriptImport", s:blue, "", "")
 	call <SID>X("typescriptFrom", s:blue, "", "")
 	call <SID>X("typescriptIdentifierName", s:orange, "", "")
@@ -356,14 +356,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("typescriptArrowFunc", s:blue, "", "")
 	call <SID>X("typescriptCall", s:foreground, "", "")
 	call <SID>X("typescriptOperator", s:blue, "", "")
-	call <SID>X("typescriptRegExpMethod", s:yellow, "", "")
-	call <SID>X("typescriptStringMethod", s:yellow, "", "")
-	call <SID>X("typescriptMathStaticMethod", s:yellow, "", "")
-	call <SID>X("typescriptArrayMethod", s:yellow, "", "")
-	call <SID>X("typescriptES6SetMethod", s:yellow, "", "")
+	call <SID>X("typescriptRegExpMethod", s:orange, "", "")
+	call <SID>X("typescriptStringMethod", s:orange, "", "")
+	call <SID>X("typescriptMathStaticMethod", s:orange, "", "")
+	call <SID>X("typescriptArrayMethod", s:orange, "", "")
+	call <SID>X("typescriptES6SetMethod", s:orange, "", "")
 
   " C Highlight
 	call <SID>X("cRepeat", s:blue, "", "")
+	call <SID>X("cType", s:blue, "", "")
+	call <SID>X("cStorageClass", s:blue, "", "")
 	call <SID>X("cStatement", s:blue, "", "")
 	call <SID>X("cConditional", s:blue, "", "")
 	call <SID>X("cLabel", s:blue, "", "")
@@ -373,19 +375,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyClass", s:blue, "", "")
 	call <SID>X("rubyModule", s:blue, "", "")
 	call <SID>X("rubyDefine", s:blue, "", "")
-	call <SID>X("rubySymbol", s:aqua, "", "")
+	call <SID>X("rubySymbol", s:blue, "", "")
 	call <SID>X("rubyKeywordAsMethod", s:yellow, "", "")
-	call <SID>X("rubyStringDelimiter", s:green, "", "")
-	call <SID>X("rubyRegexpDelimiter", s:yellow, "", "")
+	call <SID>X("rubyStringDelimiter", s:red, "", "")
+	call <SID>X("rubyRegexpDelimiter", s:red, "", "")
 	call <SID>X("rubyConditional", s:blue, "", "")
-	call <SID>X("rubyInstanceVariable", s:aqua, "", "")
+	call <SID>X("rubyInstanceVariable", s:blue, "", "")
 
   " Clojure Highlight
 	call <SID>X("clojureDefine", s:blue, "", "")
 	call <SID>X("clojureSpecial", s:blue, "", "")
 	call <SID>X("clojureCond", s:blue, "", "")
 	call <SID>X("clojureException", s:blue, "", "")
-	call <SID>X("clojureKeyword", s:aqua, "", "")
+	call <SID>X("clojureKeyword", s:blue, "", "")
 
 
   " Bash Highlight
