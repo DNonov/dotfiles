@@ -7,7 +7,7 @@ endif
 if trim(system("echo $theme_color")) == 'light'
   colorscheme dnonov-light
 else
-  colorscheme dnd
+  colorscheme night-city
 endif
 
 "Default indentation
@@ -25,6 +25,7 @@ set updatetime=100
 set signcolumn=yes
 set number
 set relativenumber
+set cursorline
 set colorcolumn=80
 set t_Co=256
 set nofixendofline
