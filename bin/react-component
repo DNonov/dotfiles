@@ -12,8 +12,8 @@ package="react-component";
 input_path=$2;
 
 # Get component and dir name
-dir=`dirname "$input_path"`;
-component_name=`echo $input_path | sed -e 's/^.*\///'`;
+dir=$(dirname "$input_path");
+component_name=$(echo $input_path | sed -e 's/^.*\///');
 
 # Check if this file already exist.
 if [ -e "$input_path.jsx" ]; then
