@@ -341,6 +341,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("typescriptBraces", s:foreground, "", "")
 	call <SID>X("typescriptConditional", s:blue, "", "")
 	call <SID>X("typescriptCase", s:blue, "", "")
+	call <SID>X("typescriptAmbientDeclaration", s:blue, "", "")
 	call <SID>X("typescriptStatementKeyword", s:blue, "", "")
 	call <SID>X("typescriptExport", s:blue, "", "")
 	call <SID>X("typescriptExceptions", s:blue, "", "")
