@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# This script is the browsing/editing system of my personal wiki.
+# I use Vim as an editor and fzf as a browser.
+#
+# Every file in the wiki has to contain at least one tag. If there are more
+# tags they must be on same line and separated with white space. If a tag has
+# more than one word has to be hayphenated e.g. (more-than-one-word).
+#
+# Tags example:
+#   [comment]: #(maths programming functional-programming)
+#
+# These tags are used to feature all topics related with the file content. If
+# a file contain one or more tags they will be displayed next to the file name
+# in order to make the wiki searchable by tags via fzf. Tags are in form of
+# markdown comments, the syntax of which was carefully chosen to be supported
+# by the majority of markdown parsers.
+#
+# A bit of stackoverflow:
+#   https://stackoverflow.com/questions/4823468/comments-in-markdown
+#
+# N.B.: I use vi instead of vim in the script, since I've got zsh alias "vi"
+# that point to nvim. Feel free to change it to any editor of choice.
+
+set -e
+
+# Get all markdown files in my index directory.
+find ~/vimwiki -iname '*.md' |
+  # Get all tags in the file.
+  xargs grep -E "\[comment\]\:"|
+  # Display only file name and tags in fzf list.
+  cut -d ':' -f '1,3' |
+  # If you press enter the selected file will be open in vim.
+  fzf --bind "enter:execute: (echo {} | cut -d ':' -f'1' | xargs vi)"
