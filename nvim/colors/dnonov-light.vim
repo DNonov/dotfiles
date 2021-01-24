@@ -421,6 +421,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyMacro", s:blue, "", "bold")
 	call <SID>X("rubyControl", s:blue, "", "bold")
 
+  " Java Highlight
+  call <SID>X("javaScopeDecl", s:blue, "", "bold")
+  call <SID>X("javaClassDecl", s:blue, "", "bold")
+
   "Clojure Highlight
 	call <SID>X("clojureSpecial", s:blue, "", "bold")
 	call <SID>X("clojureDefine", s:blue, "", "bold")
