@@ -397,6 +397,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   " C Highlight
 	call <SID>X("cRepeat", s:blue, "", "bold")
+	call <SID>X("cType", s:blue, "", "")
 	call <SID>X("cDefine", s:blue, "", "bold")
 	call <SID>X("cStatement", s:blue, "", "bold")
 	call <SID>X("cStructure", s:blue, "", "bold")
