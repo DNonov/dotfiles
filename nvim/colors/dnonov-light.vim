@@ -422,6 +422,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyMacro", s:blue, "", "bold")
 	call <SID>X("rubyControl", s:blue, "", "bold")
 
+  " PHP Highlight
+  call <SID>X("phpType", s:blue, "", "bold")
+  call <SID>X("phpFunction", s:red, "", "")
+  call <SID>X("phpMethod", s:red, "", "")
+  call <SID>X("phpClass", s:red, "", "")
+  call <SID>X("phpStatement", s:red, "", "")
+
   " Java Highlight
   call <SID>X("javaScopeDecl", s:blue, "", "bold")
   call <SID>X("javaClassDecl", s:blue, "", "bold")
