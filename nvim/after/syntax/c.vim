@@ -1,1 +1,1 @@
-syn match c_operator display "=\|->\|!=\|>\|<\|<=\|>=\|||\|&&\|+\|-"
+syn match c_operator display "=\|->\|!=\|>\|<\|<=\|>=\|||\|&&\|&\|!\|+\|-"
