@@ -405,6 +405,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cLabel", s:blue, "", "bold")
 	call <SID>X("cOperator", s:blue, "", "bold")
 	call <SID>X("c_Operator", s:blue, "", "bold")
+	call <SID>X("cUserLabel", s:blue, "", "bold")
 	call <SID>X("cMulti", s:blue, "", "bold")
 	call <SID>X("cStorageClass", s:blue, "", "bold")
 	call <SID>X("cPreCondit", s:blue, "", "bold")
