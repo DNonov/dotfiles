@@ -71,7 +71,7 @@ set statusline+=%1*\ %f
 set statusline+=%1*\ -\ %{FileSize()}
 set statusline+=%1*\%{ReadOnly()}
 set statusline+=%3*\%m
-set statusline+=%1*\%{Coc()}
 set statusline+=%=
+set statusline+=%1*\%{Coc()}\ |
 set statusline+=%2*\ %{wordcount().words}
 set statusline+=%2*\ %y
