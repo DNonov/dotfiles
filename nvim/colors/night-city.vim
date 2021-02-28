@@ -376,6 +376,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   " C Highlight
 	call <SID>X("cRepeat", s:blue, "", "")
+	call <SID>X("cUserLabel", s:blue, "", "")
 	call <SID>X("cType", s:blue, "", "")
 	call <SID>X("cStorageClass", s:blue, "", "")
 	call <SID>X("cStatement", s:blue, "", "")
@@ -383,6 +384,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cConditional", s:blue, "", "")
 	call <SID>X("cLabel", s:blue, "", "")
 	call <SID>X("c_operator", s:foreground, "", "bold")
+	call <SID>X("cOperator", s:foreground, "", "bold")
+	call <SID>X("cMulti", s:foreground, "", "bold")
 
   " Ruby Highlight
 	call <SID>X("rubyClass", s:blue, "", "")
