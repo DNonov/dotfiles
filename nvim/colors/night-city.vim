@@ -398,6 +398,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyConditional", s:blue, "", "")
 	call <SID>X("rubyInstanceVariable", s:blue, "", "")
 
+  " PHP Highlight
+  call <SID>X("phpType", s:blue, "", "")
+  call <SID>X("phpFunction", s:orange, "", "")
+  call <SID>X("phpMethod", s:orange, "", "")
+  call <SID>X("phpClass", s:orange, "", "")
+  call <SID>X("phpStatement", s:orange, "", "")
   " Clojure Highlight
 	call <SID>X("clojureDefine", s:blue, "", "")
 	call <SID>X("clojureSpecial", s:blue, "", "")
