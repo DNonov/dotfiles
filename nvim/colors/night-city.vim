@@ -404,6 +404,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("phpMethod", s:orange, "", "")
   call <SID>X("phpClass", s:orange, "", "")
   call <SID>X("phpStatement", s:orange, "", "")
+
+  " Java Highlight
+  call <SID>X("javaScopeDecl", s:blue, "", "")
+  call <SID>X("javaClassDecl", s:blue, "", "")
+
   " Clojure Highlight
 	call <SID>X("clojureDefine", s:blue, "", "")
 	call <SID>X("clojureSpecial", s:blue, "", "")
