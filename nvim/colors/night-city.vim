@@ -409,6 +409,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("javaScopeDecl", s:blue, "", "")
   call <SID>X("javaClassDecl", s:blue, "", "")
 
+  " SQl Highlight
+  call <SID>X("Quote", s:red, "", "")
+  call <SID>X("sqlStatement", s:blue, "", "")
+  call <SID>X("sqlKeyword", s:blue, "", "")
+  call <SID>X("sqlSpecial", s:blue, "", "")
+
   " Clojure Highlight
 	call <SID>X("clojureDefine", s:blue, "", "")
 	call <SID>X("clojureSpecial", s:blue, "", "")
