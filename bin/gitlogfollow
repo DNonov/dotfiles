@@ -1,0 +1,24 @@
+#!/bin/bash
+
+HASH="%C(red)%h%C(reset)";
+RELATIVE_TIME="%C(green)[%ar]%C(reset)";
+AUTHOR="%C(blue)<%an>%C(reset)";
+REFS="%C(red)%d%C(reset)";
+SUBJECT="%s";
+
+FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME";
+
+git log --pretty="tformat:$FORMAT" --color --follow $1 |
+  fzf --ansi \
+    --preview "echo {} |
+    grep -o '[a-f0-9]\{7\}' |
+    head -1 |
+    xargs -I % sh -c 'git show % | diff-so-fancy'" \
+    --bind "enter:execute:
+        (grep -o '[a-f0-9]\{7\}' |
+          head -1 |
+          xargs -I % sh -c 'git show % | diff-so-fancy |
+          less --tabs=2 -R'
+        ) << 'FZF-EOF'
+        {}
+  FZF-EOF"

@@ -40,6 +40,7 @@
   ds     = "!bash ~/bin/gitdiffstat"
   dcs    = "!bash ~/bin/gitdiffstat -c"
   l      = "!bash ~/bin/gitlog"
+  lf     = "!bash ~/bin/git-log-follow"
   lr     = "!bash ~/bin/gitlog -r"
   me     = merge
   mea    = merge --abort
