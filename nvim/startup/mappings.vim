@@ -11,7 +11,13 @@ nmap <leader>K yyP
 " Easily mark a single line in character-wise visual mode
 nnoremap vv _vg_
 
-" Sort
+" Find a string or pattern within a repo
+nnoremap <C-f> :Ggrep '
+
+" Find a word under the cursor within a repo
+nnoremap <leader>f :execute "Ggrep " . expand('<cword>') <CR>
+
+"Sort
 vmap <leader>sr :sort<CR>
 
 " Moving through splits
