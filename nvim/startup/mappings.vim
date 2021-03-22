@@ -32,12 +32,8 @@ cnoremap %% <C-R>=expand("%:h")."/"<CR>
 " Toggle spell check
 map <leader>s :set spell! spelllang=en_us<CR>
 
-
 " shows last search in quickfix
 nmap g/ :vimgrep /<C-R>//j %<CR>\|:cw<CR>
-
-" Edit Vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Source Vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
