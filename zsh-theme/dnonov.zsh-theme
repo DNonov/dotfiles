@@ -8,7 +8,7 @@ $(current_caret) '
 
 RPROMPT='%{$(echotc UP 1)%}${_return_status} $(vi_mode_prompt_info)%{$(echotc DO 1)%}'
 
-_return_status="%(?..%{$fg[red]%}%? ⚡%{$reset_color%})"
+_return_status="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # Get caret
 function current_caret {
