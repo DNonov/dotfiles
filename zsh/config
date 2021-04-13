@@ -17,7 +17,6 @@ ZSH_THEME="dnonov"
 plugins=(
   vi-mode
   gulp
-  heroku
   httpie
   ubuntu
   vundle
