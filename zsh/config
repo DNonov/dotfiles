@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# Run new tmux session or attach to existing one on shz start
+if [ -z "$TMUX" ]
+then
+  tmux attach -t TMUX || tmux new -s TMUX
+fi
+
 export ZSH=/home/dim/.oh-my-zsh
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH;
 export EDITOR="vim"
