@@ -25,7 +25,6 @@ plugins=(
   gulp
   httpie
   ubuntu
-  vundle
   virtualenv
 )
 source $ZSH/oh-my-zsh.sh
