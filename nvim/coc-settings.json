@@ -1,5 +1,16 @@
 {
   "npm.binPath": "/usr/bin/npm",
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": true,
+  "codeLens.enable": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableSign": true,
+  "diagnostic.errorSign": ">>",
+  "diagnostic.infoSign": "[i]",
+  "diagnostic.warningSign": ">>",
+  "diagnostic.hintSign": ">>",
+  "diagnostic.virtualTextPrefix": " • ",
+  "typescript.referencesCodeLens.enable": false,
   "tsserver.npm": "/usr/bin/npm",
   "python.jediEnabled": false,
   "eslint.filetypes":
