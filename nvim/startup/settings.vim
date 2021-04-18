@@ -5,8 +5,10 @@ endif
 
 " Colorscheme
 if trim(system("echo $theme_color")) == 'light'
+  set background=light
   colorscheme dnonov-light
 else
+  set background=dark
   colorscheme night-city
 endif
 
