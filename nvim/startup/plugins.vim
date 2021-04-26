@@ -35,11 +35,6 @@ let g:auto_save        = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1
 
-" Theme
-let g:javascript_plugin_flow  = 1
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
-
 " Coc
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
