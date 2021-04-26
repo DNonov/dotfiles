@@ -5,8 +5,6 @@ alias c="code -r ."
 alias f="fzf"
 alias v="nvim ."
 alias vi="nvim"
-alias g="git"
-alias t="tmux"
 alias l="ls -la --group-directories-first"
 
 # Tmuxp sessions
