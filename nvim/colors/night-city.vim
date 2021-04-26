@@ -276,10 +276,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("SpellLocal", "", s:background, "underline")
 	call <SID>X("Keyword", s:blue, "", "")
 
-  " YCM remove anoing error colors from the text
+  " YCM remove annoying error colors from the text
   call <SID>X("YcmErrorSection", s:foreground, "", "")
 
-  " YCM remove anoing error colors from the text
+  " YCM remove annoying error colors from the text
 	call <SID>X("ALEError",s:background, s:red, "")
 
   "NERDTree slashes in nice blue color
