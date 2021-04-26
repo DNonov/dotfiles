@@ -35,11 +35,6 @@ let g:auto_save        = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1
 
-" Airline settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts            = 1
-let g:airline_theme                      = 'papercolor'
-
 " Theme
 let g:javascript_plugin_flow  = 1
 let g:javascript_plugin_jsdoc = 1
