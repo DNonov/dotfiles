@@ -478,9 +478,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("ngxDirective", s:blue, "", "")
 
   " Diff Highlight
-  call <SID>X("DiffAdd", s:green, "", "")
-  call <SID>X("DiffDelete", s:red, "", "")
-  call <SID>X("DiffChange", s:yellow, "", "")
+  call <SID>X("DiffAdd", s:green, s:selection, "")
+  call <SID>X("DiffDelete", s:red, s:selection, "")
+  call <SID>X("DiffChange", s:yellow, s:selection, "")
   call <SID>X("DiffText", s:foreground, "", "")
 
   call <SID>X("diffAdded", s:green, "", "")
