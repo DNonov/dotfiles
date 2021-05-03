@@ -11,6 +11,7 @@
   "diagnostic.hintSign": ">>",
   "diagnostic.virtualTextPrefix": " • ",
   "typescript.referencesCodeLens.enable": false,
+  "javascript.referencesCodeLens.enable": false,
   "tsserver.npm": "/usr/bin/npm",
   "python.jediEnabled": false,
   "eslint.filetypes":
