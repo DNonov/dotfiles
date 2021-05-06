@@ -75,6 +75,7 @@
       "zmdi"
     ],
     "emmet.includeLanguages": {
-      "htmldjango": "html"
+      "htmldjango": "html",
+      "javascript": "javascriptreact"
     }
 }
