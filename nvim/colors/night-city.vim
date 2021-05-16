@@ -337,6 +337,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsxTagName", s:orange, "", "")
 	call <SID>X("jsxEqual", s:blue, "", "")
 
+  " GraphQl Highlight
+	call <SID>X("graphqlTemplateString", s:foreground, "", "")
+
   " TypeScript Highlight
 	call <SID>X("typescriptClassName", s:orange, "", "")
 	call <SID>X("typescriptClassStatic", s:blue, "", "")
