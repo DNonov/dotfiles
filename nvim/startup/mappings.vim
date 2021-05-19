@@ -30,7 +30,7 @@ nnoremap gl <C-w>l
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
 
 " Toggle spell check
-map <leader>s :set spell! spelllang=en_us<CR>
+nmap <leader>s :call CocAction('toggleExtension', 'coc-spell-checker')<CR>
 
 " shows last search in quickfix
 nmap g/ :vimgrep /<C-R>//j %<CR>\|:cw<CR>
