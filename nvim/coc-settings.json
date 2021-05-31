@@ -9,7 +9,7 @@
   "diagnostic.infoSign": "[i]",
   "diagnostic.warningSign": ">>",
   "diagnostic.hintSign": ">>",
-  "diagnostic.virtualTextPrefix": " • ",
+  "diagnostic.virtualTextPrefix": " ▶ ",
   "typescript.referencesCodeLens.enable": false,
   "javascript.referencesCodeLens.enable": false,
   "tsserver.npm": "/usr/bin/npm",
