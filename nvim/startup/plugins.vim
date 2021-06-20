@@ -107,3 +107,6 @@ let g:vimwiki_global_ext   = 0
 " Coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+
+" Tagalong
+let g:tagalong_additional_filetypes = ['javascript']

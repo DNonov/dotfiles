@@ -17,6 +17,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 Plug 'jsborjesson/vim-uppercase-sql'
+Plug 'AndrewRadev/tagalong.vim'
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
