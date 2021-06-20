@@ -16,6 +16,7 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
+Plug 'jsborjesson/vim-uppercase-sql'
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
