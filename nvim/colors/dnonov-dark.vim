@@ -1,19 +1,19 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "d0d0d0"
-let s:background = "232323"
-let s:line = "efefef"
-let s:selection = "00699f"
-let s:comment = "757772"
-let s:red = "ce9167"
-let s:orange = "dcb135"
-let s:yellow = "eab700"
-let s:green = "80b057"
-let s:aqua = "fefefe"
-let s:blue = "4271ae"
-let s:purple = "8959a8"
-let s:window = "efefef"
+let s:foreground = "e3e3e3"
+let s:background = "222222"
+let s:selection  = "353535"
+let s:line       = "151515"
+let s:comment    = "888888"
+let s:red        = "ff9093" " Fixed
+let s:orange     = "c87d58" " Fixed
+let s:yellow     = "c3c388" " Fixed
+let s:green      = "7fca5a" " Fixed
+let s:aqua       = "5ccff6" " Fixed
+let s:blue       = "7198dc" " Fixed
+let s:purple     = "8959a8"
+let s:window     = "efefef"
 
 set background=dark
 hi clear
@@ -229,16 +229,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 		endif
 	endfun
 
-	" Vim Highlighting
+	" Vim Highlight
 	call <SID>X("Normal", s:foreground, s:background, "")
-  highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:foreground, s:selection, "")
 	call <SID>X("TabLine", s:foreground, s:background, "reverse")
-	call <SID>X("StatusLine", s:window, s:yellow, "reverse")
+	call <SID>X("StatusLine", s:window, s:blue, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
-	call <SID>X("VertSplit", s:window, s:window, "none")
+	call <SID>X("VertSplit", s:foreground, s:background, "none")
 	call <SID>X("Visual", "", s:selection, "")
 	call <SID>X("Directory", s:blue, "", "")
 	call <SID>X("ModeMsg", s:green, "", "")
@@ -248,108 +247,262 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("MatchParen", "", s:selection, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
-	if version >= 700
-		call <SID>X("CursorLine", "", s:line, "none")
-		call <SID>X("CursorColumn", "", s:line, "none")
-		call <SID>X("PMenu", s:foreground, s:selection, "none")
-		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
-	end
-	if version >= 703
-		call <SID>X("ColorColumn", "", s:line, "none")
-	end
+  call <SID>X("PMenu", s:foreground, s:selection, "none")
+  call <SID>X("CursorLine", "", s:selection, "none")
+  call <SID>X("ColorColumn", "", s:selection, "none")
+  call <SID>X("LineNr", s:comment, s:background, "none")
+  call <SID>X("SignColumn", s:comment, s:background, "none")
+  call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
 
-	" Standard Highlighting
-	call <SID>X("Comment", s:comment, "", "")
-	call <SID>X("Todo", s:comment, s:background, "")
+	call <SID>X("Comment", s:comment, "", "italic")
+	call <SID>X("Todo", s:comment, s:background, "italic")
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:foreground, "", "none")
 	call <SID>X("Statement", s:foreground, "", "")
 	call <SID>X("Conditional", s:foreground, "", "")
 	call <SID>X("Repeat", s:foreground, "", "")
-	call <SID>X("Structure", s:purple, "", "")
-	call <SID>X("Function", s:aqua, "", "")
-	call <SID>X("Constant", s:aqua, "", "")
-	call <SID>X("Number", s:orange, "", "")
-	call <SID>X("String", s:red, "", "")
+	call <SID>X("Structure", s:orange, "", "")
+	call <SID>X("Function", s:yellow, "", "")
+	call <SID>X("Constant", s:orange, "", "")
+	call <SID>X("Number", s:red, "", "")
+	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
-	call <SID>X("PreProc", s:purple, "", "")
-	call <SID>X("Operator", s:foreground, "", "none")
-	call <SID>X("Type", s:green, "", "none")
-	call <SID>X("Define", s:purple, "", "none")
-	call <SID>X("Include", s:green, "", "")
-	call <SID>X("Spellbad",s:background, s:red, "")
-	call <SID>X("Keyword", s:green, "", "none")
+	call <SID>X("PreProc", s:blue, "", "")
+	call <SID>X("Operator", s:foreground, "", "")
+	call <SID>X("Type", s:aqua, "", "none")
+	call <SID>X("Define", s:foreground, "", "none")
+	call <SID>X("Include", s:blue, "", "")
+	call <SID>X("SpellBad", "", s:background, "underline")
+	call <SID>X("SpellCap", "", s:background, "underline")
+	call <SID>X("SpellRare", "", s:background, "underline")
+	call <SID>X("SpellLocal", "", s:background, "underline")
+	call <SID>X("Keyword", s:blue, "", "")
 
-	"NERDTree slashes in nice blue color
+  " YCM remove annoying error colors from the text
+  call <SID>X("YcmErrorSection", s:foreground, "", "")
+
+  " YCM remove annoying error colors from the text
+	call <SID>X("ALEError",s:background, s:red, "")
+
+  "NERDTree slashes in nice blue color
 	call <SID>X("NERDTreeDirSlash",s:blue, "", "")
 
 	" Fix jsx bug (different color on closing tag)
-	hi link xmlEndTag xmlTag
+  "hi link xmlEndTag xmlTag
 
-	" Vim Highlighting
-	call <SID>X("vimCommand", s:red, "", "none")
+	" Python Highlight
+	call <SID>X("pythonInclude", s:blue, "", "")
+	call <SID>X("pythonLambdaExpr", s:blue, "", "")
+	call <SID>X("pythonStatement", s:blue, "", "")
+	call <SID>X("pythonConditional", s:blue, "", "")
+	call <SID>X("pythonSelf", s:blue, "", "")
+	call <SID>X("pythonClassVar", s:blue, "", "")
+	call <SID>X("pythonFunction", s:yellow, "", "")
+	call <SID>X("pythonFunctionCall", s:yellow, "", "")
+	call <SID>X("pythonStrFormat", s:green, "", "")
+	call <SID>X("pythonExtraOperator", s:foreground, "", "")
+	call <SID>X("pythonOperator", s:blue, "", "")
+	call <SID>X("pythonDecorator", s:aqua, "", "")
+	call <SID>X("pythonDottedName", s:aqua, "", "")
+	call <SID>X("pythonClass", s:orange, "", "")
+	call <SID>X("pythonBuiltinType", s:orange, "", "")
+	call <SID>X("pythonBuiltinObj", s:blue, "", "")
+	call <SID>X("pythonRepeat", s:blue, "", "")
+	call <SID>X("pythonException", s:blue, "", "")
 
-	" C Highlighting
-	call <SID>X("cType", s:yellow, "", "")
-	call <SID>X("cStorageClass", s:purple, "", "")
-	call <SID>X("cConditional", s:purple, "", "")
-	call <SID>X("cRepeat", s:purple, "", "")
+	" JavaScript Highlight
+  call <SID>X("jsFunction", s:blue, "", "")
+	call <SID>X("jsConditional", s:blue, "", "")
+	call <SID>X("jsUndefined", s:blue, "", "")
+	call <SID>X("jsStatement", s:blue, "", "")
+	call <SID>X("jsOperatorKeyword", s:blue, "", "")
+	call <SID>X("jsLabel", s:blue, "", "")
+	call <SID>X("jsSuper", s:blue, "", "")
+	call <SID>X("jsReturn", s:blue, "", "")
+	call <SID>X("jsThis", s:blue, "", "")
+	call <SID>X("jsNull", s:blue, "", "")
+	call <SID>X("jsRepeat", s:blue, "", "")
+  call <SID>X("jsException", s:blue, "", "")
+  call <SID>X("jsExceptions", s:orange, "", "")
+	call <SID>X("jsStorageClass", s:blue, "", "")
+	call <SID>X("jsBooleanFalse", s:blue, "", "")
+	call <SID>X("jsBooleanTrue", s:blue, "", "")
+	call <SID>X("jsArrowFunction", s:foreground, "", "")
+	call <SID>X("jsClassDefinition", s:orange, "", "")
+	call <SID>X("jsClassMethodType", s:blue, "", "")
+	call <SID>X("jsGlobalObjects", s:orange, "", "")
+	call <SID>X("jsGlobalNodeObjects", s:orange, "", "")
+	call <SID>X("jsExportDefault", s:blue, "", "")
+	call <SID>X("jsTemplateBraces", s:green, "", "")
+	call <SID>X("jsFlowobjectKey", s:foreground, "", "")
+	call <SID>X("jsxAttrib", s:blue, "", "")
+	call <SID>X("jsxTagName", s:orange, "", "")
+	call <SID>X("jsxEqual", s:blue, "", "")
 
-	" PHP Highlighting
-	call <SID>X("phpVarSelector", s:red, "", "")
-	call <SID>X("phpKeyword", s:purple, "", "")
-	call <SID>X("phpRepeat", s:purple, "", "")
-	call <SID>X("phpConditional", s:purple, "", "")
-	call <SID>X("phpStatement", s:purple, "", "")
-	call <SID>X("phpMemberSelector", s:foreground, "", "")
+  " GraphQl Highlight
+	call <SID>X("graphqlTemplateString", s:foreground, "", "")
 
-	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
-	call <SID>X("rubyConstant", s:yellow, "", "")
-	call <SID>X("rubyAttribute", s:blue, "", "")
-	call <SID>X("rubyInclude", s:blue, "", "")
-	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
-	call <SID>X("rubyCurlyBlock", s:orange, "", "")
-	call <SID>X("rubyStringDelimiter", s:green, "", "")
-	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
-	call <SID>X("rubyConditional", s:purple, "", "")
-	call <SID>X("rubyRepeat", s:purple, "", "")
+  " TypeScript Highlight
+	call <SID>X("typescriptClassName", s:orange, "", "")
+	call <SID>X("typescriptClassStatic", s:blue, "", "")
+	call <SID>X("typescriptBraces", s:foreground, "", "")
+	call <SID>X("typescriptConditional", s:blue, "", "")
+	call <SID>X("typescriptCase", s:blue, "", "")
+	call <SID>X("typescriptAmbientDeclaration", s:blue, "", "")
+	call <SID>X("typescriptStatementKeyword", s:blue, "", "")
+	call <SID>X("typescriptExport", s:blue, "", "")
+	call <SID>X("typescriptExceptions", s:blue, "", "")
+	call <SID>X("typescriptTry", s:blue, "", "")
+	call <SID>X("typescriptVariable", s:blue, "", "")
+	call <SID>X("typescriptTypeReference", s:orange, "", "")
+	call <SID>X("typescriptRepeat", s:blue, "", "")
+	call <SID>X("typescriptBranch", s:blue, "", "")
+	call <SID>X("typescriptAssign", s:foreground, "", "")
+	call <SID>X("typescriptBinaryOp", s:foreground, "", "")
+	call <SID>X("typescriptRegexpString", s:red, "", "")
+	call <SID>X("typescriptImport", s:blue, "", "")
+	call <SID>X("typescriptFrom", s:blue, "", "")
+	call <SID>X("typescriptIdentifierName", s:orange, "", "")
+	call <SID>X("typescriptIdentifier", s:blue, "", "")
+	call <SID>X("typescriptCall", s:foreground, "", "")
+	call <SID>X("typescriptOperator", s:blue, "", "")
+	call <SID>X("typescriptRegExpMethod", s:orange, "", "")
+	call <SID>X("typescriptStringMethod", s:orange, "", "")
+	call <SID>X("typescriptMathStaticMethod", s:orange, "", "")
+	call <SID>X("typescriptArrayMethod", s:orange, "", "")
+	call <SID>X("typescriptArrowFuncArg", s:foreground, "", "")
+	call <SID>X("typescriptArrowFunc", s:foreground, "", "")
+	call <SID>X("typescriptES6SetMethod", s:orange, "", "")
+	call <SID>X("typescriptDOMFormProp", s:orange, "", "")
+	call <SID>X("typescriptDOMDocProp", s:orange, "", "")
+	call <SID>X("typescriptJSONStaticMethod", s:orange, "", "")
+	call <SID>X("typescriptCastKeyword", s:blue, "", "")
+	call <SID>X("typescriptPromiseMethod", s:orange, "", "")
+	call <SID>X("typescriptPromiseStaticMethod", s:orange, "", "")
+	call <SID>X("typescriptFuncTypeArrow", s:foreground, "", "")
 
-	" Python Highlighting
-	call <SID>X("pythonInclude", s:purple, "", "")
-	call <SID>X("pythonStatement", s:purple, "", "")
-	call <SID>X("pythonConditional", s:purple, "", "")
-	call <SID>X("pythonFunction", s:blue, "", "")
+  " C Highlight
+	call <SID>X("cRepeat", s:blue, "", "")
+	call <SID>X("cUserLabel", s:blue, "", "")
+	call <SID>X("cType", s:blue, "", "")
+	call <SID>X("cStorageClass", s:blue, "", "")
+	call <SID>X("cStatement", s:blue, "", "")
+	call <SID>X("cStructure", s:blue, "", "")
+	call <SID>X("cConditional", s:blue, "", "")
+	call <SID>X("cLabel", s:blue, "", "")
+	call <SID>X("c_operator", s:foreground, "", "")
+	call <SID>X("cOperator", s:foreground, "", "")
+	call <SID>X("cMulti", s:foreground, "", "")
 
-	" JavaScript Highlighting
-	call <SID>X("javaScriptBraces", s:foreground, "", "")
-	call <SID>X("javaScriptFunction", s:purple, "", "")
-	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:orange, "", "")
-	call <SID>X("javaScriptMember", s:orange, "", "")
-	call <SID>X("jsSuper", s:green, "", "")
-	call <SID>X("jsReturn", s:green, "", "")
-	call <SID>X("jsThis", s:aqua, "", "")
-	"call <SID>X("jsClassFuncName", s:foreground, "", "")
-	call <SID>X("jsClassDefinition", s:foreground, "", "")
-	call <SID>X("jsTemplateBraces", s:aqua, "", "")
+  " Ruby Highlight
+	call <SID>X("rubyClass", s:blue, "", "")
+	call <SID>X("rubyModule", s:blue, "", "")
+	call <SID>X("rubyDefine", s:blue, "", "")
+	call <SID>X("rubySymbol", s:blue, "", "")
+	call <SID>X("rubyKeywordAsMethod", s:yellow, "", "")
+	call <SID>X("rubyStringDelimiter", s:red, "", "")
+	call <SID>X("rubyRegexpDelimiter", s:red, "", "")
+	call <SID>X("rubyConditional", s:blue, "", "")
+	call <SID>X("rubyInstanceVariable", s:blue, "", "")
 
-	" HTML Highlighting
-	call <SID>X("htmlTag", s:foreground, "", "")
-	call <SID>X("htmlEndTag", s:foreground, "", "")
-	call <SID>X("htmlTagName", s:green, "", "")
+  " PHP Highlight
+  call <SID>X("phpType", s:blue, "", "")
+  call <SID>X("phpFunction", s:orange, "", "")
+  call <SID>X("phpMethod", s:orange, "", "")
+  call <SID>X("phpClass", s:orange, "", "")
+  call <SID>X("phpStatement", s:orange, "", "")
+
+  " Java Highlight
+  call <SID>X("javaScopeDecl", s:blue, "", "")
+  call <SID>X("javaClassDecl", s:blue, "", "")
+
+  " SQl Highlight
+  call <SID>X("Quote", s:red, "", "")
+  call <SID>X("sqlStatement", s:blue, "", "")
+  call <SID>X("sqlKeyword", s:blue, "", "")
+  call <SID>X("sqlSpecial", s:blue, "", "")
+
+  " Clojure Highlight
+	call <SID>X("clojureDefine", s:blue, "", "")
+	call <SID>X("clojureSpecial", s:blue, "", "")
+	call <SID>X("clojureCond", s:blue, "", "")
+	call <SID>X("clojureException", s:blue, "", "")
+	call <SID>X("clojureKeyword", s:blue, "", "")
+
+
+  " Bash Highlight
+	call <SID>X("shConditional", s:blue, "", "")
+	call <SID>X("shLoop", s:blue, "", "")
+	call <SID>X("shDerefSimple", s:blue, "", "")
+
+  " Vim Script Highlight
+  call <SID>X("vimCommand", s:blue, "", "")
+  call <SID>X("vimOper", s:foreground, "", "")
+
+	" HTML Highlight
+	call <SID>X("htmlTag", s:comment, "", "")
+	call <SID>X("htmlEndTag", s:comment, "", "")
+	call <SID>X("htmlTagName", s:orange, "", "")
 	call <SID>X("htmlArg", s:blue, "", "")
-	call <SID>X("htmlScriptTag", s:red, "", "")
+	call <SID>X("htmlScriptTag", s:comment, "", "")
+	call <SID>X("htmlTitle", s:foreground, "", "")
+	call <SID>X("htmlH1", s:foreground, "", "")
 
-	" XML Highlighting
-	call <SID>X("xmlTag", s:foreground, "", "")
-	call <SID>X("xmlTagName", s:green, "", "")
-	call <SID>X("xmlEndTag", s:foreground, "", "")
+  " CSS Highlight
+	call <SID>X("cssTagName", s:blue, "", "")
+	call <SID>X("cssColor", s:green, "", "")
+	call <SID>X("cssBraces", s:foreground, "", "")
+	call <SID>X("cssProp", s:foreground, "", "")
 
-	" Diff Highlighting
-	call <SID>X("diffAdded", s:green, "", "")
-	call <SID>X("diffRemoved", s:red, "", "")
+	" XML Highlight
+	call <SID>X("xmlTag", s:comment, "", "")
+	call <SID>X("xmlTagName", s:orange, "", "")
+	call <SID>X("xmlAttrib", s:blue, "", "")
+	call <SID>X("xmlEqual", s:aqua, "", "")
+	call <SID>X("xmlEndTag", s:orange, "", "")
+
+  " Yaml Highlight
+	call <SID>X("yamlKey", s:blue, "", "")
+
+  " Markdown Highlight
+	call <SID>X("mkdHeading", s:blue, "", "")
+	call <SID>X("mkdCode", s:foreground, "", "")
+	call <SID>X("mkdLink", s:aqua, "", "underline")
+	call <SID>X("mkdInlineURL", s:aqua, "", "underline")
+	call <SID>X("htmlH1", s:blue, "", "")
+
+  " Vim Highlight
+  call <SID>X("vimFunction", s:orange, "", "")
+  call <SID>X("vimUserFunc", s:orange, "", "")
+  call <SID>X("vimNotation", s:orange, "", "")
+  call <SID>X("vimFuncSID", s:orange, "", "")
+
+  " Nginx.conf Highlight
+  call <SID>X("ngxDirectiveBlock", s:blue, "", "")
+  call <SID>X("ngxDirectiveImportant", s:blue, "", "")
+  call <SID>X("ngxDirective", s:blue, "", "")
+
+  " Diff Highlight
+  call <SID>X("DiffAdd", s:green, s:selection, "")
+  call <SID>X("DiffDelete", s:red, s:selection, "")
+  call <SID>X("DiffChange", s:yellow, s:selection, "")
+  call <SID>X("DiffText", s:foreground, "", "")
+
+  call <SID>X("diffAdded", s:green, "", "")
+  call <SID>X("diffRemoved", s:red, "", "")
+  call <SID>X("diffChanged", s:yellow, "", "")
+
+  " GitGutter
+	call <SID>X("GitGutterAdd", s:green, "", "")
+	call <SID>X("GitGutterChange", s:aqua, "", "")
+	call <SID>X("GitGutterDelete", s:red, "", "")
+
+  " Magit
+	call <SID>X("fileEntry", s:orange, "", "")
+
+  " Coc
+  call <SID>X("CocWarningSign", s:orange, "", "")
+  call <SID>X("CocInfoSign", s:aqua, "", "")
 
 	" Delete Functions
 	delf <SID>X
