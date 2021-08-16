@@ -1,8 +1,8 @@
 DIR="${HOME}/Documents/workspace/dotfiles"
 
-.PHONY: tmux tmuxp neovim git zsh code bin kitty all help
+.PHONY: tmux tmuxp neovim git zsh code bin kitty hooks all help
 
-all: neovim zsh tmux tmuxp bin git code
+all: neovim zsh tmux tmuxp bin git code hooks
 
 neovim:
 	@ln -sfT "$(DIR)"/nvim ~/.config/nvim
@@ -26,6 +26,10 @@ bin:
 git:
 	@ln -sf "$(DIR)"/gitconfig ~/.gitconfig
 	@ln -sf "$(DIR)"/gitignore ~/.gitignore
+
+hooks:
+	@rm -rf "$(DIR)"/.git/hooks
+	@ln -sf "$(DIR)"/hooks "$(DIR)"/.git/
 
 code:
 	@bash ./code/settings.sh; ln -sf "$(DIR)"/code/settings.json \
