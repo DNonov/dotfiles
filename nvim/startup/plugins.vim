@@ -3,15 +3,13 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeDirArrowExpandable  = '+'
 
-" Magit
-nnoremap <leader>m :Magit<CR>
-
 " Git fugitive
-nnoremap <leader>g :Gstatus<CR>
+nnoremap <leader>g :Git<CR>
 
 " Splitting and joining code blocks
 nmap <silent> sk <Plug>SplitjoinSplit
 nmap <silent> sj <Plug>SplitjoinJoin
+
 " Execute normal vim join if in visual mode
 xnoremap sk J
 
