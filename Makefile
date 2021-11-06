@@ -5,27 +5,27 @@ DIR="${HOME}/Documents/workspace/dotfiles"
 all: neovim zsh tmux tmuxp bin git code hooks
 
 neovim:
-	@ln -sfT "$(DIR)"/nvim ~/.config/nvim
+	@ln -sf "$(DIR)"/nvim ${HOME}/.config/nvim
 
 zsh:
-	@ln -sfT "$(DIR)"/zsh ~/.zsh
-	@ln -sf "$(DIR)"/zshrc ~/.zshrc
+	@ln -sf "$(DIR)"/zsh ${HOME}/.zsh
+	@ln -sf "$(DIR)"/zshrc ${HOME}/.zshrc
 	@ln -sf "$(DIR)"/zsh-theme/dnonov.zsh-theme \
-		~/.oh-my-zsh/themes/dnonov.zsh-theme
+		${HOME}/.oh-my-zsh/themes/dnonov.zsh-theme
 
 tmux:
-	@ln -sfT "$(DIR)"/tmux ~/.tmux
-	@ln -sf "$(DIR)"/tmux.conf ~/.tmux.conf
+	@ln -sf "$(DIR)"/tmux ${HOME}/.tmux
+	@ln -sf "$(DIR)"/tmux.conf ${HOME}/.tmux.conf
 
 tmuxp:
-	@ln -sfT "$(DIR)"/tmuxp ~/.tmuxp
+	@ln -sf "$(DIR)"/tmuxp ${HOME}/.tmuxp
 
 bin:
-	@ln -sf "$(DIR)"/bin ~/
+	@ln -sf "$(DIR)"/bin ${HOME}/
 
 git:
-	@ln -sf "$(DIR)"/gitconfig ~/.gitconfig
-	@ln -sf "$(DIR)"/gitignore ~/.gitignore
+	@ln -sf "$(DIR)"/gitconfig ${HOME}/.gitconfig
+	@ln -sf "$(DIR)"/gitignore ${HOME}/.gitignore
 
 hooks:
 	@rm -rf "$(DIR)"/.git/hooks
@@ -33,12 +33,12 @@ hooks:
 
 code:
 	@bash ./code/settings.sh; ln -sf "$(DIR)"/code/settings.json \
-		~/.config/Code/User/settings.json
+		${HOME}/.config/Code/User/settings.json
 	@ln -sf "$(DIR)"/code/keybindings.json \
-		~/.config/Code/User/keybindings.json
+		${HOME}/.config/Code/User/keybindings.json
 
 kitty:
-	@ln -sfT "$(DIR)"/kitty ~/.config/kitty
+	@ln -sf "$(DIR)"/kitty ${HOME}/.config/kitty
 
 help:
 	@echo 'Makefile for my dotfiles                                     '
