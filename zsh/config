@@ -6,7 +6,7 @@ then
   tmux attach -t TMUX || tmux new -s TMUX
 fi
 
-export ZSH=/home/dim/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH;
 export EDITOR="vim"
 
