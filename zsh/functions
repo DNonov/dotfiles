@@ -5,7 +5,7 @@ function mktouch() {
 }
 
 function mkfilevim() {
-  touch $1 && vim $1
+  touch $1 && nvim $1
 }
 
 function fh() {
