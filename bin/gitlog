@@ -6,7 +6,7 @@ AUTHOR="%C(blue)<%an>%C(reset)";
 REFS="%C(red)%d%C(reset)";
 SUBJECT="%s";
 
-FORMAT="$HASH $REFS $SUBJECT $AUTHOR $RELATIVE_TIME";
+FORMAT="$HASH $REFS $SUBJECT $RELATIVE_TIME $AUTHOR";
 
 if [[ $1 == "-r" ]]; then
   form="--reverse";
