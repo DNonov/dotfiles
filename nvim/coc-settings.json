@@ -27,6 +27,7 @@
         "cpp",
         "csharp",
         "css",
+        "Dockerfile",
         "gitcommit",
         "go",
         "html",
@@ -48,7 +49,9 @@
     "cSpell.userWords": [
       "Pomodoro",
       "Screencasting",
+      "Scroller",
       "Tabularize",
+      "WORKDIR",
       "atexit",
       "chdir",
       "cond",
