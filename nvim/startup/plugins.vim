@@ -1,5 +1,6 @@
 " Nerdtree config
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden          = 1
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeDirArrowExpandable  = '+'
 
