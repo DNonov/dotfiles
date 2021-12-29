@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Script I use in TMUX to display what's CMUS currently playing.
+
+
+# Prevent silent errors.
+set -e
+
+# Check for proper song's metadata.
+proper_metadata=$(cmus-remote -Q | grep tag | wc -l)
+
+if [ $proper_metadata = 0 ]; then
+  # There is no proper metadata so display song's file name instead.
+  song_name=$(cmus-remote -Q | grep file | rev | cut -d '/' -f '1' | rev)
+  echo $song_name
+else
+  # Display song's name and artist.
+  song=$(cmus-remote -Q |grep title|sed 's/title/\^/'|cut -d'^' -f '2')
+  artist=$(cmus-remote -Q |grep ' artist'|sed 's/artist/\^/'|cut -d'^' -f '2')
+  echo "$artist -$song"
+fi
