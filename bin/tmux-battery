@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Script I use in TMUX to display my battery percentage.
+
+# Prevent silent errors.
+set -e;
+
+# Get battery percentage.
+battery_percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -d ':' -f '2' | xargs);
+
+echo " Battery: $battery_percentage ";
