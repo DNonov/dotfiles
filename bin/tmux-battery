@@ -5,12 +5,24 @@
 # Prevent silent errors.
 set -e;
 
-# Get battery percentage.
-battery_percentage=$(
-  upower -i /org/freedesktop/UPower/devices/battery_BAT0 |
-  grep percentage |
-  cut -d ':' -f '2' |
-  xargs
-);
+# Check for Mac OS
+if [ `uname` == "Darwin" ]; then
+  # Get battery percentage in Mac OS.
+  battery_percentage=$(
+    pmset -g batt |
+    xargs |
+    cut -d ' ' -f '8' |
+    sed 's/;//'
+  )
+else
+  # Get battery percentage in Linux.
+  battery_percentage=$(
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 |
+    grep percentage |
+    cut -d ':' -f '2' |
+    xargs
+  );
+fi
+
 
 echo " Battery: $battery_percentage ";
