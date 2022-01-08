@@ -30,6 +30,7 @@
         "Dockerfile",
         "gitcommit",
         "go",
+        "haskell",
         "html",
         "javascript",
         "javascriptreact",
@@ -56,38 +57,64 @@
       "chdir",
       "cmus",
       "cond",
-      "cupsd",
       "daemonize",
       "daemonized",
-      "defn",
-      "dnsmasq",
       "ecommerce",
-      "elif",
-      "endblock",
-      "errno",
       "esac",
       "eval",
-      "fileno",
-      "getpid",
       "gitguter",
       "gmail",
       "jsdoc",
-      "lsof",
-      "mkdir",
       "ngdoc",
-      "pidfile",
-      "println",
       "pytest",
       "repo",
       "screencast",
       "screencasts",
       "tformat",
       "tmux",
-      "umask",
-      "untracked",
-      "wfile",
-      "xargs",
-      "zmdi"
+      "untracked"
+    ],
+    "cSpell.languageSettings": [
+      {
+        "languageId": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "java",
+          "c",
+          "cpp",
+          "csharp",
+          "css"
+        ],
+        "includeRegExpList": [
+          "CStyleComment",
+          "string"
+        ]
+      },
+      {
+        "languageId": "python",
+        "includeRegExpList": [
+          "/#.*/",
+          "/([\"]{3}|[']{3})[^\\1]+?\\1/g",
+          "string"
+        ]
+      },
+      {
+        "languageId": "clojure",
+        "includeRegExpList": [
+          "/;;.*/",
+          "string"
+        ]
+      },
+      {
+        "languageId": "haskell",
+        "includeRegExpList": [
+          "/--.*/",
+          "{-(.|\n)*?-}",
+          "string"
+        ]
+      }
     ],
     "emmet.includeLanguages": {
       "htmldjango": "html",
