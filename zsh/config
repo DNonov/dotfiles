@@ -24,7 +24,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Predicates vim, tmux and fzf color scheme
-export theme_color="light"
+export theme_color="dark"
 
 # Prevents inactive vim on Ctrl-s
 stty -ixon
