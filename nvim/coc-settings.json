@@ -54,6 +54,7 @@
       "Tabularize",
       "WORKDIR",
       "atexit",
+      "backticks",
       "chdir",
       "cmus",
       "cond",
