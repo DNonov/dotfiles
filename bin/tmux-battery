@@ -6,14 +6,14 @@
 set -e;
 
 # Check for Mac OS
-if [ `uname` == "Darwin" ]; then
+if [[ $(uname) == "Darwin" ]]; then
   # Get battery percentage in Mac OS.
   battery_percentage=$(
     pmset -g batt |
     xargs |
     cut -d ' ' -f '8' |
     sed 's/;//'
-  )
+  );
 else
   # Get battery percentage in Linux.
   battery_percentage=$(

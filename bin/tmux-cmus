@@ -9,7 +9,7 @@ set -e;
 # Check for proper song's metadata.
 proper_metadata=$(cmus-remote -Q | grep tag | wc -l);
 
-if [ $proper_metadata = 0 ]; then
+if [[ $proper_metadata == 0 ]]; then
   # There is no proper metadata so display song's file name instead.
   song_name=$(cmus-remote -Q |grep file|rev|cut -d '/' -f '1'|rev|xargs);
   echo $song_name;
