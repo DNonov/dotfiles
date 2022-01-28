@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Improves 'git diff' with added and removed lines custom color pattern.
 
 if [[ $1 == "-c" ]]; then
   git diff --cached | diff-so-fancy | less --tabs=2 -RS --pattern '^(Date|added|deleted|modified): '

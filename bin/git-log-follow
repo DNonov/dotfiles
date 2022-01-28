@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Lists all files and executes 'gitlogfollow' on the chosen one.
 
 
 fzf --ansi \

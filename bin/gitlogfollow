@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Improves 'git log --follow' display and adds search capabilities.
 
 HASH="%C(red)%h%C(reset)";
 RELATIVE_TIME="%C(green)[%ar]%C(reset)";

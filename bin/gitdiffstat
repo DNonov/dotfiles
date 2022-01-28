@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Displays 'git --stat' or 'git --cached --stat' without pager.
 
 if [[ $1 == "-c" ]]; then
   git diff --cached --stat | col

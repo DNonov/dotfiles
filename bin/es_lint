@@ -1,3 +1,5 @@
 #!/bin/bash
+#
+# Copies 'eslintrc.json' into current dir.
 
 cp ~/.es_lintrc.json ./eslintrc.json
