@@ -30,6 +30,8 @@ find ~/vimwiki -iname '*.md' |
   xargs grep -E "\[comment\]\:"|
   # Display only file name and tags in fzf list.
   cut -d ':' -f '1,3' |
-  # If you press enter the selected file will be open in vim.
-  fzf --bind "enter:execute: (echo {} | cut -d ':' -f'1' | xargs vi)"
+  # If you press enter the selected file will be open in vim. Just hoover it and
+  # its content will appear in the preview window.
+  fzf --bind "enter:execute: (echo {} | cut -d ':' -f'1' | xargs vi)" \
+    --preview "echo {} | cut -d':' -f'1' | xargs cat"
 
