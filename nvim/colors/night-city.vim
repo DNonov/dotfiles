@@ -470,6 +470,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("mkdInlineURL", s:aqua, "", "underline")
 	call <SID>X("htmlH1", s:blue, "", "")
 
+  " vimwiki Highlight
+	call <SID>X("VimwikiHeaderChar", s:blue, "", "")
+	call <SID>X("VimwikiHeader1", s:blue, "", "")
+	call <SID>X("VimwikiHeader2", s:blue, "", "")
+	call <SID>X("VimwikiHeader3", s:blue, "", "")
+	call <SID>X("VimwikiHeader4", s:blue, "", "")
+	call <SID>X("VimwikiHeader5", s:blue, "", "")
+	call <SID>X("VimwikiHeader6", s:blue, "", "")
+
   " Vim Highlight
   call <SID>X("vimFunction", s:orange, "", "")
   call <SID>X("vimUserFunc", s:orange, "", "")
