@@ -26,7 +26,12 @@ function current_caret {
 # Get PWD
 function current_dir {
   local _max_pwd_length="65"
-  local color='blue'
+  # $theme_color is an everionment variable defined in 'zsh/config'
+  if [[ "$theme_color" == "dark" ]]; then
+    local color='white';
+  else
+    local color='black';
+  fi
 
   if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
     echo "%{$fg[$color]%}%-2~ ... %3~%{$reset_color%} "
