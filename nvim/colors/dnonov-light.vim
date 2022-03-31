@@ -466,7 +466,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" HTML Highlight
 	call <SID>X("htmlTag", s:comment, "", "")
 	call <SID>X("htmlEndTag", s:comment, "", "")
-	call <SID>X("htmlTagName", s:green, "", "")
+	call <SID>X("htmlTagName", s:red, "", "")
 	call <SID>X("htmlArg", s:blue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 	call <SID>X("htmlTitle", s:orange, "", "")
@@ -479,9 +479,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" XML Highlight
 	call <SID>X("xmlTag", s:comment, "", "")
-	call <SID>X("xmlTagName", s:green, "", "")
+	call <SID>X("xmlTagName", s:red, "", "")
 	call <SID>X("xmlAttrib", s:blue, "", "")
 	call <SID>X("xmlEndTag", s:comment, "", "")
+
+  "JSX Highlight
+	call <SID>X("jsxTagName", s:red, "", "")
+	call <SID>X("jsxOpenPunct", s:comment, "", "")
+	call <SID>X("jsxClosePunct", s:comment, "", "")
 
   " Yaml Highlight
 	call <SID>X("yamlKey", s:blue, "", "")
