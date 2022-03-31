@@ -530,6 +530,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("CocWarningSign", s:aqua, "", "")
   call <SID>X("CocInfoSign", s:aqua, "", "")
 
+  " SQL Highlight
+  call <SID>X("Quote", s:green, "", "")
+  call <SID>X("sqlStatement", s:blue, "", "")
+  call <SID>X("sqlKeyword", s:blue, "", "")
+  call <SID>X("sqlSpecial", s:blue, "", "")
+
   " Spelunker
   " TODO: This need to be done with call.
   highlight SpelunkerSpellBad cterm=underline gui=underline
