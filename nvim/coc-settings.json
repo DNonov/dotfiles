@@ -52,6 +52,7 @@
       "Screencasting",
       "Scroller",
       "Tabularize",
+      "VARCHAR",
       "WORKDIR",
       "atexit",
       "backticks",
