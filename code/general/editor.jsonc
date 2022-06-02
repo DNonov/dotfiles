@@ -9,7 +9,7 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Inconsolata Light",
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "none",
