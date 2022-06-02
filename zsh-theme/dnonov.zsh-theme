@@ -28,7 +28,7 @@ function current_dir {
   local _max_pwd_length="65"
   # $theme_color is an everionment variable defined in 'zsh/config'
   if [[ "$theme_color" == "dark" ]]; then
-    local color='white';
+    local color='blue';
   else
     local color='black';
   fi
