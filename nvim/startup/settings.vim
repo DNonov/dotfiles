@@ -27,7 +27,6 @@ set updatetime=100
 set signcolumn=yes
 set number
 set relativenumber
-set colorcolumn=80
 set t_Co=256
 set nofixendofline
 set wrap
