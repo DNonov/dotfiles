@@ -26,7 +26,6 @@ let mapleader = "\<space>"
 set updatetime=100
 set signcolumn=yes
 set number
-set relativenumber
 set t_Co=256
 set nofixendofline
 set wrap
