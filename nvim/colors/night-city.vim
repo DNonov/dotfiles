@@ -343,6 +343,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " TypeScript Highlight
 	call <SID>X("typescriptClassName", s:orange, "", "")
 	call <SID>X("typescriptClassStatic", s:blue, "", "")
+	call <SID>X("typescriptMember", s:foreground, "", "")
 	call <SID>X("typescriptBraces", s:foreground, "", "")
 	call <SID>X("typescriptConditional", s:blue, "", "")
 	call <SID>X("typescriptCase", s:blue, "", "")
