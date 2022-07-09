@@ -10,7 +10,7 @@
   "markdown.preview.breaks": true,
   "workbench.list.automaticKeyboardNavigation": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.fontFamily": "Iconsolata",
+  "terminal.fontFamily": "Input",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.renderType": "canvas",
