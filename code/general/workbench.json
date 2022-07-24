@@ -10,8 +10,8 @@
   "markdown.preview.breaks": true,
   "workbench.list.automaticKeyboardNavigation": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.fontFamily": "Input",
-  "terminal.integrated.fontSize": 16,
+  "terminal.fontFamily": "Inconsolata",
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.renderType": "canvas",
   "workbench.activityBar.visible": true,
@@ -19,7 +19,6 @@
   "workbench.tree.indent": 20,
   "workbench.iconTheme": "city-lights-icons-vsc",
   "workbench.colorTheme": "Light Delight",
-  // Scrollbar indicators hidden
   "workbench.colorCustomizations": {
     "editorOverviewRuler.addedForeground": "#0000",
     "editorOverviewRuler.border": "#0000",
@@ -36,6 +35,6 @@
     "editorOverviewRuler.selectionHighlightForeground": "#0000",
     "editorOverviewRuler.warningForeground": "#0000",
     "editorOverviewRuler.wordHighlightForeground": "#0000",
-    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-  },
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000"
+  }
 }

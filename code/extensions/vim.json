@@ -2,9 +2,6 @@
   "vim.useCtrlKeys": false,
   "vim.leader": "<space>",
 
-  // This is workaround of the undo bug
-  // VSCodeVim's history stack differs from the VS Code's one.
-  // So "undo" and "redo" actions will be mapped to VS Code's history stack.
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["u"],
@@ -26,7 +23,6 @@
         }
       ]
     },
-    // Fast movements in normal mode
     {
       "before": ["J"],
       "after": ["5", "j"]
@@ -35,7 +31,6 @@
       "before": ["K"],
       "after": ["5", "k"]
     },
-    //Faster yank a line
     {
       "before": ["leader", "k"],
       "after": ["y", "y", "p"]
@@ -44,61 +39,52 @@
       "before": ["leader", "K"],
       "after": ["y", "y", "P"]
     },
-    // Select whole file
     {
       "before": ["leader", "a"],
       "after": ["g", "g", "V", "G"]
     },
-    // Moving through "splits"
     {
       "before": ["g", "h"],
-      "commands":["workbench.action.focusLeftGroup"],
+      "commands":["workbench.action.focusLeftGroup"]
     },
     {
       "before": ["g", "l"],
-      "commands":["workbench.action.focusRightGroup"],
+      "commands":["workbench.action.focusRightGroup"]
     },
     {
       "before": ["g", "j"],
-      "commands":["workbench.action.focusBelowGroup"],
+      "commands":["workbench.action.focusBelowGroup"]
     },
     {
       "before": ["g", "k"],
-      "commands":["workbench.action.focusAboveGroup"],
+      "commands":["workbench.action.focusAboveGroup"]
     },
-    // Trim whitespace
     {
       "before": ["leader", "w"],
-      "commands":["editor.action.trimTrailingWhitespace"],
+      "commands":["editor.action.trimTrailingWhitespace"]
     },
-    // Open git panel
     {
       "before": ["leader", "g"],
-      "commands":["workbench.view.scm"],
+      "commands":["workbench.view.scm"]
     },
-    // Open debug panel
     {
       "before": ["leader", "d"],
-      "commands":["workbench.view.debug"],
+      "commands":["workbench.view.debug"]
     },
-    // Open extensions panel
     {
       "before": ["leader", "x"],
-      "commands":["workbench.view.extensions"],
+      "commands":["workbench.view.extensions"]
     },
-    // Open explorer panel
     {
       "before": ["leader", "e"],
-      "commands":["workbench.view.explorer"],
+      "commands":["workbench.view.explorer"]
     },
-    // Open peek problem
     {
       "before": ["leader", "p"],
-      "commands":["editor.action.marker.nextInFiles"],
-    },
+      "commands":["editor.action.marker.nextInFiles"]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    // Fast movements in visual mode
     {
       "before": ["J"],
       "after": ["5", "j"]
@@ -107,15 +93,13 @@
       "before": ["K"],
       "after": ["5", "k"]
     },
-    // Sort a selection in ascending order
     {
       "before": ["leader", "s"],
       "commands": ["editor.action.sortLinesAscending"]
     },
-    // Align a selection
     {
       "before": ["leader", "t"],
       "commands": ["wwm.aligncode"]
-    },
-  ],
+    }
+  ]
 }

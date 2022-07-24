@@ -3,5 +3,5 @@
     "Dockerfile.*": "dockerfile",
     "vimrc": "viml"
 
-  },
+  }
 }

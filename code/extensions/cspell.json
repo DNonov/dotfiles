@@ -5,11 +5,9 @@
     "endblock",
     "gmail",
     "zmdi",
-    // Clojure keywords or function
     "defn",
     "println",
     "cond",
-    // Bash keywords and unix tools
     "mkdir",
     "esac",
     "elif",
@@ -20,7 +18,6 @@
     "dnsmasq",
     "eval",
     "tmux",
-    // Git related
     "repo",
     "untracked"
 
@@ -95,10 +92,9 @@
     "xsl",
     "yaml"
   ],
-  // Original ignorePaths array contains .git which prevents spellcheck on commit_msg
   "cSpell.ignorePaths": [
     "node_modules",
     "*.dll",
     "**/*.dll"
-  ],
+  ]
 }

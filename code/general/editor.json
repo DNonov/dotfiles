@@ -7,11 +7,11 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Input",
-  "editor.fontSize": 16,
+  "editor.fontFamily": "Inconsolata",
+  "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.suggestSelection": "first",
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "none",
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": false
 }

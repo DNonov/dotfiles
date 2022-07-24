@@ -1,5 +1,0 @@
-{
-  "[javascript]": {
-    "javascript.updateImportsOnFileMove.enabled": "always",
-  },
-}
