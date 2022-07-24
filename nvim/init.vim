@@ -38,5 +38,4 @@ runtime startup/autocommands.vim
 runtime startup/mappings.vim
 runtime startup/commands.vim
 runtime startup/plugins.vim
-" runtime startup/statusline.vim
 runtime startup/cyrillic.vim
