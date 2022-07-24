@@ -17,6 +17,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'jsborjesson/vim-uppercase-sql'
 Plug 'AndrewRadev/tagalong.vim'
+Plug 'ryanoasis/vim-devicons'       " vimscript
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -35,5 +38,5 @@ runtime startup/autocommands.vim
 runtime startup/mappings.vim
 runtime startup/commands.vim
 runtime startup/plugins.vim
-runtime startup/statusline.vim
+" runtime startup/statusline.vim
 runtime startup/cyrillic.vim

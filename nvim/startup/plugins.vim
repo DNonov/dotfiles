@@ -4,6 +4,9 @@ let g:NERDTreeShowHidden          = 1
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeDirArrowExpandable  = '+'
 
+" Vim-airline
+let g:airline_theme = 'tomorrow'
+
 " Git fugitive
 nnoremap <leader>g :Git<CR>
 
