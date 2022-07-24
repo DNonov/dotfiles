@@ -36,6 +36,11 @@ code:
 		${HOME}/.config/Code/User/settings.json
 	@ln -sf "$(DIR)"/code/keybindings.json \
 		${HOME}/.config/Code/User/keybindings.json
+codemac:
+	@python3 ./code/settings.py; ln -sf "$(DIR)"/code/settings.json \
+		${HOME}/Library/Application\ Support/Code/User/settings.json
+	@ln -sf "$(DIR)"/code/keybindings.json \
+		${HOME}/Library/Application\ Support/Code/User/keybindings.json
 
 kitty:
 	@ln -sf "$(DIR)"/kitty ${HOME}/.config/kitty

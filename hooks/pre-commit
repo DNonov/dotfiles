@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-./code/settings.sh;
+python3 ./code/settings.py;
