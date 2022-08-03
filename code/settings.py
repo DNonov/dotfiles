@@ -1,6 +1,6 @@
 import json
 
-SETTINGS_FILES = [
+settings_files = [
     "./code/general/editor.json",
     "./code/general/workbench.json",
     "./code/languages/python.json",
@@ -19,14 +19,17 @@ SETTINGS_FILES = [
     "./code/general/associations.json",
 ]
 
-def create_settings_file(file):
-    result = dict()
-    for f in SETTINGS_FILES:
-        with open(f, 'r') as in_file:
-            result.update(json.load(in_file))
+def create_settings_file(file_path):
+    accumulator_dict = dict()
+    for file in settings_files:
+        try:
+            with open(file, 'r') as file_content:
+                accumulator_dict.update(json.load(file_content))
+        except IOError:
+            print(f"{file} cannot be merged!")
 
-    with open(file, 'w') as final_file:
-        json.dump(result, final_file)
+    with open(file_path, 'w') as final_file:
+        json.dump(accumulator_dict, final_file)
 
 
 create_settings_file('./code/settings.json')
