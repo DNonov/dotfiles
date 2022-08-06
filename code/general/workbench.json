@@ -8,7 +8,7 @@
   "markdown.preview.breaks": true,
   "workbench.list.automaticKeyboardNavigation": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "300",
   "workbench.activityBar.visible": true,
   "workbench.tree.renderIndentGuides": "none",

@@ -7,7 +7,7 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Inconsolata",
-  "editor.fontSize": 17,
+  "editor.fontSize": 16,
   "editor.fontWeight": "300",
   "editor.suggestSelection": "first",
   "editor.renderWhitespace": "none",
