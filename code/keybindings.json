@@ -1,73 +1,73 @@
 [
   {
-    "key": "Ctrl+;",
+    "key": "Cmd+;",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.new"
   },
   {
-    "key": "Ctrl+'",
+    "key": "Cmd+'",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.kill"
   },
   {
-    "key": "Ctrl+t",
+    "key": "Cmd+t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "Ctrl+i",
+    "key": "Cmd+i",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.focusNext"
   },
   {
-    "key": "ctrl+j",
+    "key": "Cmd+j",
     "command": "workbench.action.navigateDown"
   },
   {
-    "key": "ctrl+h",
+    "key": "Cmd+h",
     "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "ctrl+l",
+    "key": "Cmd+l",
     "command": "workbench.action.navigateRight"
   },
   {
-    "key": "ctrl+k",
+    "key": "Cmd+k",
     "command": "workbench.action.navigateUp"
   },
   {
-    "key": "ctrl+[",
+    "key": "Cmd+[",
     "when": "editorFocus",
     "command": "workbench.action.splitEditor"
   },
   {
-    "key": "ctrl+shift+j",
+    "key": "Cmd+shift+j",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.resizePaneDown"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "Cmd+shift+k",
     "when": "terminalFocus",
     "command": "workbench.action.terminal.resizePaneUp"
   },
   {
-    "key": "ctrl+n",
+    "key": "Cmd+n",
     "command": "explorer.newFile"
   },
   {
-    "key": "ctrl+f",
+    "key": "Cmd+f",
     "command": "explorer.newFolder"
   },
   {
-    "key": "ctrl+o",
+    "key": "Cmd+o",
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "ctrl+;",
+    "key": "Cmd+;",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+[",
+    "key": "Cmd+[",
     "command": "editor.action.referenceSearch.trigger",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
@@ -77,27 +77,27 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+]",
+    "key": "Cmd+]",
     "command": "editor.action.peekDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+shift+f10",
+    "key": "Cmd+shift+f10",
     "command": "-editor.action.peekDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+[",
+    "key": "Cmd+[",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+5",
+    "key": "Cmd+shift+5",
     "command": "-workbench.action.terminal.split",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+h",
+    "key": "Cmd+h",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
@@ -107,7 +107,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "Cmd+l",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
   },
