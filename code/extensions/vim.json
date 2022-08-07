@@ -44,22 +44,6 @@
       "after": ["g", "g", "V", "G"]
     },
     {
-      "before": ["g", "h"],
-      "commands":["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["g", "l"],
-      "commands":["workbench.action.focusRightGroup"]
-    },
-    {
-      "before": ["g", "j"],
-      "commands":["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["g", "k"],
-      "commands":["workbench.action.focusAboveGroup"]
-    },
-    {
       "before": ["leader", "w"],
       "commands":["editor.action.trimTrailingWhitespace"]
     },
