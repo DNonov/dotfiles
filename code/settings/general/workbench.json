@@ -14,7 +14,7 @@
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 20,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dark Theme",
+  "workbench.colorTheme": "Red Blue",
   "workbench.colorCustomizations": {
     "editorOverviewRuler.addedForeground": "#0000",
     "editorOverviewRuler.border": "#0000",
