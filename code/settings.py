@@ -1,26 +1,14 @@
-import json
+import json, os, glob
 
-settings_files = [
-    "./code/general/editor.json",
-    "./code/general/workbench.json",
-    "./code/languages/python.json",
-    "./code/languages/csharp.json",
-    "./code/languages/git.json",
-    "./code/languages/html.json",
-    "./code/languages/javascript.json",
-    "./code/extensions/emmet.json",
-    "./code/extensions/gitlens.json",
-    "./code/extensions/polacode.json",
-    "./code/extensions/simpleIcons.json",
-    "./code/extensions/cspell.json",
-    "./code/extensions/vim.json",
-    "./code/extensions/eslint.json",
-    "./code/extensions/customCss.json",
-    "./code/general/associations.json",
-]
+settings_files_path = os.path.abspath("./code/settings")
+
+def get_settings_files():
+    return glob.glob(f"{settings_files_path}/**/*.json", recursive=True)
 
 def create_settings_file(file_path):
     accumulator_dict = dict()
+    settings_files = get_settings_files()
+
     for file in settings_files:
         try:
             with open(file, 'r') as file_content:
@@ -30,6 +18,5 @@ def create_settings_file(file_path):
 
     with open(file_path, 'w') as final_file:
         json.dump(accumulator_dict, final_file)
-
 
 create_settings_file('./code/settings.json')
