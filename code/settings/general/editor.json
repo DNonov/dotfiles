@@ -6,7 +6,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Inconsolata",
+  "editor.fontFamily": "Iosevka",
   "editor.fontSize": 17,
   "editor.fontWeight": "300",
   "editor.suggestSelection": "first",
