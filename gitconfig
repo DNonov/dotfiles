@@ -1,7 +1,7 @@
 [init]
   defaultBranch = "main"
 [core]
-  editor       = code --wait
+  editor       = nvim
   excludesFile = ~/.gitignore
 [user]
   email = d.nonov@gmail.com
