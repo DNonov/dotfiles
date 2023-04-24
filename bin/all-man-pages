@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# List all man pages on current system. Stolen from: https://github.com/dmitmel/dotfiles/blob/master/scripts/fzf-search-manpage
+
+# Prevent silent errors.
+set -e;
+
+apropos . | fzf --height=40% --reverse --no-multi --tiebreak=begin --query="$*" | sed -n 's/^\([^ ]\+\) \?(\([^)]\+\)).*$/\2 \1/p'

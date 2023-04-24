@@ -26,7 +26,7 @@ nmap <leader>tf :Tabularize /from<CR>
 vmap <leader>tf :Tabularize /from<CR>
 
 " vim-commentary
-map <C-/> <Plug>Commentary
+map <C-c> <Plug>Commentary
 
 " vim-gitguter config
 let g:gitgutter_map_keys  = 0

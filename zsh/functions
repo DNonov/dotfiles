@@ -61,3 +61,7 @@ function ..() {
     fi
   fi
 }
+
+function local_ip() {
+  ipconfig getifaddr en0
+}
