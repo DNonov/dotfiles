@@ -115,5 +115,15 @@
     "key": "alt+left",
     "command": "-workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
+  },
+  {
+    "key": "Cmd+s",
+    "command": "git.stageSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "Cmd+u",
+    "command": "git.unstageSelectedRanges",
+    "when": "editorTextFocus"
   }
 ]
