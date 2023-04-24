@@ -7,6 +7,9 @@ all: neovim zsh tmux tmuxp bin git code hooks
 neovim:
 	@ln -sf "$(DIR)"/nvim ${HOME}/.config/nvim
 
+neovim_lua:
+	@ln -sf "$(DIR)"/nvim_lua ${HOME}/.config/nvim
+
 zsh:
 	@ln -sf "$(DIR)"/zsh ${HOME}/.zsh
 	@ln -sf "$(DIR)"/zshrc ${HOME}/.zshrc
