@@ -44,6 +44,7 @@
   l      = "!bash ~/bin/gitlog"
   lf     = "!bash ~/bin/git-log-follow"
   lr     = "!bash ~/bin/gitlog -r"
+  gsf    = "!bash ~/bin/git-stash-pop-file"
   me     = merge
   mea    = merge --abort
   phm    = push heroku  master

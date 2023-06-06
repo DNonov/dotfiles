@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Simple function that pops just a file from a stash
+
+git diff stash@{0}^1 stash@{0} -- $1 | git apply;

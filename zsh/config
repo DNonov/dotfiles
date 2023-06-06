@@ -15,7 +15,7 @@ if type ag &> /dev/null; then
   export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore --hidden -g ""'
 fi
 
-ZSH_THEME="bullet-train"
+ZSH_THEME="dnonov"
 
 BULLETTRAIN_STATUS_EXIT_SHOW="true"
 
