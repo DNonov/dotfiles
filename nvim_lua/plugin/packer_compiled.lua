@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/dim/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -144,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/jellybeans",
     url = "https://github.com/dnonov/jellybeans"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/Users/dim/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["light-delight"] = {
     loaded = true,
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/light-delight",
@@ -158,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/Users/dim/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -234,6 +249,11 @@ _G.packer_plugins = {
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/dim/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -243,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dim/.local/share/nvim/site/pack/packer/start/vscode.nvim",
     url = "https://github.com/Mofiqul/vscode.nvim"
+  },
+  ["zenbones.nvim"] = {
+    loaded = true,
+    path = "/Users/dim/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
+    url = "https://github.com/mcchrish/zenbones.nvim"
   },
   ["zenburn.nvim"] = {
     loaded = true,

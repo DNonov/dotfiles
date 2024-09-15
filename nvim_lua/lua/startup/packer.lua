@@ -8,10 +8,14 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Esential
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use('mfussenegger/nvim-dap')
+  use('leoluz/nvim-dap-go')
+  use('olexsmir/gopher.nvim')
+  use { "MunifTanjim/nui.nvim" }
 
   use('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -41,15 +45,22 @@ return require('packer').startup(function(use)
   }
   }
 
+  use({"nvim-lua/plenary.nvim"})
+  use({"github/copilot.vim"})
+  use({"AndrewRadev/splitjoin.vim"})
+
   use("nvim-tree/nvim-tree.lua")
   use("kyazdani42/nvim-web-devicons")
-  use("steelsojka/pears.nvim")
+  use("jiangmiao/auto-pairs")
   use("nvim-lualine/lualine.nvim")
   use("pocco81/auto-save.nvim")
   use("lewis6991/gitsigns.nvim")
   use("numToStr/Comment.nvim")
 
   -- Themes
+  use('~/Documents/workspace/vim_theme')
+  use('~/Documents/workspace/dast')
+  use('~/Documents/workspace/light_vim_theme')
   use("aktersnurra/no-clown-fiesta.nvim")
   use("creasty/candle.vim")
   use("chiendo97/intellij.vim")

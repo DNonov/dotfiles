@@ -17,6 +17,9 @@ require('vscode').setup({
         -- use colors from this colorscheme by requiring vscode.colors!
         ["@comment"] = { fg = c.vscGray, bg = c.vscNone },
         ["Label"] = { fg = c.vscBlueGreen, bg = c.vscNone },
+        ["Search"] = { fg = c.vscNone, bg = c.vscSelection },
+        ["DiffAdd"] = { fg = c.vscGreen, bg = c.None },
+        ["DiffDelete"] = { fg = c.vscOrange, bg = c.vscNone },
         ["ngxBlock"] = { fg = c.vscBlue, bg = c.vscNone },
         ["Statement"] = { fg = c.vscBlue, bg = c.vscNone },
         ["PreProc"] = { fg = c.vscBlue, bg = c.vscNone },
@@ -35,4 +38,4 @@ require('vscode').setup({
     }
 })
 
-vim.cmd [[colorscheme vscode]]
+--vim.cmd [[colorscheme vscode]]
