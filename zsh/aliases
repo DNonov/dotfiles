@@ -28,6 +28,7 @@ else
 fi
 
 alias wo="cd ~ && cd Documents/workspace"
+alias work="cd ~ && cd Documents/work"
 alias dot="cd ~ && cd Documents/workspace/dotfiles"
 alias pymod="touch __init__.py"
 alias mongoon="service mongod start"
