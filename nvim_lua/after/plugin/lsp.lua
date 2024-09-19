@@ -8,9 +8,9 @@ lsp.ensure_installed({
 
 lsp.on_attach(function(client, bufnr)
     local bind = vim.keymap.set
-    local opt = {buffer = bufnr}
+	local opt = {buffer = bufnr, remap = false}
 
-    bind("n", "<leader>H", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opt)
+    bind("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", opt)
     --  This is where a variable was first declared, or where a function is defined, etc.
     bind("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opt)
     -- WARN: This is not Goto Definition, this is Goto Declaration.
@@ -37,7 +37,7 @@ vim.diagnostic.config({
     signs = true,
     update_in_insert = false,
     underline = true,
-    severity_sort = false,
+    severity_sort = true,
     float = true,
 })
 
