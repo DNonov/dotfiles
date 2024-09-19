@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   use({"AndrewRadev/splitjoin.vim"})
 
   use("nvim-tree/nvim-tree.lua")
-  use("kyazdani42/nvim-web-devicons")
+  -- use("kyazdani42/nvim-web-devicons")
   use("jiangmiao/auto-pairs")
   use("nvim-lualine/lualine.nvim")
   use("pocco81/auto-save.nvim")
